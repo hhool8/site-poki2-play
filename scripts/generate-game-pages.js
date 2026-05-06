@@ -233,7 +233,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <base href="/">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KTE3BWDVHC');<\/script>
+  <script>window.dataLayer=window.dataLayer||[];window.__poki2GaConfigured=window.__poki2GaConfigured||false;function gtag(){dataLayer.push(arguments);}function poki2PlayInitAnalytics(){if(window.__poki2GaConfigured)return;gtag('config','G-KTE3BWDVHC',{send_page_view:true});window.__poki2GaConfigured=true;}gtag('js',new Date());gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});<\/script>
 </head>
 ${bodyTag}
   <!-- Static fallback for no-JS crawlers -->

@@ -12,10 +12,27 @@ function setConsent(v){
   }catch(e){}
   try{
     if(v === 'granted'){
+      try{ updateMeasurementConsent(true); }catch(e){}
       try{ initAds(); }catch(e){}
       try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
     }else if(v === 'denied'){
+      try{ updateMeasurementConsent(false); }catch(e){}
       try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
+    }
+  }catch(e){}
+}
+
+function updateMeasurementConsent(granted){
+  try{
+    if(typeof window.gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: granted ? 'granted' : 'denied',
+      ad_storage: granted ? 'granted' : 'denied',
+      ad_user_data: granted ? 'granted' : 'denied',
+      ad_personalization: granted ? 'granted' : 'denied'
+    });
+    if(granted && typeof window.poki2PlayInitAnalytics === 'function'){
+      window.poki2PlayInitAnalytics();
     }
   }catch(e){}
 }
@@ -562,7 +579,10 @@ window.poki2Consent = {
   try{
     const status = getConsent();
     if(status === 'granted'){
+      try{ updateMeasurementConsent(true); }catch(e){}
       try{ initAds(); }catch(e){}
+    }else if(status === 'denied'){
+      try{ updateMeasurementConsent(false); }catch(e){}
     }
     const cleanup = ()=>{
       try{
