@@ -2,15 +2,9 @@
 /play/*       /  301
 /category/*   /  301
 
-# Serve tag listing pages through the SPA so they get the full head/assets
-# This ensures URLs like /tag/adventure/ are handled by `index.html` (SPA).
-/tag/*        /index.html  200
-
-# First, route common static asset requests to custom 404 so missing assets return 404
-# Allow .html to fall through to the SPA fallback so client routes like
-# /tag/puzzle/about.html can be handled client-side instead of triggering
-# the static 404 page.
-/*.{js,css,png,jpg,jpeg,webp,svg,json,map,xml,txt,ico}  /404.html  404
+# Retire removed advertising files before the SPA fallback.
+/ads.txt / 410
+/app-ads.txt / 410
 
 # SPA fallback: rewrite all other requests to index.html so client router handles paths
 # Generated per-game redirects
@@ -457,5 +451,3 @@
 /games/snakebird /game/s/snakebird/ 301
 /games/snakebird/ /game/s/snakebird/ 301
 /*    /index.html   200
-/ads.txt / 410
-/app-ads.txt / 410
