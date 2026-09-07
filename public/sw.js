@@ -13,7 +13,6 @@ const STATIC_ASSETS = [
   '/css/style.css',
   '/js/app.js',
   '/js/webp-detect.js',
-  '/js/consent.js',
   '/js/fix-root-href.js',
   '/favicon.png',
   '/favicon.webp',

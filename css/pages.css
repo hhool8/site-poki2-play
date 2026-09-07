@@ -487,32 +487,6 @@ body.full-bleed-footer .site-footer .footer-inner{
   padding-right:12px;
 }
 
-/* Consent banner — improved visual treatment
-   - Sits above the footer and pushes page content by setting a CSS var
-   - Responsive layout with clear actions and accessible contrast
-*/
-.consent-banner{
-  position:fixed;
-  left:16px;
-  right:16px;
-  /* Position the consent banner above the footer when the footer is fixed */
-  bottom: calc(var(--footer-h) + 16px);
-  /* Raise above game overlay (z-index 1400) so buttons are clickable */
-  z-index:1600;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:14px 18px;
-  background:linear-gradient(180deg,#ffffff, #fbfdff);
-  border-radius:12px;
-  border:1px solid rgba(15,23,42,0.06);
-  box-shadow:0 8px 30px rgba(12,20,40,0.12);
-  font-size:.95rem;color:var(--text);
-  max-width:1100px;
-  margin:0 auto;
-}
-.consent-banner .consent-actions{display:flex;gap:10px;margin-left:12px}
-
 /* Ensure informational pages use the same top-corner radius as the index footer */
 body.about-page .site-footer,
 body.privacy-page .site-footer,
@@ -845,59 +819,6 @@ body.static-page .site-footer .footer-inner {
   align-items:center !important;
   height: auto !important;
 }
-.consent-banner .consent-body{flex:1;min-width:0}
-.consent-banner p{margin:0;line-height:1.45;color:var(--text-muted)}
-.consent-banner p strong{color:var(--text)}
-.consent-banner a{color:var(--brand);text-decoration:underline}
-.consent-banner .consent-actions{display:flex;gap:10px;margin-left:12px}
-.consent-banner button{border:0;padding:8px 14px;border-radius:10px;font-weight:700;cursor:pointer}
-.consent-accept{background:var(--brand);color:#fff;box-shadow:0 6px 14px rgba(31,111,235,0.18)}
-.consent-decline{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--text)}
-
-/* When consent banner is visible we add bottom padding to the page to avoid overlap */
-/* Hide consent banner during initial render to avoid being chosen as LCP */
-.consent-banner{opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s ease,transform .25s ease,visibility .25s}
-
-/* When we mark the page ready, show the consent banner */
-body.consent-ready .consent-banner{opacity:1;visibility:visible;transform:none}
-
-/* When consent banner is visible we add bottom padding to the page to avoid overlap */
-body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
-
-/* For static/informational pages we should not add body-level bottom padding
-   because the footer is fixed and body padding creates a visual gap below
-   the content. Instead, add the consent height to the page content padding so
-   content sits above both the fixed footer and the consent banner. */
-body.static-page.consent-visible,
-body.about-page.consent-visible,
-body.privacy-page.consent-visible,
-body.terms-page.consent-visible,
-body.dmca-page.consent-visible,
-body.contact-page.consent-visible {
-  padding-bottom: 0 !important;
-}
-
-body.static-page.consent-visible .page-content,
-body.about-page.consent-visible .page-content,
-body.privacy-page.consent-visible .page-content,
-body.terms-page.consent-visible .page-content,
-body.dmca-page.consent-visible .page-content,
-body.contact-page.consent-visible .page-content {
-  padding-bottom: calc(var(--footer-h) + var(--consent-height,96px)) !important;
-}
-
-@media(max-width:720px){
-  .consent-banner{left:12px;right:12px;flex-direction:column;align-items:stretch;gap:10px;padding:12px}
-  .consent-banner .consent-actions{justify-content:flex-end}
-  .consent-banner button{width:48%;}
-}
-
-/* Ad placeholder and fallback styles */
-.ad-slot{display:block;max-width:100%;margin:18px auto;text-align:center}
-.ad-placeholder{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;border-radius:8px;border:1px dashed rgba(0,0,0,0.06);background:linear-gradient(180deg,#fff,#fbfdff)}
-.ad-placeholder-inner{font-weight:600;color:var(--text-muted)}
-.ad-placeholder-accept{margin-left:12px;padding:6px 10px;border-radius:8px;border:0;background:var(--brand);color:#fff;cursor:pointer}
-.ad-fallback{padding:12px;border-radius:8px;background:linear-gradient(180deg,#f8f9fb,#ffffff);border:1px solid rgba(0,0,0,0.03);color:var(--text-muted)}
 .ad-collapsed{display:none!important;height:6px!important;margin:0!important;min-height:0!important;overflow:hidden!important;padding:0!important}
 
 
@@ -1019,5 +940,4 @@ body.static-page .page-content {
     padding-right:12px;
   }
 }
-
 

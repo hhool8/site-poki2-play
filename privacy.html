@@ -57,9 +57,6 @@
       gtag('js', new Date());
       gtag('consent', 'default', {
         analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
         wait_for_update: 500
       });
     </script>
@@ -162,9 +159,6 @@
             </section>
         </main>
 
-        <!-- Sample ad slot for privacy page -->
-        <div class="ad-slot" id="ad-slot-privacy" data-ad-client="ca-pub-6199549323873133" data-ad-slot="9876543210">
-        </div>
     </div>
     <!-- Footer: moved to body level for consistent fixed positioning across pages -->
     <footer class="site-footer">
@@ -181,16 +175,9 @@
         <p class="footer-copy">© 2026 Poki2. All rights reserved.</p>
     </footer>
 
-    <script src="js/consent.js" defer=""></script>
     <script src="js/fix-root-href.js" defer=""></script>
     <script defer src="js/reload-guard.js"></script>
     <script src="js/footer-measure.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            try { document.querySelectorAll('div.ad-slot').forEach(el => window.poki2RenderAd.render(el)); } catch (e) { }
-        });
-    </script>
-
 </body>
 
 </html>

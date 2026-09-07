@@ -43,38 +43,6 @@ def replace_head(target_html, new_head):
     return new_head + '\n' + target_html
 
 
-def ensure_ad_placeholder_and_inject(html, name):
-    """Ensure a top ad placeholder exists and inject a small ad-loader script into the head.
-    The ad loader is intentionally generic; replace the URL with your real ad vendor snippet.
-    """
-    # inject simple ad placeholder after opening <body>
-    body_open = re.search(r'<body[\s\S]*?>', html, re.IGNORECASE)
-    if body_open:
-        insert_pos = body_open.end()
-        if 'id="ad-slot-top"' not in html:
-            placeholder = '\n  <div id="ad-slot-top" class="ad-slot" aria-hidden="true"></div>\n'
-            html = html[:insert_pos] + placeholder + html[insert_pos:]
-
-    # ensure ad loader script in head
-    head_open = re.search(r'<head[\s\S]*?>', html, re.IGNORECASE)
-    if head_open and 'data-seo-ad-loader' not in html:
-        # lightweight generic loader; swap src to your real ad library (e.g., AdSense) and add publisher id
-        ad_loader = ('\n  <script data-seo-ad-loader>\n'
-                     "    (function(){\n"
-                     "      try{\n"
-                     "        var s=document.createElement('script');\n"
-                     "        s.src='https://cdn.example-ads/publisher.js';\n"
-                     "        s.async=true;\n"
-                     "        document.head.appendChild(s);\n"
-                     "      }catch(e){}\n"
-                     "    })();\n"
-                     '  </script>\n')
-        insert_pos = head_open.end()
-        html = html[:insert_pos] + ad_loader + html[insert_pos:]
-
-    return html
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--source', required=True, help='Generated SEO folder (e.g., dist_seo_c)')
@@ -126,9 +94,6 @@ def main():
 
         orig_html = read(tgt_index)
         new_html = replace_head(orig_html, new_head)
-
-        # ensure ad placeholder and lightweight ad loader are present
-        new_html = ensure_ad_placeholder_and_inject(new_html, name)
 
         # backup
         bak = tgt_index + '.seo.bak'

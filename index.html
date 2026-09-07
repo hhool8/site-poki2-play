@@ -5,7 +5,6 @@
     <script id="collapse-slashes-normalizer">(function(){try{var p=location.pathname;var c=p.replace(/\/\/{2,}/g,'/');if(c!==p){history.replaceState(null,'',c+location.search+location.hash);} }catch(e){} })();</script>
     <style id="preload-style">.preload-hide, .preload-hide *{visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;opacity:0!important}</style>
     <script id="preload-unhide">(function(){var done=false;function unhide(){if(done)return;done=true;document.documentElement.classList.remove('preload-hide');var s=document.getElementById('preload-style');if(s&&s.parentNode)s.parentNode.removeChild(s);var sc=document.getElementById('preload-unhide');if(sc&&sc.parentNode)sc.parentNode.removeChild(sc);}window.__tryU=function(){if((window.__cssN||0)>=(window.__cssT||1))unhide();};if(document.readyState==='complete'){window.__tryU();return;}window.addEventListener('load',window.__tryU,{once:true});setTimeout(unhide,2500);})();</script>
-    <!-- Ads controlled by consent banner (do not load until user accepts) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Poki2 — Play 200+ Free Online Games</title>
@@ -107,9 +106,6 @@
       gtag('js', new Date());
       gtag('consent', 'default', {
         analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
         wait_for_update: 500
       });
     </script>
@@ -270,10 +266,6 @@
             <!-- Category sections rendered by JS -->
             <div id="game-sections"></div>
 
-            <!-- Sample ad slot (controlled by consent.js) -->
-            <div class="ad-slot" id="ad-slot-main" data-ad-client="ca-pub-6199549323873133" data-ad-slot="1234567890">
-            </div>
-
             <!-- Search results (hidden by default) -->
             <section class="search-results" id="search-results" style="display:none">
                 <h2 class="section-title" id="search-results-title">Results</h2>
@@ -295,20 +287,6 @@
             <!-- Footer removed from here and placed at body level for layout stability -->
         </main>
     </div>
-        <script>
-            // If consent already stored, remove the static banner so it doesn't linger
-            (function(){
-                try{
-                    var s = null;
-                    try{ s = localStorage.getItem('poki2_consent_v1'); }catch(e){}
-                    if(s === 'granted' || s === 'denied'){
-                        var b = document.getElementById('consent-banner');
-                        if(b && b.parentNode) b.parentNode.removeChild(b);
-                    }
-                }catch(e){}
-            })();
-        </script>
-
     <!-- ===== GAME PLAY OVERLAY ===== -->
     <div class="game-overlay" id="game-overlay">
         <div class="bar-trigger" id="bar-trigger"></div>
@@ -465,32 +443,7 @@
         });
       }
     </script>
-    <script src="js/consent.js" defer=""></script>
     <script src="js/fix-root-href.js" defer=""></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            try { document.querySelectorAll('div.ad-slot').forEach(el => window.poki2RenderAd.render(el)); } catch (e) { }
-        });
-    </script>
-
-    <!-- Static consent banner for exported snapshots: will be managed by `js/consent.js` at runtime. -->
-        <style id="consent-inline-style">
-            .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;}
-            .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
-            .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
-            .consent-decline{background:transparent;color:#0b1220;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
-        </style>
-
-        <div id="consent-banner" class="consent-banner">
-        <div class="consent-body">
-            <p><strong>Poki2 uses ads</strong> — we display advertising to support the site. By clicking "Accept" you consent to loading advertising scripts and personalized ads. You can read more in our <a href="/privacy.html">Privacy Policy</a>.</p>
-        </div>
-        <div class="consent-actions">
-            <button class="consent-decline">Decline</button>
-            <button class="consent-accept">Accept</button>
-        </div>
-    </div>
-
 
 </body>
 </html>
