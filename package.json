@@ -11,7 +11,7 @@
     "hash:assets": "node scripts/hash-assets.cjs",
     "generate:sw": "node scripts/generate-sw.cjs",
     "validate:sw": "node scripts/validate-sw.js dist",
-    "build:images": "node scripts/optimize-images.cjs dist dist",
+    "build:images": "node scripts/optimize-images.cjs public dist",
     "generate:og": "node scripts/generate-og-images.cjs",
     "generate:gamepages": "node scripts/generate-game-pages.cjs",
     "generate:tagpages": "node scripts/generate-tag-pages.cjs",
