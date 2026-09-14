@@ -158,12 +158,10 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
         url = url.replace(/\/+$/, '');
       }
       return {
-        '@type':    'VideoGame',
+        '@type':    'ListItem',
         position:   i + 1,
         name:       g.title,
         url:        url,
-        image:      g.imgSrc || ogImg,
-        description: g.description || '',
       };
     }),
   });
