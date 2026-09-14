@@ -197,7 +197,7 @@
   const $searchInput = $("search");
   const $searchResults = $("search-results");
   const $searchGrid = $("search-grid");
-  const $searchTitle = $("search-results-title");
+  let $searchTitle = $("search-results-title"); // created lazily on first search
   const $searchEmpty = $("search-empty");
   const $hero = $("hero");
   const $heroFeatured = $("hero-featured");
@@ -882,6 +882,29 @@
       return;
     }
     $recentSection.style.display = "";
+    // Header (title + Clear button) is built on demand so the static markup
+    // never ships an empty <h2> (SEO: remove empty H2).
+    let header = $recentSection.querySelector(".section-header");
+    if (!header) {
+      header = document.createElement("div");
+      header.className = "section-header";
+      const h2 = document.createElement("h2");
+      h2.className = "section-title";
+      const emoji = document.createElement("span");
+      emoji.className = "emoji";
+      emoji.textContent = "\u{1F550}";
+      h2.appendChild(emoji);
+      h2.appendChild(document.createTextNode(" Recently Played"));
+      const clearBtn = document.createElement("button");
+      clearBtn.className = "clear-recent";
+      clearBtn.id = "clear-recent";
+      clearBtn.type = "button";
+      clearBtn.textContent = "Clear";
+      clearBtn.addEventListener("click", clearRecent);
+      header.appendChild(h2);
+      header.appendChild(clearBtn);
+      $recentSection.insertBefore(header, $recentGrid);
+    }
     $recentGrid.innerHTML = "";
     (async () => {
       const BATCH = 8;
@@ -1488,6 +1511,14 @@
     $gameSections.style.display = "none";
     $skeleton.style.display = "none";
     $searchResults.style.display = "";
+    if (!$searchTitle) {
+      // Title is injected on demand so the static markup never ships an
+      // empty <h2> (SEO: remove empty H2).
+      $searchTitle = document.createElement("h2");
+      $searchTitle.className = "section-title";
+      $searchTitle.id = "search-results-title";
+      $searchResults.insertBefore($searchTitle, $searchGrid);
+    }
     $searchTitle.textContent = `Results for "${query}" (${matched.length})`;
 
     // Render results synchronously — no setTimeout/rAF delay to avoid
