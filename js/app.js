@@ -1115,18 +1115,14 @@
     loadedSections = 0;
     if (lazyObserver) lazyObserver.disconnect();
 
-    // Load initial sections
-    const initialTags = TAG_ORDER.slice(0, INITIAL_SECTIONS);
-    for (const tag of initialTags) {
+    // Render ALL category sections immediately — every H2 ships with its
+    // games. Lazy-loading sections on scroll left later sections as bare
+    // headings with empty grids in no-scroll renders (crawlers/SEO checks).
+    for (const tag of TAG_ORDER) {
       const sec = renderSection(tag, SECTION_LIMIT);
       if (sec) $gameSections.appendChild(sec);
-      loadedSections++;
     }
-
-    // Set up lazy loading if there are more sections
-    if (loadedSections < TAG_ORDER.length) {
-      setupLazyObserver();
-    }
+    loadedSections = TAG_ORDER.length;
 
     highlightSidebarItem(null);
     updateChipActive('__all');
