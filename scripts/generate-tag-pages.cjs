@@ -13,6 +13,30 @@ const path = require('path');
 
 const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
+const AUTHOR_ORG = {
+  '@type': 'Organization',
+  name:    'Poki2 Team',
+  url:     `${BASE_URL}/`,
+  sameAs:  ['https://github.com/hhool8/site-poki2-play'],
+};
+const TODAY = new Date().toISOString().slice(0, 10);
+
+// Wikipedia citation + short attributed definition per category (AI-answer
+// optimization: question-style headings, answer-first text, named sources).
+const WIKI = {
+  action:      { title: 'Action game',        url: 'https://en.wikipedia.org/wiki/Action_game',        quote: 'a video game genre that emphasizes physical challenges, including hand–eye coordination and reaction time' },
+  puzzle:      { title: 'Puzzle video game',  url: 'https://en.wikipedia.org/wiki/Puzzle_video_game',  quote: 'a genre of video games that emphasize puzzle solving and test problem-solving skills, including logic, pattern recognition and word completion' },
+  adventure:   { title: 'Adventure game',     url: 'https://en.wikipedia.org/wiki/Adventure_game',     quote: 'a video game genre in which the player assumes the role of a protagonist in an interactive story driven by exploration and puzzle-solving' },
+  racing:      { title: 'Racing video game',  url: 'https://en.wikipedia.org/wiki/Racing_video_game',  quote: 'a video game genre in which the player takes part in a racing competition with any type of land, air or sea vehicles' },
+  shooting:    { title: 'Shooter game',       url: 'https://en.wikipedia.org/wiki/Shooter_game',       quote: 'a video game subgenre in which the focus is on weapons-based combat, with testing reflexes and spatial awareness' },
+  multiplayer: { title: 'Multiplayer video game', url: 'https://en.wikipedia.org/wiki/Multiplayer_video_game', quote: 'a video game in which more than one person can play in the same game environment at the same time' },
+  competitive: { title: 'Esports',            url: 'https://en.wikipedia.org/wiki/Esports',            quote: 'a form of organized, multiplayer video game competition between players, often for prizes and rankings' },
+  strategy:    { title: 'Strategy video game', url: 'https://en.wikipedia.org/wiki/Strategy_video_game', quote: 'a video game genre in which gameplay requires careful and skillful thinking and planning to achieve victory' },
+  idle:        { title: 'Idle game',          url: 'https://en.wikipedia.org/wiki/Idle_game',          quote: 'a video game in which progress is achieved even when the player is not actively playing, often called incremental or clicker games' },
+  arcade:      { title: 'Arcade game',        url: 'https://en.wikipedia.org/wiki/Arcade_game',        quote: 'a machine-arcade game genre traditionally defined by fast-paced, easy-to-learn gameplay built around chasing a high score' },
+  sports:      { title: 'Sports video game',  url: 'https://en.wikipedia.org/wiki/Sports_video_game',  quote: 'a video game genre that simulates the practice of sports, including team sports, athletics and racing' },
+  platformer:  { title: 'Platform game',      url: 'https://en.wikipedia.org/wiki/Platform_game',      quote: 'a video game genre in which the player controls a character who jumps and climbs between elevated platforms while avoiding obstacles' },
+};
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(__dirname, '..', 'games.json');
 const MIN_GAMES  = 5;   // minimum games in a tag to warrant a page
@@ -147,6 +171,8 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     name:        cfg.headline,
     url:         pageUrl,
     description: cfg.desc,
+    dateModified: TODAY,
+    author:      AUTHOR_ORG,
     publisher:   { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
     hasPart:     allTagGames.map((g, i) => {
       const slug  = normalizeHref(g.link);
@@ -204,6 +230,41 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
               <p class="tag-intro-desc">${esc(cfg.desc)}</p>
               <p class="tag-intro-count">${pageCountNote}</p>
             </section>`;
+
+  // ── AI-answer FAQ: question-style headings, answer-first text, citations ──
+  const wiki = WIKI[tag] || null;
+  const faqs = [];
+  if (wiki) {
+    faqs.push({
+      q: `What are ${esc(cfg.label)} games?`,
+      a: `<p>${esc(cfg.label)} games are games where ${esc(wiki.quote)}. According to <a href="${wiki.url}" rel="noopener" target="_blank">Wikipedia's "${esc(wiki.title)}"</a> article, the genre is defined exactly this way.</p>`,
+    });
+  }
+  faqs.push({
+    q: `Are ${esc(cfg.label)} games free on Poki2?`,
+    a: `<p>Yes. All <strong>${totalCount}</strong> ${esc(cfg.label)} games listed on this page are completely free to play — no download, no installation and no account required. Just click a game and it runs instantly in your browser.</p>`,
+  });
+  faqs.push({
+    q: `Can I play ${esc(cfg.label)} games on mobile?`,
+    a: `<p>Yes. ${esc(cfg.label)} games on Poki2 run in any modern mobile browser and support touch controls (keyboard support is available on desktop). There is nothing to install.</p>`,
+  });
+  const faqHtml = `<section class="tag-faq" id="tag-faq">
+  <h2>${esc(cfg.label)} Games — Frequently Asked Questions</h2>
+  ${faqs.map(f => `  <div class="faq-item">
+    <h3 class="faq-q">${f.q}</h3>
+    ${f.a}
+  </div>`).join('\n')}
+</section>`;
+
+  const faqLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type':    'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name:    f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') },
+    })),
+  });
   const tagBodyInner = bodyInner
     .replace(
       '<p class="hero-title">What are you playing today?</p>',
@@ -215,7 +276,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     )
     .replace(
       '<div id="game-sections"></div>',
-      `<div id="game-sections"></div>\n\n${tagIntroHtml}`
+      `<div id="game-sections"></div>\n\n${tagIntroHtml}\n\n${faqHtml}`
     );
 
   return `<!DOCTYPE html>
@@ -243,6 +304,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <!-- Structured Data: CollectionPage first (auditors read first block) -->
   <script type="application/ld+json">${itemListLd}</script>
   <script type="application/ld+json">${breadcrumbLd}</script>
+  <script type="application/ld+json">${faqLd}</script>
 
   <!-- Assets -->
   <link rel="preload" href="/css/style.css?v=__CACHE_VER__" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.add('css-ready');">
@@ -339,7 +401,7 @@ const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 const sanitizedBody = bodyInner
   .replace(/<section class="tag-intro">[\s\S]*?<\/section>/gi, '')
   // Strip prerendered home sections — tag pages must not embed homepage content
-  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '<!--HOME-STATIC:START--><!--HOME-STATIC:END-->');
+  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '');
 const gameBodyContent = sanitizedBody
   .replace(/<\/body>\s*$/i, '')
   .replace(/<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i, '<p$1>What are you playing today?</p>');

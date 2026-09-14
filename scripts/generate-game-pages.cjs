@@ -257,7 +257,7 @@ if (!fs.existsSync(indexHtml)) {
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 const bodyContent = bodyInner.replace(/<\/body>\s*$/i, '')
   // Strip prerendered home sections — game pages must not embed homepage content
-  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '<!--HOME-STATIC:START--><!--HOME-STATIC:END-->');
+  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '');
 const gameBodyContent = bodyContent.replace(
   /<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i,
   '<p$1>What are you playing today?</p>'

@@ -229,6 +229,23 @@ input{font:inherit}
 }
 .hero-card:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .hero-card img{width:100%;height:100%;object-fit:fill;object-position:center center}
+/* Page byline (author + last-updated, E-E-A-T signal) */
+.page-byline{
+  font-size:.85rem;
+  color:var(--text-muted,#6b7280);
+  margin:6px 0 14px;
+}
+/* Tag page FAQ (question-style headings + answer-first content) */
+.tag-faq{
+  padding:16px 20px;
+  max-width:860px;
+  margin:0 auto;
+}
+.tag-faq h2{margin:0 0 12px}
+.faq-item{margin:0 0 18px}
+.faq-q{font-size:1.05rem;font-weight:700;margin:0 0 6px}
+.faq-item p{margin:0;line-height:1.6}
+
 /* Reserve layout space for hero thumbnails to avoid CLS */
 .hero-card{
   display:block;
