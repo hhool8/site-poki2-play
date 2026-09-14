@@ -122,19 +122,19 @@ function buildSuffix(game, currentDesc) {
     if (!desc.includes(keyWord)) clauses.push(hint);
   }
 
+  // ── 6. Short generic fillers (last resort, always fit small gaps) ──────────
+  clauses.push('Free to play instantly.', 'Play free online.', 'No download required.');
+
   // ── Chain clauses greedily ────────────────────────────────────────────────
+  // Only append whole clauses that fit; skip ones that do not (no mid-sentence
+  // truncation — partial clauses read unnatural in meta descriptions).
   let built = '';
+  const effLen = () => currentDesc.length + (built ? built.length + 1 : 0);
   for (const clause of clauses) {
-    const next = (built ? built + ' ' : '') + clause;
-    const total = currentDesc + ' ' + next;
-    if (total.length > TARGET_MAX) {
-      // Try trimming this clause to fit
-      const space = TARGET_MAX - currentDesc.length - (built ? built.length + 2 : 1);
-      if (space >= 20) built = (built ? built + ' ' : '') + clause.slice(0, space - 1) + '.';
-      break;
+    if (effLen() >= TARGET_MIN) break;
+    if (effLen() + 1 + clause.length <= TARGET_MAX) {
+      built = built ? built + ' ' + clause : clause;
     }
-    built = next;
-    if ((currentDesc + ' ' + built).length >= TARGET_MIN) break;
   }
 
   return built || null;

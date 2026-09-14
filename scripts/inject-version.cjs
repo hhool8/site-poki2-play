@@ -19,3 +19,20 @@ if (hashes.length>0){ const combined = crypto.createHash('sha1').update(hashes.j
 const html = fs.readFileSync(distHtml,'utf8'); const replaced = html.replace(/__CACHE_VER__/g, version); fs.writeFileSync(distHtml, replaced);
 
 const gamePageGlob = path.join(dist, 'game'); if (fs.existsSync(gamePageGlob)) { let patched = 0; const charDirs = fs.readdirSync(gamePageGlob); for (const charDir of charDirs) { const charPath = path.join(gamePageGlob, charDir); if (!fs.statSync(charPath).isDirectory()) continue; const slugDirs = fs.readdirSync(charPath); for (const slug of slugDirs) { const p = path.join(charPath, slug, 'index.html'); if (fs.existsSync(p)) { const content = fs.readFileSync(p,'utf8'); if (content.includes('__CACHE_VER__')) { fs.writeFileSync(p, content.replace(/__CACHE_VER__/g, version)); patched++; } } } } if (patched>0) console.log(`✅  Patched __CACHE_VER__ in ${patched} game pages`); }
+
+// Tag pages also carry the __CACHE_VER__ placeholder — patch them too.
+const tagPageGlob = path.join(dist, 'tag');
+if (fs.existsSync(tagPageGlob)) {
+  let patchedTags = 0;
+  for (const tagDir of fs.readdirSync(tagPageGlob)) {
+    const p = path.join(tagPageGlob, tagDir, 'index.html');
+    if (fs.existsSync(p)) {
+      const content = fs.readFileSync(p, 'utf8');
+      if (content.includes('__CACHE_VER__')) {
+        fs.writeFileSync(p, content.replace(/__CACHE_VER__/g, version));
+        patchedTags++;
+      }
+    }
+  }
+  if (patchedTags > 0) console.log(`✅  Patched __CACHE_VER__ in ${patchedTags} tag pages`);
+}

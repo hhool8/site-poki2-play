@@ -225,11 +225,12 @@ ${bodyTag}
     <p>${esc(desc)}</p>
     ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/tag/${k}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
-    ${(relatedGames && relatedGames.length) ? `<p><strong>More games:</strong> ${relatedGames.map(r => {
+    ${game.howToPlay ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
+    ${(relatedGames && relatedGames.length) ? `<h2>More games like ${esc(game.title)}</h2>\n    <ul>\n${relatedGames.map(r => {
       const rs = normalizeHref(r.link);
       const rc = rs[0].toLowerCase();
-      return `<a href="/game/${rc}/${rs}/">${esc(r.title)}</a>`;
-    }).join(', ')}</p>` : ''}
+      return `      <li><h3><a href="/game/${rc}/${rs}/">${esc(r.title)}</a></h3></li>`;
+    }).join('\n')}\n    </ul>` : ''}
     <nav aria-label="Game Categories">
       <ul>
         ${TAG_PAGES.map(([k, l]) => `<li><a href="/tag/${k}/">${esc(l)} Games</a></li>`).join('\n        ')}
@@ -254,7 +255,9 @@ if (!fs.existsSync(indexHtml)) {
 }
 
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
-const bodyContent = bodyInner.replace(/<\/body>\s*$/i, '');
+const bodyContent = bodyInner.replace(/<\/body>\s*$/i, '')
+  // Strip prerendered home sections — game pages must not embed homepage content
+  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '<!--HOME-STATIC:START--><!--HOME-STATIC:END-->');
 const gameBodyContent = bodyContent.replace(
   /<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i,
   '<p$1>What are you playing today?</p>'

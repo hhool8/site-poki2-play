@@ -399,6 +399,10 @@ input{font:inherit}
   padding:1px;
   box-shadow:0 2px 8px rgba(0,0,0,.06);
   cursor:pointer;
+  /* static (prerendered) cards are <a> elements — keep them looking identical */
+  display:block;
+  text-decoration:none;
+  color:inherit;
   /* animate transform only (composited) to avoid box-shadow animations */
   transition: transform .2s var(--ease);
   will-change: transform;

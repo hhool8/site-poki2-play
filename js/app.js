@@ -744,7 +744,8 @@
 
     const info = document.createElement("div");
     info.className = "game-card-info";
-    const title = document.createElement("div");
+    // Use a real <h3> heading so cards contribute to document outline (h1→h2→h3)
+    const title = document.createElement("h3");
     title.className = "game-card-title";
     // Ensure a readable fallback title is always present in the DOM so
     // category views reliably show a label under each icon.

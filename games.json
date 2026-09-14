@@ -216,7 +216,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger. Supports keyboard and touch controls.",
+    "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger.",
     "icons": {
       "180": "/icons/c/crossyroad/icon-180.png",
@@ -350,7 +350,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels. Supports keyboard and touch controls.",
+    "description": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels.",
     "icons": {
       "180": "/icons/r/runneryodas/icon-180.png",
@@ -474,7 +474,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights. Supports keyboard and touch controls.",
+    "description": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights.",
     "icons": {
       "180": "/icons/d/dronewars/icon-180.png",
@@ -506,7 +506,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles. Supports keyboard and touch controls.",
+    "description": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles.",
     "icons": {
       "180": "/icons/l/luxahoy/icon-180.png",
@@ -641,7 +641,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out. Supports keyboard and touch controls.",
+    "description": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out.",
     "icons": {
       "180": "/icons/s/silverarrow/icon-180.png",
@@ -771,7 +771,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps. Controlled entirely with your keyboard.",
+    "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps. Controlled entirely with your keyboard. Free to play instantly.",
     "featured": true,
     "badge": "popular",
     "howToPlay": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps.",
@@ -835,7 +835,7 @@
     "show": true,
     "use_overlay_title": false,
     "badge": "",
-    "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox. Supports keyboard and touch controls.",
+    "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox. Supports keyboard and touch controls. Free to play instantly.",
     "featured": false,
     "howToPlay": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox.",
     "icons": {
@@ -976,7 +976,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal. Best experienced on desktop browsers.",
+    "description": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal. Best experienced on desktop browsers. Free to play instantly.",
     "howToPlay": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal.",
     "icons": {
       "180": "/icons/c/csgo-clicker/icon-180.png",
@@ -1007,7 +1007,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls.",
+    "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom!",
     "icons": {
       "180": "/icons/c/cuttherope/icon-180.png",
@@ -1037,7 +1037,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels. Supports keyboard and touch controls.",
+    "description": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels.",
     "icons": {
       "180": "/icons/c/cuttheropeholiday/icon-180.png",
@@ -1126,7 +1126,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic. Supports keyboard and touch controls.",
+    "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic.",
     "icons": {
       "180": "/icons/d/deal-or-no-deal/icon-180.png",
@@ -1216,7 +1216,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win. Supports keyboard and touch controls.",
+    "description": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win.",
     "icons": {
       "180": "/icons/d/doge2048/icon-180.png",
@@ -1246,7 +1246,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps. Supports keyboard and touch controls.",
+    "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps.",
     "icons": {
       "180": "/icons/d/doodle-jump/icon-180.png",
@@ -1278,7 +1278,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative. Supports keyboard and touch controls.",
+    "description": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative.",
     "icons": {
       "180": "/icons/d/draw-the-hill/icon-180.png",
@@ -1333,7 +1333,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields. Controlled entirely with your keyboard.",
+    "description": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields. Controlled entirely with your keyboard. Free to play instantly.",
     "howToPlay": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields.",
     "icons": {
       "180": "/icons/e/endlesswar3/icon-180.png",
@@ -1393,7 +1393,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time. Runs in any modern browser on mobile and desktop.",
+    "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time. Runs in any modern browser on mobile and desktop. Free to play instantly.",
     "howToPlay": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time.",
     "icons": {
       "180": "/icons/f/flappy-bird/icon-180.png",
@@ -1447,7 +1447,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun. Controlled entirely with your keyboard.",
+    "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun. Controlled entirely with your keyboard. Free to play instantly.",
     "featured": false,
     "howToPlay": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun.",
     "icons": {
@@ -1563,7 +1563,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL. Supports keyboard and touch controls.",
+    "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL.",
     "icons": {
       "180": "/icons/h/hexgl/icon-180.png",
@@ -1618,7 +1618,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game. Controlled entirely with your keyboard.",
+    "description": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game. Controlled entirely with your keyboard. Play free online.",
     "howToPlay": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game.",
     "icons": {
       "180": "/icons/j/just-one-boss/icon-180.png",
@@ -1650,7 +1650,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed. Supports keyboard and touch controls.",
+    "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay.",
     "icons": {
       "180": "/icons/k/krunker/icon-180.png",
@@ -1707,7 +1707,7 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required. Controlled entirely with your keyboard.",
+    "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required. Controlled entirely with your keyboard. Free to play instantly.",
     "howToPlay": "Play Minecraft 1.8 directly in your browser.",
     "icons": {
       "180": "/icons/e/eaglercraft/icon-180.png",
@@ -1797,7 +1797,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic. Supports keyboard and touch controls.",
+    "description": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic.",
     "icons": {
       "180": "/icons/m/missiles/icon-180.png",
@@ -1853,7 +1853,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun. Supports keyboard and touch controls.",
+    "description": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun.",
     "icons": {
       "180": "/icons/o/omnombounce/icon-180.png",
@@ -1886,7 +1886,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers. Supports keyboard and touch controls.",
+    "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers.",
     "icons": {
       "180": "/icons/p/papaspizzaria/icon-180.png",
@@ -1952,7 +1952,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly. Supports keyboard and touch controls.",
+    "description": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly.",
     "icons": {
       "180": "/icons/p/papery-planes/icon-180.png",
@@ -1980,7 +1980,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles. Supports keyboard and touch controls.",
+    "description": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles.",
     "icons": {
       "180": "/icons/p/push-the-square/icon-180.png",
@@ -2104,7 +2104,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau. Supports keyboard and touch controls.",
+    "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau.",
     "icons": {
       "180": "/icons/s/solitaire/icon-180.png",
@@ -2163,7 +2163,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum. Supports keyboard and touch controls.",
+    "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum.",
     "icons": {
       "180": "/icons/s/stealingthediamond/icon-180.png",
@@ -2193,7 +2193,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic. Supports keyboard and touch controls.",
+    "description": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic.",
     "icons": {
       "180": "/icons/s/stickwar/icon-180.png",
@@ -2222,7 +2222,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line. Supports keyboard and touch controls.",
+    "description": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line.",
     "icons": {
       "180": "/icons/s/stormthehouse2/icon-180.png",
@@ -2255,7 +2255,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed. Supports keyboard and touch controls.",
+    "description": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed.",
     "icons": {
       "180": "/icons/s/swerve/icon-180.png",
@@ -2316,7 +2316,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold. Supports keyboard and touch controls.",
+    "description": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold.",
     "icons": {
       "180": "/icons/t/thebattle/icon-180.png",
@@ -2372,7 +2372,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step. Supports keyboard and touch controls.",
+    "description": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step.",
     "icons": {
       "180": "/icons/t/theheist/icon-180.png",
@@ -2400,7 +2400,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one. Supports keyboard and touch controls.",
+    "description": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one.",
     "icons": {
       "180": "/icons/t/there-is-no-game/icon-180.png",
@@ -2429,7 +2429,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle. Controlled entirely with your keyboard.",
+    "description": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle. Controlled entirely with your keyboard. Play free online.",
     "howToPlay": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle.",
     "icons": {
       "180": "/icons/t/thisistheonlylevel/icon-180.png",
@@ -2460,7 +2460,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible. Supports keyboard and touch controls.",
+    "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible.",
     "icons": {
       "180": "/icons/t/tosstheturtle/icon-180.png",
@@ -2836,7 +2836,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre. Supports keyboard and touch controls.",
+    "description": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre.",
     "icons": {
       "180": "/icons/b/bravebird/icon-180.png",
@@ -2866,7 +2866,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece. Supports keyboard and touch controls.",
+    "description": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece.",
     "icons": {
       "180": "/icons/b/brokenhorn/icon-180.png",
@@ -2896,7 +2896,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board. Supports keyboard and touch controls.",
+    "description": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board.",
     "icons": {
       "180": "/icons/b/bubbleitsteven/icon-180.png",
@@ -3049,7 +3049,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive. Supports keyboard and touch controls.",
+    "description": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive.",
     "icons": {
       "180": "/icons/c/catonfire/icon-180.png",
@@ -3080,7 +3080,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides. Runs in any modern browser on mobile and desktop.",
+    "description": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides. Runs in any modern browser on mobile and desktop. Play free online.",
     "howToPlay": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides.",
     "icons": {
       "180": "/icons/c/cavejumper/icon-180.png",
@@ -3108,7 +3108,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up. Optimized for mobile browsers — play anywhere.",
+    "description": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up. Optimized for mobile browsers — play anywhere. Play free online.",
     "howToPlay": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up..",
     "icons": {
       "180": "/icons/c/cboxes/icon-180.png",
@@ -3170,7 +3170,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game. Supports keyboard and touch controls.",
+    "description": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game.",
     "icons": {
       "180": "/icons/c/chipman/icon-180.png",
@@ -3202,7 +3202,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter. Supports keyboard and touch controls.",
+    "description": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter.",
     "icons": {
       "180": "/icons/c/christmasballs/icon-180.png",
@@ -3266,7 +3266,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play. Supports keyboard and touch controls.",
+    "description": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play.",
     "icons": {
       "180": "/icons/c/circlepong/icon-180.png",
@@ -3329,7 +3329,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes. Supports keyboard and touch controls.",
+    "description": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes.",
     "icons": {
       "180": "/icons/c/crunchingninjas/icon-180.png",
@@ -3361,7 +3361,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
+    "description": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer.",
     "icons": {
       "180": "/icons/s/supercowboyrun/icon-180.png",
@@ -3393,7 +3393,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown. Supports keyboard and touch controls.",
+    "description": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown.",
     "icons": {
       "180": "/icons/c/cowboy2shot/icon-180.png",
@@ -3424,7 +3424,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles. Supports keyboard and touch controls.",
+    "description": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles.",
     "icons": {
       "180": "/icons/c/craigenstone/icon-180.png",
@@ -3489,7 +3489,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently. Supports keyboard and touch controls.",
+    "description": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently.",
     "icons": {
       "180": "/icons/d/darkninja/icon-180.png",
@@ -3552,7 +3552,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high. Supports keyboard and touch controls.",
+    "description": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high.",
     "icons": {
       "180": "/icons/d/donteattrash/icon-180.png",
@@ -3583,7 +3583,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent. Supports keyboard and touch controls.",
+    "description": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent.",
     "icons": {
       "180": "/icons/d/dotgame/icon-180.png",
@@ -3615,7 +3615,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer. Supports keyboard and touch controls.",
+    "description": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer.",
     "icons": {
       "180": "/icons/d/dropcircle/icon-180.png",
@@ -3680,7 +3680,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience. Supports keyboard and touch controls.",
+    "description": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience.",
     "icons": {
       "180": "/icons/s/scratchcard/icon-180.png",
@@ -3713,7 +3713,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game. Supports keyboard and touch controls.",
+    "description": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game.",
     "icons": {
       "180": "/icons/e/escape/icon-180.png",
@@ -3747,7 +3747,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Hack and slash through a factory overrun with rogue robots before they take over completely. Supports keyboard and touch controls.",
+    "description": "Hack and slash through a factory overrun with rogue robots before they take over completely. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Hack and slash through a factory overrun with rogue robots before they take over completely.",
     "icons": {
       "180": "/icons/e/evilrobot/icon-180.png",
@@ -3782,7 +3782,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it. Supports keyboard and touch controls.",
+    "description": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it.",
     "icons": {
       "180": "/icons/e/evilwyrm/icon-180.png",
@@ -3849,7 +3849,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames. Supports keyboard and touch controls.",
+    "description": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames.",
     "icons": {
       "180": "/icons/f/firebrigade/icon-180.png",
@@ -3913,7 +3913,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper. Supports keyboard and touch controls.",
+    "description": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper.",
     "icons": {
       "180": "/icons/f/flapcatcopters/icon-180.png",
@@ -3947,7 +3947,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses. Supports keyboard and touch controls.",
+    "description": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses.",
     "icons": {
       "180": "/icons/f/flapcatxmas/icon-180.png",
@@ -3981,7 +3981,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist. Best experienced on desktop browsers.",
+    "description": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist. Best experienced on desktop browsers. Free to play instantly.",
     "howToPlay": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist.",
     "icons": {
       "180": "/icons/f/flappydog/icon-180.png",
@@ -4083,7 +4083,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures. Supports keyboard and touch controls.",
+    "description": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures.",
     "icons": {
       "180": "/icons/f/foxfury/icon-180.png",
@@ -4213,7 +4213,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down. Supports keyboard and touch controls.",
+    "description": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down.",
     "icons": {
       "180": "/icons/f/funnysoccer/icon-180.png",
@@ -4244,7 +4244,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist. Supports keyboard and touch controls.",
+    "description": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist.",
     "icons": {
       "180": "/icons/g/gettwelve/icon-180.png",
@@ -4276,7 +4276,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles. Supports keyboard and touch controls.",
+    "description": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles.",
     "icons": {
       "180": "/icons/g/goblinmachine/icon-180.png",
@@ -4371,7 +4371,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense. Supports keyboard and touch controls.",
+    "description": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense.",
     "icons": {
       "180": "/icons/g/greedygnomes/icon-180.png",
@@ -4498,7 +4498,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line. Supports keyboard and touch controls.",
+    "description": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line.",
     "icons": {
       "180": "/icons/g/gumballrace/icon-180.png",
@@ -4561,7 +4561,7 @@
     "show": false,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner. Supports keyboard and touch controls.",
+    "description": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner.",
     "icons": {
       "180": "/icons/h/herojump/icon-180.png",
@@ -4593,7 +4593,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires. Supports keyboard and touch controls.",
+    "description": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires.",
     "icons": {
       "180": "/icons/h/hidden/icon-180.png",
@@ -4658,7 +4658,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act. Supports keyboard and touch controls.",
+    "description": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act.",
     "icons": {
       "180": "/icons/i/icecream/icon-180.png",
@@ -4692,7 +4692,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles. Supports keyboard and touch controls.",
+    "description": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles.",
     "icons": {
       "180": "/icons/j/jellydoods/icon-180.png",
@@ -4726,7 +4726,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below. Supports keyboard and touch controls.",
+    "description": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below.",
     "icons": {
       "180": "/icons/j/jellyslice/icon-180.png",
@@ -4757,7 +4757,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board. Supports keyboard and touch controls.",
+    "description": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board.",
     "icons": {
       "180": "/icons/j/jomjom/icon-180.png",
@@ -4789,7 +4789,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start! Supports keyboard and touch controls.",
+    "description": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start! Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start!",
     "icons": {
       "180": "/icons/j/jumpkitty/icon-180.png",
@@ -4823,7 +4823,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence. Supports keyboard and touch controls.",
+    "description": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence.",
     "icons": {
       "180": "/icons/f/falljumproll/icon-180.png",
@@ -4855,7 +4855,7 @@
     "show": false,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up. Runs in any modern browser on mobile and desktop.",
+    "description": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up. Runs in any modern browser on mobile and desktop. Play free online.",
     "howToPlay": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up.",
     "icons": {
       "180": "/icons/j/jumppydog/icon-180.png",
@@ -4952,7 +4952,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights. Supports keyboard and touch controls.",
+    "description": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights.",
     "icons": {
       "180": "/icons/i/izardrocket/icon-180.png",
@@ -4985,7 +4985,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities. Supports keyboard and touch controls.",
+    "description": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities.",
     "icons": {
       "180": "/icons/l/looneyroonks/icon-180.png",
@@ -5018,7 +5018,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos. Supports keyboard and touch controls.",
+    "description": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos.",
     "icons": {
       "180": "/icons/m/manic/icon-180.png",
@@ -5148,7 +5148,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible. Supports keyboard and touch controls.",
+    "description": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible.",
     "icons": {
       "180": "/icons/m/monstereater/icon-180.png",
@@ -5180,7 +5180,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges. Runs in any modern browser on mobile and desktop.",
+    "description": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges. Runs in any modern browser on mobile and desktop. Play free online.",
     "howToPlay": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges.",
     "icons": {
       "180": "/icons/m/mousejump/icon-180.png",
@@ -5245,7 +5245,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything. Supports keyboard and touch controls.",
+    "description": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything.",
     "icons": {
       "180": "/icons/n/ninjarun/icon-180.png",
@@ -5279,7 +5279,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior. Supports keyboard and touch controls.",
+    "description": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior.",
     "icons": {
       "180": "/icons/n/ninjaway/icon-180.png",
@@ -5312,7 +5312,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game. Supports keyboard and touch controls.",
+    "description": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game.",
     "icons": {
       "180": "/icons/o/ojello/icon-180.png",
@@ -5379,7 +5379,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience. Supports keyboard and touch controls.",
+    "description": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience.",
     "icons": {
       "180": "/icons/p/pancakeboss/icon-180.png",
@@ -5412,7 +5412,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level. Supports keyboard and touch controls.",
+    "description": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level.",
     "icons": {
       "180": "/icons/p/pandaflash/icon-180.png",
@@ -5477,7 +5477,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards. Supports keyboard and touch controls.",
+    "description": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards.",
     "icons": {
       "180": "/icons/p/penguin/icon-180.png",
@@ -5542,7 +5542,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos. Supports keyboard and touch controls.",
+    "description": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos.",
     "icons": {
       "180": "/icons/p/pigeon/icon-180.png",
@@ -5575,7 +5575,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles. Supports keyboard and touch controls.",
+    "description": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles.",
     "icons": {
       "180": "/icons/p/piggyroll/icon-180.png",
@@ -5642,7 +5642,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal. Supports keyboard and touch controls.",
+    "description": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal.",
     "icons": {
       "180": "/icons/p/pitana/icon-180.png",
@@ -5782,7 +5782,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner. Supports keyboard and touch controls.",
+    "description": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner.",
     "icons": {
       "180": "/icons/r/raccoonrun/icon-180.png",
@@ -5815,7 +5815,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game. Supports keyboard and touch controls.",
+    "description": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game.",
     "icons": {
       "180": "/icons/r/rainbox/icon-180.png",
@@ -5850,7 +5850,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles. Supports keyboard and touch controls.",
+    "description": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles.",
     "icons": {
       "180": "/icons/r/rapunzeltower/icon-180.png",
@@ -5882,7 +5882,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game. Supports keyboard and touch controls.",
+    "description": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game.",
     "icons": {
       "180": "/icons/r/rectangzings/icon-180.png",
@@ -5916,7 +5916,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Program a robot with simple movement commands to navigate mazes and reach the charging station. Supports keyboard and touch controls.",
+    "description": "Program a robot with simple movement commands to navigate mazes and reach the charging station. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Program a robot with simple movement commands to navigate mazes and reach the charging station.",
     "icons": {
       "180": "/icons/r/robotion/icon-180.png",
@@ -5985,7 +5985,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms. Supports keyboard and touch controls.",
+    "description": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms.",
     "icons": {
       "180": "/icons/r/ropeninja/icon-180.png",
@@ -6019,7 +6019,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive. Supports keyboard and touch controls.",
+    "description": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive.",
     "icons": {
       "180": "/icons/r/runpixierun/icon-180.png",
@@ -6053,7 +6053,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave. Supports keyboard and touch controls.",
+    "description": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave.",
     "icons": {
       "180": "/icons/s/sallybbq/icon-180.png",
@@ -6087,7 +6087,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds. Supports keyboard and touch controls.",
+    "description": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds.",
     "icons": {
       "180": "/icons/s/skylands/icon-180.png",
@@ -6154,7 +6154,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines. Supports keyboard and touch controls.",
+    "description": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines.",
     "icons": {
       "180": "/icons/s/skywire/icon-180.png",
@@ -6185,7 +6185,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols. Supports keyboard and touch controls.",
+    "description": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols.",
     "icons": {
       "180": "/icons/s/slotchicken/icon-180.png",
@@ -6253,7 +6253,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle. Supports keyboard and touch controls.",
+    "description": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle.",
     "icons": {
       "180": "/icons/s/springninja/icon-180.png",
@@ -6285,7 +6285,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score. Supports keyboard and touch controls.",
+    "description": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score.",
     "icons": {
       "180": "/icons/s/squarecrush/icon-180.png",
@@ -6318,7 +6318,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city. Supports keyboard and touch controls.",
+    "description": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city.",
     "icons": {
       "180": "/icons/s/stevenkash/icon-180.png",
@@ -6351,7 +6351,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer. Supports keyboard and touch controls.",
+    "description": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer.",
     "icons": {
       "180": "/icons/s/stickpanda/icon-180.png",
@@ -6384,7 +6384,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles. Supports keyboard and touch controls.",
+    "description": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles.",
     "icons": {
       "180": "/icons/s/stickpandaxmas/icon-180.png",
@@ -6418,7 +6418,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game. Supports keyboard and touch controls.",
+    "description": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game.",
     "icons": {
       "180": "/icons/s/sticksamurai/icon-180.png",
@@ -6452,7 +6452,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels. Supports keyboard and touch controls.",
+    "description": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels.",
     "icons": {
       "180": "/icons/s/stickygoo/icon-180.png",
@@ -6486,7 +6486,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape. Supports keyboard and touch controls.",
+    "description": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape.",
     "icons": {
       "180": "/icons/s/strangespace/icon-180.png",
@@ -6518,7 +6518,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap to dive and release to surface, guiding your submarine through underwater caverns. Runs in any modern browser on mobile and desktop.",
+    "description": "Tap to dive and release to surface, guiding your submarine through underwater caverns. Runs in any modern browser on mobile and desktop. Free to play instantly.",
     "howToPlay": "Tap to dive and release to surface, guiding your submarine through underwater caverns.",
     "icons": {
       "180": "/icons/t/taptapsubmarine/icon-180.png",
@@ -6588,7 +6588,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings. Supports keyboard and touch controls.",
+    "description": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings.",
     "icons": {
       "180": "/icons/t/titanrunner/icon-180.png",
@@ -6621,7 +6621,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup! Supports keyboard and touch controls.",
+    "description": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup! Supports keyboard and touch controls. Play free online.",
     "howToPlay": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup!",
     "icons": {
       "180": "/icons/t/tooncup/icon-180.png",
@@ -6651,7 +6651,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers. Supports keyboard and touch controls.",
+    "description": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers.",
     "icons": {
       "180": "/icons/t/trailblazer/icon-180.png",
@@ -6682,7 +6682,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles. Supports keyboard and touch controls.",
+    "description": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles.",
     "icons": {
       "180": "/icons/t/trashdash/icon-180.png",
@@ -6781,7 +6781,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery. Supports keyboard and touch controls.",
+    "description": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery.",
     "icons": {
       "180": "/icons/v/veggirabbit/icon-180.png",
@@ -6812,7 +6812,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle. Supports keyboard and touch controls.",
+    "description": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle.",
     "icons": {
       "180": "/icons/w/woodblock/icon-180.png",
@@ -6845,7 +6845,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers. Supports keyboard and touch controls.",
+    "description": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers.",
     "icons": {
       "180": "/icons/x/xtypesky/icon-180.png",
@@ -6878,7 +6878,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty. Supports keyboard and touch controls.",
+    "description": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty.",
     "icons": {
       "180": "/icons/z/zapaliens/icon-180.png",
@@ -6908,7 +6908,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Survive the night by shooting zombies that close in from all directions in this top-down horror game. Supports keyboard and touch controls.",
+    "description": "Survive the night by shooting zombies that close in from all directions in this top-down horror game. Supports keyboard and touch controls. Play free online.",
     "howToPlay": "Survive the night by shooting zombies that close in from all directions in this top-down horror game.",
     "icons": {
       "180": "/icons/z/zombienight/icon-180.png",
@@ -6937,7 +6937,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game. Supports keyboard and touch controls.",
+    "description": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game.",
     "icons": {
       "180": "/icons/z/zombieworld/icon-180.png",
@@ -6966,7 +6966,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures. Supports keyboard and touch controls.",
+    "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures. Supports keyboard and touch controls. Free to play instantly.",
     "howToPlay": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures.",
     "icons": {
       "180": "/icons/z/zoonstuner/icon-180.png",

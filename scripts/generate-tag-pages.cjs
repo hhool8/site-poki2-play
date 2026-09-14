@@ -65,12 +65,12 @@ const TAG_CONFIG = {
   strategy:    {
     label:    'Strategy',
     headline: 'Free Online Strategy Games',
-    desc:     'Outthink your opponents with the best free strategy games online. Plan every move, manage resources, and dominate the battlefield. Play instantly in your browser.',
+    desc:     'Outthink your opponents with the best free strategy games online. Plan every move, manage resources, and dominate the battlefield. Play in your browser.',
   },
   multiplayer: {
     label:    'Multiplayer',
     headline: 'Free Online Multiplayer Games',
-    desc:     'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real-time — no download, no install, just play instantly.',
+    desc:     'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real time. No download, no install, just play.',
   },
   idle:        {
     label:    'Idle',
@@ -80,7 +80,7 @@ const TAG_CONFIG = {
   arcade:      {
     label:    'Arcade',
     headline: 'Free Online Arcade Games',
-    desc:     'Relive the golden age of gaming with the best free arcade games online. Simple controls, addictive gameplay, and high scores to chase. Play instantly in any browser.',
+    desc:     'Relive the golden age of gaming with the best free arcade games online. Simple controls, addictive gameplay, and high scores to chase. Play free now.',
   },
   platformer:  {
     label:    'Platformer',
@@ -125,7 +125,9 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   const pageUrl = tagBase;
   const title   = `${cfg.headline} — ${SITE_NAME}`;
   const _ogImgGame = allTagGames.find(g => g.featured && g.imgSrc) || allTagGames.find(g => g.imgSrc);
-  const ogImg    = _ogImgGame ? _ogImgGame.imgSrc : `${BASE_URL}/assets/icon/icon-512.png`;
+  const ogImg = _ogImgGame
+    ? (_ogImgGame.imgSrc.startsWith('http') ? _ogImgGame.imgSrc : `${BASE_URL}${_ogImgGame.imgSrc}`)
+    : `${BASE_URL}/assets/icon/icon-512.png`;
 
   // BreadcrumbList JSON-LD
   const breadcrumbItems = [
@@ -166,12 +168,13 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     }),
   });
 
-  // Static game list (visible to crawlers + no-JS users) — include all tag games
+  // Static game list (visible to crawlers + no-JS users) — include all tag games.
+  // Titles are wrapped in <h3> so pages expose a proper h1→h2→h3 outline.
   const gameListHtml = allTagGames.map(g => {
     const slug = normalizeHref(g.link);
     const char = slug[0].toLowerCase();
     const href = `/game/${char}/${slug}/`;
-    return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
+    return `      <li><h3><a href="${esc(href)}">${esc(g.title)}</a></h3></li>`;
   }).join('\n');
 
   // Featured games (short list at top). Matching rule: backend `featured === true` and a `badge` must exist.
@@ -180,7 +183,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     const slug = normalizeHref(g.link);
     const char = slug[0].toLowerCase();
     const href = `/game/${char}/${slug}/`;
-    return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
+    return `      <li><h3><a href="${esc(href)}">${esc(g.title)}</a></h3></li>`;
   }).join('\n');
 
   // Related categories (all other tags)
@@ -267,8 +270,9 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     <ul>
 ${gameListHtml}
     </ul>
-    <!-- Moved H1 and intro below the full games list for noscript users (per designer request) -->
-    <h1>${esc(cfg.headline)}</h1>
+    <!-- Moved intro below the full games list for noscript users (per designer request).
+         Kept as <p> — the visible hero already carries the single <h1> for this page. -->
+    <p class="tag-noscript-heading"><strong>${esc(cfg.headline)}</strong></p>
     <p>${esc(cfg.desc)}</p>
     <nav aria-label="Other Categories">
       <p>Other Categories:</p>
@@ -334,7 +338,10 @@ for (const g of allGames) {
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 // Remove any existing tag-intro sections from the template so generator
 // inserts a single intro in the desired location (after #game-sections).
-const sanitizedBody = bodyInner.replace(/<section class="tag-intro">[\s\S]*?<\/section>/gi, '');
+const sanitizedBody = bodyInner
+  .replace(/<section class="tag-intro">[\s\S]*?<\/section>/gi, '')
+  // Strip prerendered home sections — tag pages must not embed homepage content
+  .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '<!--HOME-STATIC:START--><!--HOME-STATIC:END-->');
 const gameBodyContent = sanitizedBody
   .replace(/<\/body>\s*$/i, '')
   .replace(/<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i, '<p$1>What are you playing today?</p>');
