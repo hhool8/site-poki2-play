@@ -1,0 +1,39 @@
+# Poki2
+
+> Poki2 (play.poki2.online) is a free online gaming portal offering 200+ browser games — action, puzzle, adventure, racing, shooting, multiplayer, strategy, idle, arcade, sports and platformer titles. All games run instantly in any modern desktop or mobile browser with no download, no installation and no registration.
+
+Poki2 is a static HTML5 games website. Each game has a dedicated page with an embedded playable iframe, a short description and related game recommendations. Pages are server-rendered-friendly (content is present in the initial HTML), so crawlers and LLMs can read full content without executing JavaScript.
+
+## Main Pages
+
+- [Home](https://play.poki2.online/): Full game catalog with 12 category sections and trending games.
+- [About](https://play.poki2.online/about/): What Poki2 is and how it works.
+- [Contact](https://play.poki2.online/contact/): Contact form and feedback channels.
+- [Terms of Service](https://play.poki2.online/terms/): Usage terms for the site.
+- [Privacy Policy](https://play.poki2.online/privacy/): Data collection and cookie practices.
+- [DMCA](https://play.poki2.online/dmca/): Copyright takedown request procedure.
+
+## Game Categories
+
+- [Action Games](https://play.poki2.online/tag/action/): Fast-paced combat, platformers and adventures.
+- [Puzzle Games](https://play.poki2.online/tag/puzzle/): Brain teasers, logic and 2048-style challenges.
+- [Adventure Games](https://play.poki2.online/tag/adventure/): Exploration and story-driven quests.
+- [Racing Games](https://play.poki2.online/tag/racing/): Kart racers and high-speed tracks.
+- [Shooting Games](https://play.poki2.online/tag/shooting/): FPS, top-down shooters and blasters.
+- [Multiplayer Games](https://play.poki2.online/tag/multiplayer/): Play with or against other players.
+- [Competitive Games](https://play.poki2.online/tag/competitive/): Skill-based PvP challenges.
+- [Strategy Games](https://play.poki2.online/tag/strategy/): Build, plan and conquer.
+- [Idle Games](https://play.poki2.online/tag/idle/): Clickers and incremental progress games.
+- [Arcade Games](https://play.poki2.online/tag/arcade/): Classic high-score chasers.
+- [Sports Games](https://play.poki2.online/tag/sports/): Football, basketball, soccer and more.
+- [Platformer Games](https://play.poki2.online/tag/platformer/): Jump-and-run classics.
+
+## Game Pages
+
+Every game lives at `https://play.poki2.online/game/<first-letter>/<slug>/` (for example [Crossy Road](https://play.poki2.online/game/c/crossyroad/) or [Among Us](https://play.poki2.online/game/a/among-us/)). The complete list of game URLs is available in the [sitemap](https://play.poki2.online/sitemap.xml).
+
+## Usage Notes
+
+- All content is free to play; games are third-party embeds credited to their original developers.
+- No account or personal data is required to play; see the [Privacy Policy](https://play.poki2.online/privacy/).
+- For copyright issues use the [DMCA page](https://play.poki2.online/dmca/).
