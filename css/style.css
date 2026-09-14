@@ -237,6 +237,72 @@ input{font:inherit}
   background-color:#f3f4f6;
 }
 
+/* ---- Hero Android app downloads ---- */
+.hero-apps{
+  margin-top:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.hero-apps-title{
+  font-size:.9rem;
+  font-weight:600;
+  opacity:.9;
+  letter-spacing:.02em;
+}
+.hero-apps-list{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.hero-app{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 14px 6px 6px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.28);
+  color:#fff;
+  text-decoration:none;
+  font-size:.82rem;
+  line-height:1.2;
+  backdrop-filter:blur(4px);
+  transition:background .18s var(--ease), transform .18s var(--ease), border-color .18s var(--ease);
+}
+.hero-app img{
+  width:28px;height:28px;
+  border-radius:8px;
+  flex-shrink:0;
+  background:#f3f4f6;
+  display:block;
+}
+.hero-app-name{
+  font-weight:700;
+  max-width:150px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.hero-app-cta{
+  font-size:.68rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  padding:3px 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.22);
+  white-space:nowrap;
+}
+.hero-app:hover{
+  background:rgba(255,255,255,.28);
+  border-color:rgba(255,255,255,.5);
+  transform:translateY(-2px);
+}
+.hero-app:active{transform:translateY(0)}
+
 /* ---- Recently Played ---- */
 .recently-played .clear-recent{
   font-size:.8rem;color:var(--text-muted);

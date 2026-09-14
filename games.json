@@ -186,7 +186,8 @@
       "192": "/icons/b/blockclaimio/icon-192.png",
       "512": "/icons/b/blockclaimio/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.paperio2"
   },
   {
     "title": "Crossy Road",
@@ -221,7 +222,8 @@
       "180": "/icons/c/crossyroad/icon-180.png",
       "192": "/icons/c/crossyroad/icon-192.png",
       "512": "/icons/c/crossyroad/icon-512.png"
-    }
+    },
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.crossyroadshow.offline"
   },
   {
     "title": "BaBa Is You",
@@ -288,7 +290,8 @@
       "192": "/icons/z/zcj2/icon-192.png",
       "512": "/icons/z/zcj2/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj2"
   },
   {
     "title": "Zombies Can't Jump",
@@ -320,7 +323,8 @@
       "192": "/icons/z/zombiescantjump/icon-192.png",
       "512": "/icons/z/zombiescantjump/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj"
   },
   {
     "title": "Runner Yodas",
@@ -7002,6 +7006,7 @@
       "180": "/icons/s/snakebird/icon-180.png",
       "192": "/icons/s/snakebird/icon-192.png",
       "512": "/icons/s/snakebird/icon-512.png"
-    }
+    },
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.snakebird.offline"
   }
 ]
