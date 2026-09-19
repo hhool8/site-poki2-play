@@ -284,6 +284,9 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Google AdSense -->
+  <script>window.adsbygoogle = window.adsbygoogle || [];</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5676206764686662" crossorigin="anonymous"></script>
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(cfg.desc)}">
   <link rel="canonical" href="${pageUrl}">
