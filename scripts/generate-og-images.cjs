@@ -33,7 +33,7 @@ async function fetchBuffer(src) {
 			if (!res.ok) throw new Error(`HTTP ${res.status}`);
 			return Buffer.from(await res.arrayBuffer());
 		}
-		const local = path.join(__dirname, '..', src.replace(/^\//, ''));
+		const local = path.join(__dirname, '..', 'public', src.replace(/^\//, ''));
 		if (fs.existsSync(local)) return fs.readFileSync(local);
 		return null;
 	} catch (err) {
