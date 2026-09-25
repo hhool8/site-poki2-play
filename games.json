@@ -693,7 +693,8 @@
       "europe",
       "medieval",
       "singleplayer",
-      "competitive"
+      "competitive",
+      "classic"
     ],
     "input": [
       "touch",
@@ -879,7 +880,8 @@
     "link": "https://c.poki2.online/circlo/",
     "imgSrc": "/icons/c/circlo/icon-512.png",
     "tags": [
-      "other"
+      "other",
+      "classic"
     ],
     "input": [
       "touch",
@@ -1113,7 +1115,8 @@
     "link": "https://d.poki2.online/deal-or-no-deal/",
     "imgSrc": "/icons/d/deal-or-no-deal/icon-512.png",
     "tags": [
-      "other"
+      "other",
+      "classic"
     ],
     "input": [
       "touch",
@@ -1520,7 +1523,8 @@
     "link": "https://h.poki2.online/helicopter/",
     "imgSrc": "/icons/h/helicopter/icon-512.png",
     "tags": [
-      "other"
+      "other",
+      "classic"
     ],
     "input": [
       "touch",
@@ -1577,7 +1581,8 @@
     "link": "https://i.poki2.online/interactivebuddy/",
     "imgSrc": "/icons/i/interactivebuddy/icon-512.png",
     "tags": [
-      "other"
+      "other",
+      "classic"
     ],
     "input": [
       "touch",
@@ -1606,7 +1611,8 @@
     "imgSrc": "/icons/j/just-one-boss/icon-512.png",
     "tags": [
       "other",
-      "pixel"
+      "pixel",
+      "classic"
     ],
     "input": [
       "keyboard"
@@ -1872,7 +1878,8 @@
       "restaurant",
       "game",
       "online game",
-      "html5 game"
+      "html5 game",
+      "classic"
     ],
     "input": [
       "touch",
@@ -2361,7 +2368,8 @@
     "imgSrc": "/icons/t/theheist/icon-512.png",
     "tags": [
       "puzzle",
-      "idle"
+      "idle",
+      "classic"
     ],
     "input": [
       "touch",
@@ -2386,7 +2394,8 @@
     "link": "https://t.poki2.online/there-is-no-game/",
     "imgSrc": "/icons/t/there-is-no-game/icon-512.png",
     "tags": [
-      "other"
+      "other",
+      "classic"
     ],
     "input": [
       "touch",
@@ -2792,7 +2801,8 @@
     "tags": [
       "achievement",
       "singleplayer",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -2882,7 +2892,8 @@
     "tags": [
       "achievement",
       "bubble",
-      "singleplayer"
+      "singleplayer",
+      "classic"
     ],
     "input": [
       "touch",
@@ -2912,7 +2923,8 @@
     "tags": [
       "skill",
       "fishing",
-      "singleplayer"
+      "singleplayer",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3066,7 +3078,8 @@
       "achievement",
       "cave",
       "jumper",
-      "singleplayer"
+      "singleplayer",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3096,7 +3109,8 @@
     "tags": [
       "achievement",
       "box",
-      "singleplayer"
+      "singleplayer",
+      "classic"
     ],
     "input": [
       "touch"
@@ -3126,7 +3140,8 @@
       "singleplayer",
       "jumper",
       "mouse",
-      "cheese"
+      "cheese",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3157,7 +3172,8 @@
       "achievement",
       "singleplayer",
       "jumper",
-      "chip"
+      "chip",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3188,7 +3204,8 @@
       "singleplayer",
       "skill",
       "christmas",
-      "ball"
+      "ball",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3220,7 +3237,8 @@
       "singleplayer",
       "skill",
       "circle",
-      "ball"
+      "ball",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3252,7 +3270,8 @@
       "singleplayer",
       "skill",
       "circle",
-      "pong"
+      "pong",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3284,7 +3303,8 @@
       "singleplayer",
       "skill",
       "circle",
-      "tris"
+      "tris",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3315,7 +3335,8 @@
       "achievement",
       "singleplayer",
       "ninja",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3601,7 +3622,8 @@
       "singleplayer",
       "skill",
       "circle",
-      "drop"
+      "drop",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3666,7 +3688,8 @@
       "singleplayer",
       "scratch",
       "card",
-      "cartoon"
+      "cartoon",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3800,7 +3823,8 @@
       "singleplayer",
       "escape",
       "fast",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3835,7 +3859,8 @@
       "rescue",
       "8-bit",
       "pixel",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -3866,7 +3891,8 @@
       "achievement",
       "fishing",
       "singleplayer",
-      "boat"
+      "boat",
+      "classic"
     ],
     "input": [
       "touch",
@@ -4743,7 +4769,8 @@
       "achievement",
       "singleplayer",
       "jumper",
-      "jomjom"
+      "jomjom",
+      "classic"
     ],
     "input": [
       "touch",
@@ -5366,7 +5393,8 @@
       "stickman-style",
       "taptap",
       "html5game",
-      "food"
+      "food",
+      "classic"
     ],
     "input": [
       "touch",
@@ -5431,7 +5459,8 @@
       "pebble",
       "boy",
       "okijin",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -5463,7 +5492,8 @@
       "singleplayer",
       "penguin",
       "taptap",
-      "html5game"
+      "html5game",
+      "classic"
     ],
     "input": [
       "touch",
@@ -5595,7 +5625,8 @@
       "kid",
       "jumper",
       "taptap",
-      "html5game"
+      "html5game",
+      "classic"
     ],
     "input": [
       "touch",
@@ -5971,7 +6002,8 @@
       "rope",
       "okijin",
       "taptap",
-      "html5game"
+      "html5game",
+      "classic"
     ],
     "input": [
       "touch",
@@ -6140,7 +6172,8 @@
       "singleplayer",
       "balance",
       "skywire",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -6239,7 +6272,8 @@
       "ninja",
       "spring",
       "jump",
-      "taptap"
+      "taptap",
+      "classic"
     ],
     "input": [
       "touch",
@@ -6304,7 +6338,8 @@
       "singleplayer",
       "ninja",
       "steven",
-      "kash"
+      "kash",
+      "classic"
     ],
     "input": [
       "touch",

@@ -30,6 +30,7 @@
     shooting:    { emoji: "🔫", label: "Shooting" },
     sports:      { emoji: "⚽", label: "Sports" },
     strategy:    { emoji: "♟️", label: "Strategy" },
+    classic:     { emoji: "🎵", label: "Classic" },
     // fallback label for non-standard tags (no tag page)
     other:       { emoji: "🎲", label: "Other" },
   };
@@ -63,6 +64,7 @@
     "arcade",
     "sports",
     "platformer",
+    "classic",
   ];
   // Maximum games to show per category section (configurable, computed per device/orientation)
   let SECTION_LIMIT; // set below after detecting mobile/orientation

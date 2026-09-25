@@ -27,6 +27,7 @@ Poki2 is a static HTML5 games website. Each game has a dedicated page with an em
 - [Arcade Games](https://play.poki2.online/tag/arcade/): Classic high-score chasers.
 - [Sports Games](https://play.poki2.online/tag/sports/): Football, basketball, soccer and more.
 - [Platformer Games](https://play.poki2.online/tag/platformer/): Jump-and-run classics.
+- [Classic Games](https://play.poki2.online/tag/classic/): Timeless browser classics from the Flash era and beyond.
 
 ## Game Pages
 

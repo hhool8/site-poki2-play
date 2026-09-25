@@ -246,6 +246,34 @@ input{font:inherit}
 .faq-q{font-size:1.05rem;font-weight:700;margin:0 0 6px}
 .faq-item p{margin:0;line-height:1.6}
 
+/* Visible static game index on tag pages (crawlable internal links) */
+.tag-games{
+  padding:16px 20px;
+  max-width:860px;
+  margin:0 auto;
+}
+.tag-games h2{margin:0 0 10px}
+.tag-games ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+  gap:4px 16px;
+}
+.tag-games li{margin:0}
+.tag-games a{
+  display:block;
+  font-size:.85rem;
+  line-height:1.7;
+  opacity:.85;
+  text-decoration:none;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tag-games a:hover{opacity:1;text-decoration:underline}
+
 /* Reserve layout space for hero thumbnails to avoid CLS */
 .hero-card{
   display:block;

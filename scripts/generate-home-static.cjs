@@ -42,10 +42,11 @@ const TAG_META = {
   shooting:    { emoji: '\u{1F52B}', label: 'Shooting' },
   sports:      { emoji: '\u26BD', label: 'Sports' },
   strategy:    { emoji: '\u265F\uFE0F', label: 'Strategy' },
+  classic:     { emoji: '\u{1F3B5}', label: 'Classic' },
 };
 const TAG_ORDER = [
   'action', 'puzzle', 'adventure', 'racing', 'shooting', 'multiplayer',
-  'competitive', 'strategy', 'idle', 'arcade', 'sports', 'platformer',
+  'competitive', 'strategy', 'idle', 'arcade', 'sports', 'platformer', 'classic',
 ];
 const SECTION_LIMIT = 12;
 

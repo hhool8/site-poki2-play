@@ -2,11 +2,12 @@
 /play/*       /  301
 /category/*   /  301
 
-# Retire removed advertising files before the SPA fallback.
+# Retire removed advertising files.
 /ads.txt / 410
 /app-ads.txt / 410
 
-# SPA fallback: rewrite all other requests to index.html so client router handles paths
+# Note: no SPA fallback — every real route is a static file; unknown paths must return 404.html
+# (a 200-rewrite to index.html would create soft-404 duplicate content and hurt GSC indexing)
 # Generated per-game redirects
 /games/2048 /game/2/2048/ 301
 /games/2048/ /game/2/2048/ 301
@@ -450,4 +451,3 @@
 /games/zoostuner/ /game/z/zoostuner/ 301
 /games/snakebird /game/s/snakebird/ 301
 /games/snakebird/ /game/s/snakebird/ 301
-/*    /index.html   200

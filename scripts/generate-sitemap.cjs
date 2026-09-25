@@ -29,7 +29,7 @@ function url(loc, changefreq, priority, lastmod, imgSrc, imgTitle){
 if(!fs.existsSync(GAMES)){ console.error('games.json not found'); process.exit(1); }
 
 const games = JSON.parse(fs.readFileSync(GAMES,'utf8'));
-const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive'];
+const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive','classic'];
 const lines = ['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"','        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">','','  <!-- Site pages -->', url(`${BASE}/`,'daily','1.0',TODAY), url(`${BASE}/about/`,'yearly','0.4',TODAY), url(`${BASE}/privacy/`,'yearly','0.3',TODAY), url(`${BASE}/terms/`,'yearly','0.3',TODAY), url(`${BASE}/contact/`,'yearly','0.3',TODAY), url(`${BASE}/dmca/`,'yearly','0.2',TODAY),'','  <!-- Tag / category pages -->', ...TAG_PAGES.map(t => url(`${BASE}/tag/${t}/`,'weekly','0.8',TODAY)),'','  <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->'];
 
 const seen = new Set(); let count = 0;

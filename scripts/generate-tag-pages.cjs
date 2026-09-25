@@ -32,6 +32,7 @@ const WIKI = {
   multiplayer: { title: 'Multiplayer video game', url: 'https://en.wikipedia.org/wiki/Multiplayer_video_game', quote: 'a video game in which more than one person can play in the same game environment at the same time' },
   competitive: { title: 'Esports',            url: 'https://en.wikipedia.org/wiki/Esports',            quote: 'a form of organized, multiplayer video game competition between players, often for prizes and rankings' },
   strategy:    { title: 'Strategy video game', url: 'https://en.wikipedia.org/wiki/Strategy_video_game', quote: 'a video game genre in which gameplay requires careful and skillful thinking and planning to achieve victory' },
+  classic:     { title: 'Browser game',       url: 'https://en.wikipedia.org/wiki/Browser_game',       quote: 'a video game that is played in a web browser using a standard web-based technology stack, without requiring installation' },
   idle:        { title: 'Idle game',          url: 'https://en.wikipedia.org/wiki/Idle_game',          quote: 'a video game in which progress is achieved even when the player is not actively playing, often called incremental or clicker games' },
   arcade:      { title: 'Arcade game',        url: 'https://en.wikipedia.org/wiki/Arcade_game',        quote: 'a machine-arcade game genre traditionally defined by fast-paced, easy-to-learn gameplay built around chasing a high score' },
   sports:      { title: 'Sports video game',  url: 'https://en.wikipedia.org/wiki/Sports_video_game',  quote: 'a video game genre that simulates the practice of sports, including team sports, athletics and racing' },
@@ -116,6 +117,11 @@ const TAG_CONFIG = {
     headline: 'Free Online Competitive Games',
     desc:     'Rise to the top in the best free competitive games online. Go head-to-head, prove your skills, and claim the number one spot. Play now in your browser.',
   },
+  classic:     {
+    label:    'Classic',
+    headline: 'Free Online Classic Games',
+    desc:     'Revisit the all-time greats in our classic games collection — timeless browser titles from the Flash era and beyond, all free to play instantly in your browser. No download, no install.',
+  },
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -144,7 +150,7 @@ function extractBody(htmlFile) {
 }
 
 // ── Page builder ──────────────────────────────────────────────────────────────
-function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames = games) {
+function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames = games, listGames = allTagGames) {
   const tagBase = `${BASE_URL}/tag/${tag}/`;
   const pageUrl = tagBase;
   const title   = `${cfg.headline} — ${SITE_NAME}`;
@@ -192,14 +198,23 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     }),
   });
 
-  // Static game list (visible to crawlers + no-JS users) — include all tag games.
-  // Titles are wrapped in <h3> so pages expose a proper h1→h2→h3 outline.
-  const gameListHtml = allTagGames.map(g => {
+  // Visible static game index (crawler-readable internal links + no-JS fallback).
+  // Rendered as normal HTML (NOT <noscript>): Googlebot renders JS, and the
+  // page's own defensive script strips <noscript> nodes, which used to erase
+  // every game link from the rendered DOM. This section stays in the DOM.
+  // listGames covers every tagged game incl. mobile-only titles.
+  const gameListHtml = listGames.map(g => {
     const slug = normalizeHref(g.link);
     const char = slug[0].toLowerCase();
     const href = `/game/${char}/${slug}/`;
-    return `      <li><h3><a href="${esc(href)}">${esc(g.title)}</a></h3></li>`;
+    return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
   }).join('\n');
+  const gameListSectionHtml = `<section class="tag-games" id="tag-games" aria-label="All ${esc(cfg.label)} games">
+  <h2>All ${esc(cfg.label)} Games (${listGames.length})</h2>
+  <ul>
+${gameListHtml}
+  </ul>
+</section>`;
 
   // Featured games (short list at top). Matching rule: backend `featured === true` and a `badge` must exist.
   const featuredGames = allTagGames.filter(g => g.featured === true && g.badge);
@@ -276,7 +291,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     )
     .replace(
       '<div id="game-sections"></div>',
-      `<div id="game-sections"></div>\n\n${tagIntroHtml}\n\n${faqHtml}`
+      `<div id="game-sections"></div>\n\n${tagIntroHtml}\n\n${gameListSectionHtml}\n\n${faqHtml}`
     );
 
   return `<!DOCTYPE html>
@@ -327,14 +342,9 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"><\/script>
   <script>window.dataLayer=window.dataLayer||[];window.__poki2GaConfigured=window.__poki2GaConfigured||false;function gtag(){dataLayer.push(arguments);}function poki2PlayInitAnalytics(){if(window.__poki2GaConfigured)return;gtag('config','G-KTE3BWDVHC',{send_page_view:true});window.__poki2GaConfigured=true;}gtag('js',new Date());gtag('consent','default',{analytics_storage:'denied',wait_for_update:500});<\/script></head>
   ${bodyTag}
-  <!-- Static content for crawlers / no-JS users -->
+  <!-- no-JS fallback nav (the full game index now lives in the visible .tag-games section) -->
   <noscript>
-    <p>${totalCount} games in this category:</p>
-    <ul>
-${gameListHtml}
-    </ul>
-    <!-- Moved intro below the full games list for noscript users (per designer request).
-         Kept as <p> — the visible hero already carries the single <h1> for this page. -->
+    <!-- Kept as <p> — the visible hero already carries the single <h1> for this page. -->
     <p class="tag-noscript-heading"><strong>${esc(cfg.headline)}</strong></p>
     <p>${esc(cfg.desc)}</p>
     <nav aria-label="Other Categories">
@@ -398,6 +408,19 @@ for (const g of allGames) {
   }
 }
 
+// Full tag map for the crawler-visible static list: includes mobile-only and
+// desktop-excluded games whose static pages exist but which the SPA hides.
+// The game list links must cover every generated /game/ page per tag.
+const tagMapAll = {};
+for (const g of deduped) {
+  if (g.show === false) continue;
+  const rawTags = Array.isArray(g.tags) ? g.tags : ["other"];
+  const uniqueTags = Array.from(new Set(rawTags.map((t) => String(t).trim())));
+  for (const t of (uniqueTags.length ? uniqueTags : ["other"])) {
+    (tagMapAll[t] = tagMapAll[t] || []).push(g);
+  }
+}
+
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 // Remove any existing tag-intro sections from the template so generator
 // inserts a single intro in the desired location (after #game-sections).
@@ -418,14 +441,17 @@ for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
   // Only generate a single canonical tag page. Pagination is handled
   // dynamically by the SPA at runtime.
   const pageGames = tagGames.slice(0, PAGE_SIZE);
+  // Crawler-visible list: every game carrying this tag (incl. mobile-only),
+  // so all generated /game/ pages receive an internal link from this hub.
+  const listGames = (tagMapAll[tag] && tagMapAll[tag].length >= tagGames.length) ? tagMapAll[tag] : tagGames;
   const dir = path.join(DIST, 'tag', tag);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(
     path.join(dir, 'index.html'),
-    buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, tagGames),
+    buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, tagGames, listGames),
     'utf8'
   );
-  console.log(`  /tag/${tag}/  (${tagGames.length} games)`);
+  console.log(`  /tag/${tag}/  (${tagGames.length} games, list: ${listGames.length})`);
   count++;
 }
 
