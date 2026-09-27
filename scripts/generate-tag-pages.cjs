@@ -120,7 +120,7 @@ const TAG_CONFIG = {
   classic:     {
     label:    'Classic',
     headline: 'Free Online Classic Games',
-    desc:     'Revisit the all-time greats in our classic games collection — timeless browser titles from the Flash era and beyond, all free to play instantly in your browser. No download, no install.',
+    desc:     'Revisit the all-time greats in our classic games collection — timeless browser titles from the Flash era and beyond, all free to play instantly in your browser.',
   },
 };
 

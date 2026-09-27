@@ -28,6 +28,7 @@
     "audit:imgs": "node tools/audit/check-img-src.cjs",
     "audit:desc": "node tools/audit/check-descriptions.cjs",
     "audit:seo": "node tools/audit/check-seo-meta.cjs",
+    "audit:semrush": "node tools/audit/semrush-style-audit.mjs",
     "enrich:desc": "node tools/content/enrich-descriptions.cjs",
     "enrich:desc:apply": "node tools/content/enrich-descriptions.cjs --apply",
     "generate:howtoplay": "node scripts/generate-how-to-play.cjs",
