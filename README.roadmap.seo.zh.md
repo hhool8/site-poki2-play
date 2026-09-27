@@ -72,7 +72,8 @@
 
 - [ ] 15. **404 页优化** — 加热门游戏推荐 + 分类链接
 - [ ] 16. **about / contact / privacy meta description 补全**
-- [ ] 17. **`lastmod` 自动化** — 读文件实际修改时间替代硬编码
+- [x] 17. **`lastmod` 自动化** — 内容指纹 sidecar（`scripts/sitemap-lastmod.json`），未变保留旧日期，变了才更新，commit `8a5dd1d`
+- [x] 18. **游戏页内容深度批次 1**（2026-09-27，commit `39a4739`）— 67 款知名游戏手写 about 内容（noscript 可见正文）；140 款无搜索需求冷门衍生游戏临时 noindex,follow + 移出 sitemap（可逆，`tools/content/apply-content-batch-1.cjs`）；sitemap 238→98 URL；待处理薄页 182→8（第二批队列）。审计报告 `seo-content-audit.md`
 
 ## P7 ✅ Tag 页分页
 
@@ -120,9 +121,11 @@
 
 ## P13 — 外链 / 品牌
 
-- [ ] 35. 提交到 Indie DB / itch.io / AlternativeTo 目录
-- [ ] 36. 开发者主页外链
-- [ ] 37. Wikipedia / Fandom 词条补充链接
+> 行动包见 `README.backlinks.zh.md`（含每站文案与优先级排序）
+
+- [ ] 35. 提交到 AlternativeTo / SaaSHub / Reddit 目录（itch.io / Indie DB 已评估不适用）
+- [ ] 36. 开发者主页外链 — GitHub profile 5 分钟可做
+- [ ] 37. ~~Wikipedia~~ / Fandom 谨慎（每季度≤2-3条）→ **改走 Wikidata 条目**（P20 #62 前置）
 
 ## P14 — 移动端专项
 
@@ -177,9 +180,11 @@
 
 | 指标 | 数值 |
 |---|---|
-| 游戏页 | 219 |
-| Tag 页 | 12 |
-| Sitemap 总 URL | 237 |
+| 游戏页 | 219（67 有手写 about 内容 / 140 临时 noindex / 12 第二批内容队列） |
+| Tag 页 | 13（含 classic） |
+| Sitemap 总 URL | 98（79 game + 13 tag + 6 站点页） |
+| 页面自重复 | 0（原 218/219，commit `8a5dd1d` 修复） |
+| lastmod | 自动化（内容指纹 sidecar） |
 | 审计错误 | 0 |
 | 审计警告 | 0 |
 | 分支 | main = dev_seo = `8199db5` |
