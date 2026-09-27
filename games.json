@@ -28,7 +28,8 @@
     "featured": false,
     "badge": "",
     "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master. Supports keyboard and touch controls.",
-    "howToPlay": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master."
+    "howToPlay": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master.",
+    "about": "Slide tiles with the arrow keys — identical numbers merge into their sum. The board fills up fast, so the classic strategy is to keep your highest tile locked in one corner and build a descending chain around it. Never swipe toward the corner where your big tile sits, and think one merge ahead before each move."
   },
   {
     "title": "Among Us",
@@ -60,7 +61,8 @@
       "180": "/icons/a/among-us/icon-180.png",
       "192": "/icons/a/among-us/icon-192.png",
       "512": "/icons/a/among-us/icon-512.png"
-    }
+    },
+    "about": "A social deduction game for 4-15 players: crewmates run around the ship completing tasks while hidden impostors sabotage systems and pick them off one by one. As a crewmate, finish tasks and vote out the impostor; as an impostor, lie your way through emergency meetings. Watching who was alone near a body — and whose task bar never moved — wins games."
   },
   {
     "title": "Basketball Stars",
@@ -92,7 +94,8 @@
       "180": "/icons/b/basketball-stars/icon-180.png",
       "192": "/icons/b/basketball-stars/icon-192.png",
       "512": "/icons/b/basketball-stars/icon-512.png"
-    }
+    },
+    "about": "1v1 or 2v2 basketball duels where you steal, dribble and shoot with simple controls. Timing beats spamming: fake a shot to send the defender jumping past you, then take the easy bucket. On defense, hold your position rather than lunging — a mistimed steal leaves you flat-footed."
   },
   {
     "title": "Battle for Gondor",
@@ -124,7 +127,8 @@
       "192": "/icons/b/battleforgondor/icon-192.png",
       "512": "/icons/b/battleforgondor/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Big Red Button",
@@ -153,7 +157,8 @@
       "192": "/icons/b/bigredbutton/icon-192.png",
       "512": "/icons/b/bigredbutton/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Blockclaim.io",
@@ -187,7 +192,8 @@
       "512": "/icons/b/blockclaimio/icon-512.png"
     },
     "badge": "",
-    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.paperio2"
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.paperio2",
+    "noindex": true
   },
   {
     "title": "Crossy Road",
@@ -223,7 +229,8 @@
       "192": "/icons/c/crossyroad/icon-192.png",
       "512": "/icons/c/crossyroad/icon-512.png"
     },
-    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.crossyroadshow.offline"
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.crossyroadshow.offline",
+    "about": "An endless take on Frogger: hop forward across roads, rivers and rail tracks, where cars, logs and trains punish hesitation and greed alike. Move in bursts when a lane clears, hug the far side of logs, and listen — the train warning sound buys you the time hesitation would waste."
   },
   {
     "title": "BaBa Is You",
@@ -258,7 +265,8 @@
       "180": "/icons/b/babaisyou/icon-180.png",
       "192": "/icons/b/babaisyou/icon-192.png",
       "512": "/icons/b/babaisyou/icon-512.png"
-    }
+    },
+    "about": "Every rule on the level grid is made of movable word tiles: push \"BABA IS YOU\", \"WALL IS STOP\" or \"FLAG IS WIN\" to rewrite how the world works. There is often more than one winning rule set — if the obvious solution is blocked, try making a different object \"IS YOU\", or push \"WIN\" somewhere new."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2/",
@@ -291,7 +299,8 @@
       "512": "/icons/z/zcj2/icon-512.png"
     },
     "badge": "",
-    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj2"
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj2",
+    "about": "The sequel to Zombies Can't Jump: more weapons, more zombies and tougher barricade-defense waves. Upgrade damage before fire rate, keep repairing during lulls, and save grenades for the armored zombies that shrug off pistol rounds."
   },
   {
     "title": "Zombies Can't Jump",
@@ -324,7 +333,8 @@
       "512": "/icons/z/zombiescantjump/icon-512.png"
     },
     "badge": "popular",
-    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj"
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.zcj",
+    "about": "Hold the wall against waves of zombies: aim, shoot and repair barricades while managing limited ammo. Headshots save bullets, and the reload rhythm matters more than raw firepower — keep one clip in reserve for the stragglers that always come last."
   },
   {
     "title": "Runner Yodas",
@@ -357,7 +367,8 @@
       "192": "/icons/r/runneryodas/icon-192.png",
       "512": "/icons/r/runneryodas/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Cube Ninja",
@@ -388,7 +399,8 @@
       "192": "/icons/c/cubeninja/icon-192.png",
       "512": "/icons/c/cubeninja/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Battle Day Brawl",
@@ -418,7 +430,8 @@
       "192": "/icons/b/battledaybrawl/icon-192.png",
       "512": "/icons/b/battledaybrawl/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Define Of Karmax 3",
@@ -449,7 +462,8 @@
       "192": "/icons/d/defineofkarmax3/icon-192.png",
       "512": "/icons/d/defineofkarmax3/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Drone Wars",
@@ -481,7 +495,8 @@
       "192": "/icons/d/dronewars/icon-192.png",
       "512": "/icons/d/dronewars/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Luxahoy",
@@ -513,7 +528,8 @@
       "192": "/icons/l/luxahoy/icon-192.png",
       "512": "/icons/l/luxahoy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sambogart",
@@ -546,7 +562,8 @@
       "192": "/icons/s/sambogart/icon-192.png",
       "512": "/icons/s/sambogart/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ninja Kid VS Zombies",
@@ -580,7 +597,8 @@
       "192": "/icons/n/ninjakidvszombies/icon-192.png",
       "512": "/icons/n/ninjakidvszombies/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Space Cowboy",
@@ -614,7 +632,8 @@
       "192": "/icons/s/spacecowboy/icon-192.png",
       "512": "/icons/s/spacecowboy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Silver Arrow",
@@ -648,7 +667,8 @@
       "192": "/icons/s/silverarrow/icon-192.png",
       "512": "/icons/s/silverarrow/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ninja Blade",
@@ -714,7 +734,8 @@
       "192": "/icons/b/blackknight/icon-192.png",
       "512": "/icons/b/blackknight/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Swing a sword as the Black Knight defending the keep: time swings against waves of invaders climbing the walls. Upgrades between waves matter more than raw clicking — armor keeps you alive to swing, and the sword's arc hits multiple climbers, so wait for them to bunch."
   },
   {
     "title": "Breaking the Bank",
@@ -749,7 +770,8 @@
       "192": "/icons/b/breakingthebank/icon-192.png",
       "512": "/icons/b/breakingthebank/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A short choose-your-path comedy from the Henry Stickmin collection: you are trying to break into a bank vault, and every option is either genius or disastrous. Only one plan per scene works — the rest end in instant failure screens. The fun is in watching the wrong choices explode, so try everything."
   },
   {
     "title": "Big Tower Tiny Square",
@@ -780,7 +802,8 @@
       "180": "/icons/b/bigtowertinysquare/icon-180.png",
       "192": "/icons/b/bigtowertinysquare/icon-192.png",
       "512": "/icons/b/bigtowertinysquare/icon-512.png"
-    }
+    },
+    "about": "A brutally precise platformer where a tiny square climbs one enormous tower, one checkpoint at a time. Spikes, swinging hammers and teleporting hazards are tuned to punish even a pixel of sloppy movement. Learn each section's rhythm instead of rushing — deaths are instant, checkpoints are generous, and the tower never changes."
   },
   {
     "title": "Cannon Basketball 4",
@@ -812,7 +835,8 @@
       "192": "/icons/c/cannon-basketball-4/icon-192.png",
       "512": "/icons/c/cannon-basketball-4/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Puzzle levels where you fire basketballs from a cannon and must land a set number of balls in the hoop. Angles matter more than power: bank shots off walls are often the intended solution, and most levels hide a trick — teleporters, moving platforms, or blocks to break first."
   },
   {
     "title": "Cell Machine",
@@ -843,7 +867,8 @@
       "180": "/icons/c/cell-machine/icon-180.png",
       "192": "/icons/c/cell-machine/icon-192.png",
       "512": "/icons/c/cell-machine/icon-512.png"
-    }
+    },
+    "about": "Build contraptions out of cells that spawn, move and replicate themselves to complete each level's goal. It is a friendly intro to cellular automata — start by copying the demo machines, then experiment: a single extra destroyer cell can unravel your whole build. There is no time pressure, so iterate freely."
   },
   {
     "title": "Chrome Dino",
@@ -873,7 +898,8 @@
       "180": "/icons/c/chrome-dino/icon-180.png",
       "192": "/icons/c/chrome-dino/icon-192.png",
       "512": "/icons/c/chrome-dino/icon-512.png"
-    }
+    },
+    "about": "The offline dinosaur runner from Chrome, playable full-screen: press space to jump cacti, duck under pterodactyls, and survive as the world speeds up. The trick to long runs is rhythm — jump on the beat of the cacti pattern rather than when panic says so, and duck-jump late birds."
   },
   {
     "title": "circlO",
@@ -901,7 +927,8 @@
       "192": "/icons/c/circlo/icon-192.png",
       "512": "/icons/c/circlo/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Tap to flip the rotation of a small circle orbiting the screen, threading gaps between obstacles to collect what they drop. It is pure reflex timing: short taps make micro-adjustments, and staying near the center of a gap beats hugging its edge. Mistakes compound fast, so reset your rhythm after any hit."
   },
   {
     "title": "Connect 3",
@@ -930,7 +957,8 @@
       "192": "/icons/c/connect3/icon-192.png",
       "512": "/icons/c/connect3/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A sped-up take on Connect Four — drop tokens into the grid and be the first to line up three in a row. With the shorter win condition, the center column is even more valuable, and most games are decided by the classic double-threat: build two lines that share one empty spot."
   },
   {
     "title": "CraftMine",
@@ -985,7 +1013,8 @@
       "192": "/icons/c/csgo-clicker/icon-192.png",
       "512": "/icons/c/csgo-clicker/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "An idle clicker with Counter-Strike flavor: click to fire, earn kills, and buy increasingly powerful guns that raise your damage per click. The progression loop is buy, outgrow the current round, repeat — prioritize upgrades that add passive income so kills keep flowing while you read the shop."
   },
   {
     "title": "Cut the Rope",
@@ -1015,7 +1044,8 @@
       "180": "/icons/c/cuttherope/icon-180.png",
       "192": "/icons/c/cuttherope/icon-192.png",
       "512": "/icons/c/cuttherope/icon-512.png"
-    }
+    },
+    "about": "Cut the Rope: cut ropes in the right order to swing a piece of candy into Om Nom's mouth, collecting stars along the way. Physics is everything — momentum from one swing should feed the next cut, and bubbles, spikes and air cushions turn later levels into little Rube Goldberg puzzles."
   },
   {
     "title": "Cut the Rope Holiday",
@@ -1046,7 +1076,8 @@
       "192": "/icons/c/cuttheropeholiday/icon-192.png",
       "512": "/icons/c/cuttheropeholiday/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Cut the Rope's Christmas edition: the same rope-cutting physics wrapped in festive levels with new gadgets — rockets and Christmas stockings that store and launch candy. Plan the whole candy route before the first cut; rushing usually wastes your one good swing."
   },
   {
     "title": "Cut the Rope Time Travel",
@@ -1078,7 +1109,8 @@
       "192": "/icons/c/cuttheropetimetravel/icon-192.png",
       "512": "/icons/c/cuttheropetimetravel/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Cut the Rope Time Travel sends Om Nom and his ancestors through history, from the Stone Age to the future. Each era adds a second mouth to feed, which means one candy must do double duty. Watch how chains and rockets interact before cutting; most levels hinge on one perfectly timed slash."
   },
   {
     "title": "Cupcake 2048",
@@ -1108,7 +1140,8 @@
       "192": "/icons/c/cupcake2048/icon-192.png",
       "512": "/icons/c/cupcake2048/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "The bakery-themed 2048: slide cupcakes, and matching kinds merge into the next size up. Strategy is identical to the classic — pin your biggest cupcake in a corner and never build toward it — but the ladder of pastry tiers makes chains much easier to read than raw numbers."
   },
   {
     "title": "Deal or No Deal",
@@ -1136,7 +1169,8 @@
       "192": "/icons/d/deal-or-no-deal/icon-192.png",
       "512": "/icons/d/deal-or-no-deal/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "about": "Pick one of 26 briefcases, then open the rest while the banker calls in lowball offers. The math is simple expected value: compare each offer to the average of the remaining case values, and never swap at the end unless you enjoy coin flips. The drama is pretending the decision is harder than it is."
   },
   {
     "title": "Death Run 3D",
@@ -1168,7 +1202,8 @@
       "192": "/icons/d/death-run-3d/icon-192.png",
       "512": "/icons/d/death-run-3d/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A first-person take on the endless runner: sprint down a neon corridor, dodge blocks, and survive as the speed climbs. Look two obstacles ahead rather than at your feet, and use small strafes — wide swings at this speed are how runs end."
   },
   {
     "title": "Defend the Tank",
@@ -1197,7 +1232,8 @@
       "192": "/icons/d/defend-the-tank/icon-192.png",
       "512": "/icons/d/defend-the-tank/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Place troops around your tank and hold off waves of attackers coming from every direction. Positioning wins: put cheap blockers where the enemy funnels in and your damage dealers behind them, and save your special abilities for the waves that actually leak through."
   },
   {
     "title": "Doge 2048",
@@ -1226,7 +1262,8 @@
       "192": "/icons/d/doge2048/icon-192.png",
       "512": "/icons/d/doge2048/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "2048 with Shiba Inu meme tiers instead of numbers — every merge evolves the doge toward its legendary final form. Because the tiles read as faces rather than values, trust position over intuition: corner-lock the biggest doge and run a snake pattern with the smaller ones."
   },
   {
     "title": "Doodle Jump",
@@ -1255,7 +1292,8 @@
       "180": "/icons/d/doodle-jump/icon-180.png",
       "192": "/icons/d/doodle-jump/icon-192.png",
       "512": "/icons/d/doodle-jump/icon-512.png"
-    }
+    },
+    "about": "Bounce a four-legged doodle ever upward, steering between platforms while dodging monsters, UFOs and black holes. Springs and propellers buy big altitude — the key skill is reading platform types ahead: brown platforms break, blue ones move, white ones crumble after one bounce."
   },
   {
     "title": "Draw the Hill",
@@ -1288,7 +1326,8 @@
       "192": "/icons/d/draw-the-hill/icon-192.png",
       "512": "/icons/d/draw-the-hill/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Draw a road with your finger or mouse and the car drives across whatever line you made. The trick is smooth gradients: steep lines stall the engine, while long descending curves build speed for jumps. Coins reward routes that use momentum instead of scribbled bridges."
   },
   {
     "title": "Edge Not Found",
@@ -1343,7 +1382,8 @@
       "192": "/icons/e/endlesswar3/icon-192.png",
       "512": "/icons/e/endlesswar3/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A top-down WWII shooter with destructible cover, drivable vehicles and dozens of missions. Keep moving between sandbag positions — standing still invites grenades — and capture enemy machine guns whenever the map offers one; they shred incoming waves."
   },
   {
     "title": "Evil Glitch",
@@ -1372,7 +1412,8 @@
       "192": "/icons/e/evil-glitch/icon-192.png",
       "512": "/icons/e/evil-glitch/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A retro platformer where the game itself glitches against you: tiles vanish, colors invert mid-jump, and the rules break on purpose. Treat every failed run as data — the glitches follow patterns, and surviving means learning them rather than reacting. Precision beats speed."
   },
   {
     "title": "Flappy Bird",
@@ -1402,7 +1443,8 @@
       "180": "/icons/f/flappy-bird/icon-180.png",
       "192": "/icons/f/flappy-bird/icon-192.png",
       "512": "/icons/f/flappy-bird/icon-512.png"
-    }
+    },
+    "about": "Tap to flap between green pipe gaps in the notoriously unforgiving one-button classic. The bird's physics are floaty, so small, early taps beat big corrections — aim for the middle of each gap and keep your tap rhythm steady instead of chasing the exact center."
   },
   {
     "title": "Geometry Dash (Scratch)",
@@ -1432,7 +1474,8 @@
       "180": "/icons/g/geometrydashscratch/icon-180.png",
       "192": "/icons/g/geometrydashscratch/icon-192.png",
       "512": "/icons/g/geometrydashscratch/icon-512.png"
-    }
+    },
+    "about": "A Scratch-built version of Geometry Dash: one button controls everything as an auto-running cube leaps spikes, flies through portals, and dies instantly on any mistake. Memorization is the mechanic — learn the level in chunks, and do not change your timing between attempts."
   },
   {
     "title": "Getaway Shootout",
@@ -1458,7 +1501,8 @@
       "192": "/icons/g/getaway-shootout/icon-192.png",
       "512": "/icons/g/getaway-shootout/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Two criminals race to the getaway vehicle using only jump and shoot — no walking. The weapon pickups are deliberately absurd, and the trick to most maps is controlling the high ground; shooting the obstacle blocking the shortcut you cannot reach yet often opens it."
   },
   {
     "title": "Gimme the Airpod",
@@ -1487,7 +1531,8 @@
       "192": "/icons/g/gimme-the-airpod/icon-192.png",
       "512": "/icons/g/gimme-the-airpod/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Grind Craft",
@@ -1516,7 +1561,8 @@
       "192": "/icons/g/grindcraft/icon-192.png",
       "512": "/icons/g/grindcraft/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A Minecraft-themed idle game where you grind resources and follow the crafting tree from wooden picks to nether gear. Keep every worker slot busy — villagers mine while you click — and prioritize food and tool upgrades in that order; the wood-to-iron bottleneck is where most players stall."
   },
   {
     "title": "Helicopter",
@@ -1545,7 +1591,8 @@
       "192": "/icons/h/helicopter/icon-192.png",
       "512": "/icons/h/helicopter/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "The classic cave-flyer: hold to rise, release to fall, and thread the helicopter through an ever-narrowing cave. Gravity is constant and jerkiness is death — the winning style is long, gentle hover adjustments, planning your line two obstacles ahead instead of dodging each one."
   },
   {
     "title": "HexGL",
@@ -1574,7 +1621,8 @@
       "192": "/icons/h/hexgl/icon-192.png",
       "512": "/icons/h/hexgl/icon-512.png"
     },
-    "badge": "hot"
+    "badge": "hot",
+    "about": "A WebGL futuristic racer in the spirit of F-Zero: airbrake through banked corners, ride the boost strips, and keep your ship off the walls. Airbraking before the turn apex — not during — is the difference between a clean line and scraping the barrier."
   },
   {
     "title": "Interactive Buddy",
@@ -1603,7 +1651,8 @@
       "192": "/icons/i/interactivebuddy/icon-192.png",
       "512": "/icons/i/interactivebuddy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A physics sandbox starring a ragdoll you can pummel with baseball bats, grenades, fire hoses and rockets. Cash earned from each hit unlocks new weapons and skins. There is no fail state — the fun is chaining explosions and watching the indestructible buddy ragdoll across the room."
   },
   {
     "title": "Just One Boss",
@@ -1631,7 +1680,8 @@
       "192": "/icons/j/just-one-boss/icon-192.png",
       "512": "/icons/j/just-one-boss/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A minimalist bullet-hell boss rush: one screen, one boss, dozens of attack phases, and instant death on contact. Every phase teaches a dodge pattern — learn the tells, then re-run with confidence. It is short but punishing; the final phase is fair, just fast."
   },
   {
     "title": "Krunker",
@@ -1662,7 +1712,8 @@
       "180": "/icons/k/krunker/icon-180.png",
       "192": "/icons/k/krunker/icon-192.png",
       "512": "/icons/k/krunker/icon-512.png"
-    }
+    },
+    "about": "A fast browser FPS with Counter-Strike-style movement: bunny-hop, slide and flick with low input latency across classic modes and custom maps. Movement is the skill ceiling — slide-hopping makes you nearly unhittable, and learning one map's sightlines beats changing loadouts."
   },
   {
     "title": "Meme 2048",
@@ -1691,7 +1742,8 @@
       "192": "/icons/m/meme2048/icon-192.png",
       "512": "/icons/m/meme2048/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "2048 reskinned with internet meme faces as tiles — merge tiers until you assemble the final meme. The strategy is the same corner-lock approach as the original; the joke tiles actually help you spot merge chains faster than plain numbers do."
   },
   {
     "title": "Eaglercraft",
@@ -1719,7 +1771,8 @@
       "180": "/icons/e/eaglercraft/icon-180.png",
       "192": "/icons/e/eaglercraft/icon-192.png",
       "512": "/icons/e/eaglercraft/icon-512.png"
-    }
+    },
+    "about": "Eaglercraft: the full Minecraft experience running in a browser — mine, craft, build and survive creepers in a procedurally generated world, single player or on servers. It is a faithful 1.5.2 build, so the classic opening holds: punch wood, craft tools, light your base before nightfall."
   },
   {
     "title": "Minesweeper",
@@ -1749,7 +1802,8 @@
       "180": "/icons/m/minesweeper/icon-180.png",
       "192": "/icons/m/minesweeper/icon-192.png",
       "512": "/icons/m/minesweeper/icon-512.png"
-    }
+    },
+    "about": "The classic logic puzzle: numbers tell you how many of the eight surrounding cells hide mines, and deduction — not luck — clears the board. Look for the 1-2-1 and 1-2-2-1 patterns, flag only when certain, and guess only when the math leaves no alternative."
   },
   {
     "title": "Mini-putt",
@@ -1779,7 +1833,8 @@
       "192": "/icons/m/miniputt/icon-192.png",
       "512": "/icons/m/miniputt/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Miniature golf with clean physics: read the slope, set the power, and sink putts under par. Bank shots off walls are more reliable than straight lines on most holes, and gentle taps on downhill greens beat firm ones — the ball breaks more than your eye says."
   },
   {
     "title": "Missiles",
@@ -1810,7 +1865,8 @@
       "192": "/icons/m/missiles/icon-192.png",
       "512": "/icons/m/missiles/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Pilot an aircraft while a storm of homing missiles chases you: lure them into each other, dodge terrain, and grab pickups to turn defense into offense. The core skill is herding — fly wide circles so missile clusters bunch up, then break the pattern at the last second."
   },
   {
     "title": "n-gon",
@@ -1836,7 +1892,8 @@
       "192": "/icons/n/n-gon/icon-192.png",
       "512": "/icons/n/n-gon/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A minimalist but punishing arena survival: steer an n-sided polygon through waves of spinning blades, homing shapes and bullets while collecting upgrades. Movement is inertia-based, so small corrections early prevent oversteering; prioritize shields before firepower."
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
@@ -1900,7 +1957,8 @@
       "192": "/icons/p/papaspizzaria/icon-192.png",
       "512": "/icons/p/papaspizzaria/icon-512.png"
     },
-    "badge": "hot"
+    "badge": "hot",
+    "about": "Papa's Pizzeria: take orders, top pizzas, bake and slice to order while customers wait. The station-hopping time pressure is the game — start baking as soon as toppings are on, and cut into the exact portions ordered; sloppy slices cost as much as burnt crusts."
   },
   {
     "title": "Paper.io 2",
@@ -1933,7 +1991,8 @@
       "180": "/icons/p/paperio2/icon-180.png",
       "192": "/icons/p/paperio2/icon-192.png",
       "512": "/icons/p/paperio2/icon-512.png"
-    }
+    },
+    "about": "Claim territory in Paper.io 2: loop out of your color, enclose land, and return before anyone cuts your tail. Small loops beat greedy ones early — the players who die are the ones circling for one more chunk. Turning inside your own color is always safe."
   },
   {
     "title": "Papery Planes",
@@ -1994,7 +2053,8 @@
       "192": "/icons/p/push-the-square/icon-192.png",
       "512": "/icons/p/push-the-square/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A grid puzzle about steering a square with placed arrow tiles: the square follows your arrows to the goal, but the grid fills up and careless placements block later paths. Work backwards from the goal — the last two moves constrain everything before them."
   },
   {
     "title": "Rolly Vortex",
@@ -2026,7 +2086,8 @@
       "192": "/icons/r/rolly-vortex/icon-192.png",
       "512": "/icons/r/rolly-vortex/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Rotate a ring around a falling ball, dodging spikes and gaps in an endless descending vortex. The screen scrolls at a fixed pace, so panic-rotations overshoot — short, rhythmic flicks keep the gap aligned, and gems are only worth grabbing on clear stretches."
   },
   {
     "title": "Snow Battle",
@@ -2086,7 +2147,8 @@
       "192": "/icons/s/soldier-legend/icon-192.png",
       "512": "/icons/s/soldier-legend/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A side-scrolling military platformer: run through war zones, upgrade weapons between missions and clear out enemy camps. Crouch-fire behind cover conserves health, and grenades are better spent on clusters than single enemies — ammo pickups appear after most waves."
   },
   {
     "title": "Solitaire",
@@ -2117,7 +2179,8 @@
       "180": "/icons/s/solitaire/icon-180.png",
       "192": "/icons/s/solitaire/icon-192.png",
       "512": "/icons/s/solitaire/icon-512.png"
-    }
+    },
+    "about": "Klondike Solitaire: build the four foundation piles ace-to-king by suit while rearranging the tableau in descending, alternating colors. Always unlock face-down cards first, keep at least one empty column as working space, and avoid sending cards to the foundation too early — they can still be useful."
   },
   {
     "title": "Stack",
@@ -2147,7 +2210,8 @@
       "192": "/icons/s/stack/icon-192.png",
       "512": "/icons/s/stack/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Stack blocks one on top of another; overhanging slices are shaved off, so precision decides how long the tower lasts. The blocks drift at a steady tempo — tap on rhythm, and after losing width, aim blocks back to center rather than chasing the widest edge."
   },
   {
     "title": "Stealing The Diamond",
@@ -2177,7 +2241,8 @@
       "192": "/icons/s/stealingthediamond/icon-192.png",
       "512": "/icons/s/stealingthediamond/icon-512.png"
     },
-    "badge": "hot"
+    "badge": "hot",
+    "about": "The Henry Stickmin heist: infiltrate a museum and steal a giant diamond by picking between absurd tools at each decision point. Only one choice per scene succeeds — the wrong ones are instant (and funny) game overs, so the game is really about seeing every ending."
   },
   {
     "title": "Stick War",
@@ -2207,7 +2272,8 @@
       "192": "/icons/s/stickwar/icon-192.png",
       "512": "/icons/s/stickwar/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Stick War: command an army of stick figures — miners gather gold, swordwrath rush, archidons rain arrows — while defending your statue and destroying the enemy's. Economy first: a second miner early outperforms almost any unit rush, and controlling units directly lets you micro the melee."
   },
   {
     "title": "Storm The House 2",
@@ -2236,7 +2302,8 @@
       "192": "/icons/s/stormthehouse2/icon-192.png",
       "512": "/icons/s/stormthehouse2/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Defend your house from waves of stick figures by shooting them down, then spend the earnings between waves on guns, turrets and walls. Save for the turret early — it keeps firing while you reload — and always repair the wall before buying toys you do not need."
   },
   {
     "title": "Swerve",
@@ -2269,7 +2336,8 @@
       "192": "/icons/s/swerve/icon-192.png",
       "512": "/icons/s/swerve/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Steer a ball along a narrowing winding track, tilting through curves that tighten as speed builds. The trick is looking far up the track and pre-tilting into the curve's direction — small constant inputs stay on the line while late jerks fly off it."
   },
   {
     "title": "Temple Run 2",
@@ -2300,7 +2368,8 @@
       "180": "/icons/t/temple-run-2/icon-180.png",
       "192": "/icons/t/temple-run-2/icon-192.png",
       "512": "/icons/t/temple-run-2/icon-512.png"
-    }
+    },
+    "about": "The endless runner that defined the genre: sprint through cliffside temples, tilt to collect coins, jump gaps and slide under fire. The mine-cart and zip-line diversions reset the difficulty curve, and corners — not obstacles — are where most runs end. Turn early."
   },
   {
     "title": "The Battle",
@@ -2330,7 +2399,8 @@
       "192": "/icons/t/thebattle/icon-192.png",
       "512": "/icons/t/thebattle/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "The Final Earth",
@@ -2360,7 +2430,8 @@
       "192": "/icons/t/the-final-earth/icon-192.png",
       "512": "/icons/t/the-final-earth/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Build a vertical city on a floating island in space: place homes, workplaces and food buildings while keeping citizens happy and resources flowing. Cluster service buildings within walking range — citizens only reach nearby jobs, so a well-placed market beats three new houses."
   },
   {
     "title": "The Heist",
@@ -2387,7 +2458,8 @@
       "192": "/icons/t/theheist/icon-192.png",
       "512": "/icons/t/theheist/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "There Is No Game",
@@ -2416,7 +2488,8 @@
       "192": "/icons/t/there-is-no-game/icon-192.png",
       "512": "/icons/t/there-is-no-game/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A comedy meta-adventure where the narrator insists there is nothing to play — and punishes you for proving otherwise. Click, drag and misuse everything: the \"wrong\" interactions are the intended path. It is short, genuinely funny, and the puzzles are fair despite the misdirection."
   },
   {
     "title": "This Is The Only Level",
@@ -2445,7 +2518,8 @@
       "192": "/icons/t/thisistheonlylevel/icon-192.png",
       "512": "/icons/t/thisistheonlylevel/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "One level, dozens of variations: the goal (guide a blue elephant to the exit pipe) never changes, but the physics do — gravity flips, controls reverse, walls vanish. Read the level's title each run; it usually hints the gimmick. The failures are the tutorial."
   },
   {
     "title": "Toss The Turtle",
@@ -2476,7 +2550,8 @@
       "192": "/icons/t/tosstheturtle/icon-192.png",
       "512": "/icons/t/tosstheturtle/icon-512.png"
     },
-    "badge": "hot"
+    "badge": "hot",
+    "about": "Toss the Turtle: load a turtle into a cannon and launch it across a minefield of spikes, chainsaws and bombs, each hit extending the flight. Earnings buy bigger cannons, jetpacks and better ammo — prioritize multipliers early, and aim your trajectory at clouds of hazards, not clear sky."
   },
   {
     "title": "Tube Jumpers",
@@ -2504,7 +2579,8 @@
       "192": "/icons/t/tube-jumpers/icon-192.png",
       "512": "/icons/t/tube-jumpers/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Up to four players bounce on floating tubes above water, timing jumps to avoid waves and knock rivals off. It is a last-one-standing party game — safe play stays near the tube centers, but the winner is whoever balances greedy hops with the next big wave."
   },
   {
     "title": "Vex 3",
@@ -2538,7 +2614,8 @@
       "192": "/icons/v/vex3/icon-192.png",
       "512": "/icons/v/vex3/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Vex 3: a stickman platformer across acts of spikes, saws, moving blocks and wall-jumps, with checkpoints and speedrun timers. Wall-jumping is the core skill — slide down a wall and jump at the moment you start sliding. The challenge mode's hazards are all things you have already survived once."
   },
   {
     "title": "Vex 4",
@@ -2572,7 +2649,8 @@
       "192": "/icons/v/vex4/icon-192.png",
       "512": "/icons/v/vex4/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Vex 4 pushes the stickman platformer further: new acts built around zip lines, water sections and tighter wall-jump chains. Deaths are instant and checkpoints frequent, so experiment with routes — the fast lines usually involve jumping before the safe-looking platform."
   },
   {
     "title": "Vex 6",
@@ -2606,7 +2684,8 @@
       "180": "/icons/v/vex6/icon-180.png",
       "192": "/icons/v/vex6/icon-192.png",
       "512": "/icons/v/vex6/icon-512.png"
-    }
+    },
+    "about": "Vex 6 adds fire and ice hazards, collapsing platforms and a fresh set of nine acts to the stickman series. Collect stars on alternate routes after your first clean pass — the star lines demand the trickiest wall-jumps the series has asked for."
   },
   {
     "title": "Wordle",
@@ -2635,7 +2714,8 @@
       "180": "/icons/w/wordle/icon-180.png",
       "192": "/icons/w/wordle/icon-192.png",
       "512": "/icons/w/wordle/icon-512.png"
-    }
+    },
+    "about": "Guess the five-letter word in six tries: green means right letter, right spot; yellow means right letter, wrong spot. Open with vowel-rich starters like AUDIO or CRANE, and on the third guess hunt for consonant clusters rather than new vowels — eliminating common letters matters more than guessing the word."
   },
   {
     "title": "Alien Attack",
@@ -2665,7 +2745,8 @@
       "192": "/icons/a/alienattack/icon-192.png",
       "512": "/icons/a/alienattack/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Balance Ball",
@@ -2699,7 +2780,8 @@
       "192": "/icons/b/balanceball/icon-192.png",
       "512": "/icons/b/balanceball/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Bonncing Dot",
@@ -2729,7 +2811,8 @@
       "192": "/icons/b/bdot/icon-192.png",
       "512": "/icons/b/bdot/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Black Bats",
@@ -2762,7 +2845,8 @@
       "192": "/icons/b/blackbats/icon-192.png",
       "512": "/icons/b/blackbats/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Blox Slider",
@@ -2792,7 +2876,8 @@
       "192": "/icons/b/bloxslider/icon-192.png",
       "512": "/icons/b/bloxslider/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sir Bottomtight",
@@ -2823,7 +2908,8 @@
       "192": "/icons/s/sirbottomtight/icon-192.png",
       "512": "/icons/s/sirbottomtight/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Brave Bird",
@@ -2853,7 +2939,8 @@
       "192": "/icons/b/bravebird/icon-192.png",
       "512": "/icons/b/bravebird/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Broken Horn",
@@ -2883,7 +2970,8 @@
       "192": "/icons/b/brokenhorn/icon-192.png",
       "512": "/icons/b/brokenhorn/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Bubble It Steven",
@@ -2914,7 +3002,8 @@
       "192": "/icons/b/bubbleitsteven/icon-192.png",
       "512": "/icons/b/bubbleitsteven/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Bubble Fish",
@@ -2976,7 +3065,8 @@
       "192": "/icons/c/candyfusion/icon-192.png",
       "512": "/icons/c/candyfusion/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Captain Roger",
@@ -3006,7 +3096,8 @@
       "192": "/icons/c/captainroger/icon-192.png",
       "512": "/icons/c/captainroger/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Captain War",
@@ -3037,7 +3128,8 @@
       "192": "/icons/c/captainwar/icon-192.png",
       "512": "/icons/c/captainwar/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Cat On Fire",
@@ -3068,7 +3160,8 @@
       "192": "/icons/c/catonfire/icon-192.png",
       "512": "/icons/c/catonfire/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Cave Jumper",
@@ -3100,7 +3193,8 @@
       "192": "/icons/c/cavejumper/icon-192.png",
       "512": "/icons/c/cavejumper/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "cboxes",
@@ -3129,7 +3223,8 @@
       "192": "/icons/c/cboxes/icon-192.png",
       "512": "/icons/c/cboxes/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Cheese Lab",
@@ -3162,7 +3257,8 @@
       "192": "/icons/c/cheeselab/icon-192.png",
       "512": "/icons/c/cheeselab/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Chip Man",
@@ -3193,7 +3289,8 @@
       "192": "/icons/c/chipman/icon-192.png",
       "512": "/icons/c/chipman/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Christmas Balls",
@@ -3226,7 +3323,8 @@
       "192": "/icons/c/christmasballs/icon-192.png",
       "512": "/icons/c/christmasballs/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Circle Ball",
@@ -3259,7 +3357,8 @@
       "192": "/icons/c/circleball/icon-192.png",
       "512": "/icons/c/circleball/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Circle Pong",
@@ -3292,7 +3391,8 @@
       "192": "/icons/c/circlepong/icon-192.png",
       "512": "/icons/c/circlepong/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Circle Tris",
@@ -3325,7 +3425,8 @@
       "192": "/icons/c/circletris/icon-192.png",
       "512": "/icons/c/circletris/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Crun Ching Ninjas",
@@ -3357,7 +3458,8 @@
       "192": "/icons/c/crunchingninjas/icon-192.png",
       "512": "/icons/c/crunchingninjas/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Super Cowboy Run",
@@ -3389,7 +3491,8 @@
       "192": "/icons/s/supercowboyrun/icon-192.png",
       "512": "/icons/s/supercowboyrun/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "CowBoy2 Shot",
@@ -3421,7 +3524,8 @@
       "192": "/icons/c/cowboy2shot/icon-192.png",
       "512": "/icons/c/cowboy2shot/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Craigen Stone",
@@ -3452,7 +3556,8 @@
       "192": "/icons/c/craigenstone/icon-192.png",
       "512": "/icons/c/craigenstone/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Dangerous",
@@ -3484,7 +3589,8 @@
       "192": "/icons/d/dangerous/icon-192.png",
       "512": "/icons/d/dangerous/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Dark Ninja",
@@ -3517,7 +3623,8 @@
       "192": "/icons/d/darkninja/icon-192.png",
       "512": "/icons/d/darkninja/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Death Soul",
@@ -3549,7 +3656,8 @@
       "192": "/icons/d/deathsoul/icon-192.png",
       "512": "/icons/d/deathsoul/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Dont Eat Trash",
@@ -3580,7 +3688,8 @@
       "192": "/icons/d/donteattrash/icon-192.png",
       "512": "/icons/d/donteattrash/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Dot Game",
@@ -3611,7 +3720,8 @@
       "192": "/icons/d/dotgame/icon-192.png",
       "512": "/icons/d/dotgame/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Drop Circle",
@@ -3644,7 +3754,8 @@
       "192": "/icons/d/dropcircle/icon-192.png",
       "512": "/icons/d/dropcircle/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Duck Water",
@@ -3677,7 +3788,8 @@
       "192": "/icons/d/duckwater/icon-192.png",
       "512": "/icons/d/duckwater/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Scratch Card",
@@ -3710,7 +3822,8 @@
       "192": "/icons/s/scratchcard/icon-192.png",
       "512": "/icons/s/scratchcard/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Escape",
@@ -3743,7 +3856,8 @@
       "192": "/icons/e/escape/icon-192.png",
       "512": "/icons/e/escape/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Evil Robot",
@@ -3777,7 +3891,8 @@
       "192": "/icons/e/evilrobot/icon-192.png",
       "512": "/icons/e/evilrobot/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Evil Wyrm",
@@ -3812,7 +3927,8 @@
       "192": "/icons/e/evilwyrm/icon-192.png",
       "512": "/icons/e/evilwyrm/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Fast",
@@ -3845,7 +3961,8 @@
       "192": "/icons/f/fast/icon-192.png",
       "512": "/icons/f/fast/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Fire Brigade",
@@ -3881,7 +3998,8 @@
       "192": "/icons/f/firebrigade/icon-192.png",
       "512": "/icons/f/firebrigade/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Fishing Frenzy",
@@ -3913,7 +4031,8 @@
       "192": "/icons/f/fishingfrenzy/icon-192.png",
       "512": "/icons/f/fishingfrenzy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Flap Cat Copters",
@@ -3946,7 +4065,8 @@
       "192": "/icons/f/flapcatcopters/icon-192.png",
       "512": "/icons/f/flapcatcopters/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Flap Cat Xmas",
@@ -3980,7 +4100,8 @@
       "192": "/icons/f/flapcatxmas/icon-192.png",
       "512": "/icons/f/flapcatxmas/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Flappy Dog",
@@ -4014,7 +4135,8 @@
       "192": "/icons/f/flappydog/icon-192.png",
       "512": "/icons/f/flappydog/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Flying School",
@@ -4049,7 +4171,8 @@
       "192": "/icons/f/flyingschool/icon-192.png",
       "512": "/icons/f/flyingschool/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Foo Foo",
@@ -4116,7 +4239,8 @@
       "192": "/icons/f/foxfury/icon-192.png",
       "512": "/icons/f/foxfury/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Freedom Road",
@@ -4149,7 +4273,8 @@
       "192": "/icons/f/freedomroad/icon-192.png",
       "512": "/icons/f/freedomroad/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Hungry Frog",
@@ -4182,7 +4307,8 @@
       "192": "/icons/h/hungryfrog/icon-192.png",
       "512": "/icons/h/hungryfrog/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Full Immersion",
@@ -4215,7 +4341,8 @@
       "192": "/icons/f/fullimmersion/icon-192.png",
       "512": "/icons/f/fullimmersion/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Funny Soccer",
@@ -4246,7 +4373,8 @@
       "192": "/icons/f/funnysoccer/icon-192.png",
       "512": "/icons/f/funnysoccer/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Get Twelve",
@@ -4277,7 +4405,8 @@
       "192": "/icons/g/gettwelve/icon-192.png",
       "512": "/icons/g/gettwelve/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Goblin Machine",
@@ -4309,7 +4438,8 @@
       "192": "/icons/g/goblinmachine/icon-192.png",
       "512": "/icons/g/goblinmachine/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Go Fishing",
@@ -4340,7 +4470,8 @@
       "192": "/icons/g/gofishing/icon-192.png",
       "512": "/icons/g/gofishing/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Going Nuts",
@@ -4372,7 +4503,8 @@
       "192": "/icons/g/goingnuts/icon-192.png",
       "512": "/icons/g/goingnuts/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Greedy Gnomes",
@@ -4404,7 +4536,8 @@
       "192": "/icons/g/greedygnomes/icon-192.png",
       "512": "/icons/g/greedygnomes/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Green Wings",
@@ -4436,7 +4569,8 @@
       "192": "/icons/g/greenwings/icon-192.png",
       "512": "/icons/g/greenwings/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Groovy Ski",
@@ -4468,7 +4602,8 @@
       "192": "/icons/g/groovyski/icon-192.png",
       "512": "/icons/g/groovyski/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Grub Runner",
@@ -4499,7 +4634,8 @@
       "192": "/icons/g/grubrunner/icon-192.png",
       "512": "/icons/g/grubrunner/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Gumball Race",
@@ -4531,7 +4667,8 @@
       "192": "/icons/g/gumballrace/icon-192.png",
       "512": "/icons/g/gumballrace/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Hansel and Gretel",
@@ -4563,7 +4700,8 @@
       "192": "/icons/h/hanselandgretel/icon-192.png",
       "512": "/icons/h/hanselandgretel/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Hero Jump",
@@ -4626,7 +4764,8 @@
       "192": "/icons/h/hidden/icon-192.png",
       "512": "/icons/h/hidden/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Hungry Bob",
@@ -4659,7 +4798,8 @@
       "192": "/icons/h/hungrybob/icon-192.png",
       "512": "/icons/h/hungrybob/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ice Cream",
@@ -4691,7 +4831,8 @@
       "192": "/icons/i/icecream/icon-192.png",
       "512": "/icons/i/icecream/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Jelly Doods",
@@ -4725,7 +4866,8 @@
       "192": "/icons/j/jellydoods/icon-192.png",
       "512": "/icons/j/jellydoods/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Jelly Slice",
@@ -4791,7 +4933,8 @@
       "192": "/icons/j/jomjom/icon-192.png",
       "512": "/icons/j/jomjom/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Jump Kitty",
@@ -4823,7 +4966,8 @@
       "192": "/icons/j/jumpkitty/icon-192.png",
       "512": "/icons/j/jumpkitty/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Fall Jump Roll",
@@ -4857,7 +5001,8 @@
       "192": "/icons/f/falljumproll/icon-192.png",
       "512": "/icons/f/falljumproll/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Jumppy dog",
@@ -4921,7 +5066,8 @@
       "192": "/icons/j/jumppydragon/icon-192.png",
       "512": "/icons/j/jumppydragon/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Knight Of The Day",
@@ -4953,7 +5099,8 @@
       "192": "/icons/k/knightoftheday/icon-192.png",
       "512": "/icons/k/knightoftheday/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Izard Rocket",
@@ -4986,7 +5133,8 @@
       "192": "/icons/i/izardrocket/icon-192.png",
       "512": "/icons/i/izardrocket/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Looney Roonks",
@@ -5019,7 +5167,8 @@
       "192": "/icons/l/looneyroonks/icon-192.png",
       "512": "/icons/l/looneyroonks/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Manic",
@@ -5052,7 +5201,8 @@
       "192": "/icons/m/manic/icon-192.png",
       "512": "/icons/m/manic/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Matching Time",
@@ -5085,7 +5235,8 @@
       "192": "/icons/m/matchingtime/icon-192.png",
       "512": "/icons/m/matchingtime/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Math Game",
@@ -5150,7 +5301,8 @@
       "192": "/icons/m/monstercandy/icon-192.png",
       "512": "/icons/m/monstercandy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Monster Eater",
@@ -5182,7 +5334,8 @@
       "192": "/icons/m/monstereater/icon-192.png",
       "512": "/icons/m/monstereater/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Mouse Jump",
@@ -5214,7 +5367,8 @@
       "192": "/icons/m/mousejump/icon-192.png",
       "512": "/icons/m/mousejump/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "NEST",
@@ -5245,7 +5399,8 @@
       "192": "/icons/n/nest/icon-192.png",
       "512": "/icons/n/nest/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ninja Run",
@@ -5279,7 +5434,8 @@
       "192": "/icons/n/ninjarun/icon-192.png",
       "512": "/icons/n/ninjarun/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ninja Way",
@@ -5313,7 +5469,8 @@
       "192": "/icons/n/ninjaway/icon-192.png",
       "512": "/icons/n/ninjaway/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Ojello",
@@ -5346,7 +5503,8 @@
       "192": "/icons/o/ojello/icon-192.png",
       "512": "/icons/o/ojello/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pacman",
@@ -5378,7 +5536,8 @@
       "180": "/icons/p/pacman/icon-180.png",
       "192": "/icons/p/pacman/icon-192.png",
       "512": "/icons/p/pacman/icon-512.png"
-    }
+    },
+    "about": "The arcade original: eat pellets while four ghosts hunt you, each with a distinct personality — Blinky chases, Pinky ambushes, Inky flanks, Clyde wanders. Power pellets flip the hunt for a few seconds, and the tunnel's safety is real but the fruit score is rarely worth the crossing."
   },
   {
     "title": "Pancake Boss",
@@ -5414,7 +5573,8 @@
       "192": "/icons/p/pancakeboss/icon-192.png",
       "512": "/icons/p/pancakeboss/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Panda Flash",
@@ -5447,7 +5607,8 @@
       "192": "/icons/p/pandaflash/icon-192.png",
       "512": "/icons/p/pandaflash/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pebble Boy",
@@ -5481,7 +5642,8 @@
       "192": "/icons/p/pebbleboy/icon-192.png",
       "512": "/icons/p/pebbleboy/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Penguin",
@@ -5514,7 +5676,8 @@
       "192": "/icons/p/penguin/icon-192.png",
       "512": "/icons/p/penguin/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pie Attack",
@@ -5547,7 +5710,8 @@
       "192": "/icons/p/pieattack/icon-192.png",
       "512": "/icons/p/pieattack/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pigeon",
@@ -5579,7 +5743,8 @@
       "192": "/icons/p/pigeon/icon-192.png",
       "512": "/icons/p/pigeon/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Piggy Roll",
@@ -5612,7 +5777,8 @@
       "192": "/icons/p/piggyroll/icon-192.png",
       "512": "/icons/p/piggyroll/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pirate Kid",
@@ -5647,7 +5813,8 @@
       "192": "/icons/p/piratekid/icon-192.png",
       "512": "/icons/p/piratekid/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pitana",
@@ -5680,7 +5847,8 @@
       "192": "/icons/p/pitana/icon-192.png",
       "512": "/icons/p/pitana/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Popup",
@@ -5714,7 +5882,8 @@
       "192": "/icons/p/popup/icon-192.png",
       "512": "/icons/p/popup/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Portal Runner",
@@ -5749,7 +5918,8 @@
       "192": "/icons/p/portalrunner/icon-192.png",
       "512": "/icons/p/portalrunner/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Pyramid Jump",
@@ -5785,7 +5955,8 @@
       "192": "/icons/p/pyramidjump/icon-192.png",
       "512": "/icons/p/pyramidjump/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Raccoon Run",
@@ -5820,7 +5991,8 @@
       "192": "/icons/r/raccoonrun/icon-192.png",
       "512": "/icons/r/raccoonrun/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Rain Box",
@@ -5853,7 +6025,8 @@
       "192": "/icons/r/rainbox/icon-192.png",
       "512": "/icons/r/rainbox/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Rapunzel Tower",
@@ -5888,7 +6061,8 @@
       "192": "/icons/r/rapunzeltower/icon-192.png",
       "512": "/icons/r/rapunzeltower/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Rec Tang Zings",
@@ -5920,7 +6094,8 @@
       "192": "/icons/r/rectangzings/icon-192.png",
       "512": "/icons/r/rectangzings/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Robotion",
@@ -5954,7 +6129,8 @@
       "192": "/icons/r/robotion/icon-192.png",
       "512": "/icons/r/robotion/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Rocket Pop",
@@ -5988,7 +6164,8 @@
       "192": "/icons/r/rocketpop/icon-192.png",
       "512": "/icons/r/rocketpop/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Rope Ninja",
@@ -6024,7 +6201,8 @@
       "192": "/icons/r/ropeninja/icon-192.png",
       "512": "/icons/r/ropeninja/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Run Pixie Run",
@@ -6058,7 +6236,8 @@
       "192": "/icons/r/runpixierun/icon-192.png",
       "512": "/icons/r/runpixierun/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sally BBQ",
@@ -6092,7 +6271,8 @@
       "192": "/icons/s/sallybbq/icon-192.png",
       "512": "/icons/s/sallybbq/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sky Lands",
@@ -6126,7 +6306,8 @@
       "192": "/icons/s/skylands/icon-192.png",
       "512": "/icons/s/skylands/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sky Race",
@@ -6160,7 +6341,8 @@
       "192": "/icons/s/skyrace/icon-192.png",
       "512": "/icons/s/skyrace/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sky Wire",
@@ -6225,7 +6407,8 @@
       "192": "/icons/s/slotchicken/icon-192.png",
       "512": "/icons/s/slotchicken/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sort Bird",
@@ -6259,7 +6442,8 @@
       "192": "/icons/s/sortbird/icon-192.png",
       "512": "/icons/s/sortbird/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Spring Ninja",
@@ -6326,7 +6510,8 @@
       "192": "/icons/s/squarecrush/icon-192.png",
       "512": "/icons/s/squarecrush/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Steven Kash",
@@ -6360,7 +6545,8 @@
       "192": "/icons/s/stevenkash/icon-192.png",
       "512": "/icons/s/stevenkash/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Stick Panda",
@@ -6393,7 +6579,8 @@
       "192": "/icons/s/stickpanda/icon-192.png",
       "512": "/icons/s/stickpanda/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Stick Panda Xmas",
@@ -6426,7 +6613,8 @@
       "192": "/icons/s/stickpandaxmas/icon-192.png",
       "512": "/icons/s/stickpandaxmas/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Stick Samurai",
@@ -6460,7 +6648,8 @@
       "192": "/icons/s/sticksamurai/icon-192.png",
       "512": "/icons/s/sticksamurai/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Sticky Goo",
@@ -6494,7 +6683,8 @@
       "192": "/icons/s/stickygoo/icon-192.png",
       "512": "/icons/s/stickygoo/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Strange Space",
@@ -6528,7 +6718,8 @@
       "192": "/icons/s/strangespace/icon-192.png",
       "512": "/icons/s/strangespace/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Taptap Submarine",
@@ -6560,7 +6751,8 @@
       "192": "/icons/t/taptapsubmarine/icon-192.png",
       "512": "/icons/t/taptapsubmarine/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Target Tap",
@@ -6593,7 +6785,8 @@
       "192": "/icons/t/targettap/icon-192.png",
       "512": "/icons/t/targettap/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Titan Runner",
@@ -6630,7 +6823,8 @@
       "192": "/icons/t/titanrunner/icon-192.png",
       "512": "/icons/t/titanrunner/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/tooncup/",
@@ -6663,7 +6857,8 @@
       "192": "/icons/t/tooncup/icon-192.png",
       "512": "/icons/t/tooncup/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Trailblazer",
@@ -6693,7 +6888,8 @@
       "192": "/icons/t/trailblazer/icon-192.png",
       "512": "/icons/t/trailblazer/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trashndash/",
@@ -6724,7 +6920,8 @@
       "192": "/icons/t/trashdash/icon-192.png",
       "512": "/icons/t/trashdash/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trollboxing/",
@@ -6758,7 +6955,8 @@
       "192": "/icons/t/trollboxing/icon-192.png",
       "512": "/icons/t/trollboxing/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "about": "A silly boxing brawler between two trolls: punch, duck and uppercut with timing-based controls. The AI telegraphs its swings — duck the hook, answer with a body shot, and save uppercuts for the moment an opponent finishes a whiffed heavy punch."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/uforun/",
@@ -6790,7 +6988,8 @@
       "192": "/icons/u/uforun/icon-192.png",
       "512": "/icons/u/uforun/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Veggi Rabbit",
@@ -6823,7 +7022,8 @@
       "192": "/icons/v/veggirabbit/icon-192.png",
       "512": "/icons/v/veggirabbit/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/woodblock/",
@@ -6854,7 +7054,8 @@
       "192": "/icons/w/woodblock/icon-192.png",
       "512": "/icons/w/woodblock/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky/",
@@ -6887,7 +7088,8 @@
       "192": "/icons/x/xtypesky/icon-192.png",
       "512": "/icons/x/xtypesky/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Zapaliens",
@@ -6920,7 +7122,8 @@
       "192": "/icons/z/zapaliens/icon-192.png",
       "512": "/icons/z/zapaliens/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Zombie Night",
@@ -6950,7 +7153,8 @@
       "192": "/icons/z/zombienight/icon-192.png",
       "512": "/icons/z/zombienight/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Zombie World",
@@ -6979,7 +7183,8 @@
       "192": "/icons/z/zombieworld/icon-192.png",
       "512": "/icons/z/zombieworld/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Zoon Stuner",
@@ -7008,7 +7213,8 @@
       "192": "/icons/z/zoonstuner/icon-192.png",
       "512": "/icons/z/zoonstuner/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "noindex": true
   },
   {
     "title": "Snakebird",
@@ -7042,6 +7248,7 @@
       "192": "/icons/s/snakebird/icon-192.png",
       "512": "/icons/s/snakebird/icon-512.png"
     },
-    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.snakebird.offline"
+    "android_app": "https://play.google.com/store/apps/details?id=com.poki2.snakebird.offline",
+    "about": "A delightfully cruel puzzle game: snake-birds eat fruit to grow one segment, then must reach an exit — while gravity drags every ungrounded segment down. Long snakes become bridges and ladders; before each move, check which segment is supported, because falling is permanent."
   }
 ]

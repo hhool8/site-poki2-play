@@ -75,7 +75,8 @@ function url(loc, changefreq, priority, lastmod, imgSrc, imgTitle){
 if(!fs.existsSync(GAMES)){ console.error('games.json not found'); process.exit(1); }
 
 const games = JSON.parse(fs.readFileSync(GAMES,'utf8'));
-const shown = games.filter(g => g.show);
+// noindex pages must not be in the sitemap (contradictory signals for Google)
+const shown = games.filter(g => g.show && !g.noindex);
 
 const lines = ['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"','        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">','','  <!-- Site pages -->'];
 for(const [locPath, srcFile] of STATIC_PAGES){

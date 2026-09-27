@@ -95,18 +95,23 @@ for(const g of games){
   // thinness score: lower = thinner. Only count howToPlay text that actually
   // adds unique content on the page (emitted AND not a substring of desc).
   const htpContrib = emits ? (dup ? 0 : htpL) : 0;
-  const score = descL + htpContrib + genres*15;
+  const aboutL = (g.about || '').trim().length;
+  const noindexed = exists && /<meta name="robots" content="noindex, follow">/i.test(html);
+  const score = descL + aboutL + htpContrib + genres*15;
 
   rows.push({ title:g.title, slug, char, url:`${BASE}/game/${char}/${slug}/`,
-    descL, htpL, dup, genres, noscriptLen, uniqueEst, score, featured:!!g.featured, exists });
+    descL, htpL, dup, aboutL, noindexed, genres, noscriptLen, uniqueEst, score, featured:!!g.featured, exists });
 }
 
 rows.sort((a,b)=> a.score - b.score); // thinnest first
 
 const total = rows.length;
 const shortDesc = rows.filter(r=>r.descL<120).length;
-const noIndexCandidates = rows.filter(r=> r.score < 200 || !r.exists);
-const veryThin = rows.slice(0,30);
+const noindexedPages = rows.filter(r=>r.noindexed);
+const withAbout = rows.filter(r=>r.aboutL>0);
+const indexedRows = rows.filter(r=>!r.noindexed);
+const noIndexCandidates = indexedRows.filter(r=> r.score < 200 || !r.exists);
+const veryThin = indexedRows.slice(0,30);
 
 const md = [];
 md.push('# SEO content-depth audit — play.poki2.online');
@@ -134,20 +139,23 @@ md.push(`| …of which block text ⊂ description (duplicated, must be 0) | ${du
 md.push(`| games with NO howToPlay | ${noHowTo} |`);
 md.push(`| descriptions < 120 chars (thin) | ${shortDesc} |`);
 md.push(`| boilerplate (category nav, identical every page) | ${BOILER} chars |`);
-md.push(`| noindex candidates (score<200 or no file) | ${noIndexCandidates.length} |`);
+md.push(`| pages with hand-authored "About" content (batch 1) | ${withAbout.length} |`);
+md.push(`| pages noindexed (batch 1, out of sitemap) | ${noindexedPages.length} |`);
+md.push(`| pages in the index | ${indexedRows.length} |`);
+md.push(`| remaining noindex/consolidate candidates (indexed, score<200) | ${noIndexCandidates.length} |`);
 md.push('');
-md.push('## Distribution — noscript body length (what Google sees)');
+md.push('## Distribution — noscript body length (what Google sees, INDEXED pages only)');
 md.push('');
 const buckets=[[0,300],[300,400],[400,500],[500,700],[700,9999]];
-md.push(`| noscript chars | pages |`);
+md.push(`| noscript chars | indexed pages |`);
 md.push(`|---|---|`);
 for(const [lo,hi] of buckets){
-  const n=rows.filter(r=>r.noscriptLen>=lo && r.noscriptLen<hi).length;
+  const n=indexedRows.filter(r=>r.noscriptLen>=lo && r.noscriptLen<hi).length;
   md.push(`| ${hi===9999?`≥${lo}`:`${lo}–${hi}`} | ${n} |`);
 }
 md.push('');
-md.push(`> After subtracting the ${BOILER}-char boilerplate nav, most pages have only`);
-md.push(`> ~${Math.round(rows.reduce((s,r)=>s+r.uniqueEst,0)/total)} chars of genuinely unique body text.`);
+md.push(`> After subtracting the ${BOILER}-char boilerplate nav, indexed pages average`);
+md.push(`> ~${Math.round(indexedRows.reduce((s,r)=>s+r.uniqueEst,0)/Math.max(1,indexedRows.length))} chars of genuinely unique body text.`);
 md.push('');
 md.push('## Top 30 thinnest pages — noindex / consolidate candidates');
 md.push('');

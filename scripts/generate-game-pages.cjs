@@ -84,6 +84,11 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   const desc     = game.description ||
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
 
+  // Real, hand-authored content (tools/content/apply-content-batch-*.cjs).
+  // Emitted as visible body text in the noscript fallback — this is the text
+  // Google indexes. Unique per game, unlike the templated description.
+  const about    = (game.about || '').trim();
+
   // Intra-page duplication guard: howToPlay is auto-derived from description
   // (scripts/generate-how-to-play.cjs), so on most pages it is a substring of
   // desc. Emitting it again as an "How to play" section duplicates the body
@@ -186,6 +191,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <script>window.adsbygoogle = window.adsbygoogle || [];</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5676206764686662" crossorigin="anonymous"></script>
   <title>${esc(title)}</title>
+  ${game.noindex ? '<meta name="robots" content="noindex, follow">' : ''}
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${pageUrl}">
 
@@ -235,6 +241,7 @@ ${bodyTag}
     </nav>
     <h1>${esc(game.title)}</h1>
     <p>${esc(desc)}</p>
+    ${about ? `<h2>About ${esc(game.title)}</h2>\n    <p>${esc(about)}</p>` : ''}
     ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/tag/${k}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
     ${game.howToPlay && !htpDup ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
