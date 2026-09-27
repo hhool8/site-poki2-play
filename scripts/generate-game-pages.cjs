@@ -31,6 +31,7 @@ const TAG_PAGES = [
   ['arcade',      'Arcade'],
   ['sports',      'Sports'],
   ['platformer',  'Platformer'],
+  ['classic',     'Classic'],
 ];
 
 const TAG_LABELS = {
@@ -82,6 +83,14 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
 
   const desc     = game.description ||
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
+
+  // Intra-page duplication guard: howToPlay is auto-derived from description
+  // (scripts/generate-how-to-play.cjs), so on most pages it is a substring of
+  // desc. Emitting it again as an "How to play" section duplicates the body
+  // text on the page — a thin/duplicate-content signal for Google. Skip the
+  // section (and the matching FAQ question) when it adds nothing unique.
+  const htpNorm = (game.howToPlay || '').trim().toLowerCase().replace(/[.!?]+$/, '');
+  const htpDup  = htpNorm.length > 0 && desc.toLowerCase().includes(htpNorm);
   const char     = slug[0].toLowerCase();
   const _iconRel = (game.icons && (game.icons['192'] || game.icons['512'])) || game.imgSrc;
   const game_icon = _iconRel
@@ -228,7 +237,7 @@ ${bodyTag}
     <p>${esc(desc)}</p>
     ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/tag/${k}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
-    ${game.howToPlay ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
+    ${game.howToPlay && !htpDup ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
     ${(relatedGames && relatedGames.length) ? `<h2>More games like ${esc(game.title)}</h2>\n    <ul>\n${relatedGames.map(r => {
       const rs = normalizeHref(r.link);
       const rc = rs[0].toLowerCase();
