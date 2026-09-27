@@ -23,10 +23,10 @@ fix stays at 0 and tracks the remaining problem: pages whose unique indexable te
 | games with NO howToPlay | 0 |
 | descriptions < 120 chars (thin) | 0 |
 | boilerplate (category nav, identical every page) | 200 chars |
-| pages with hand-authored "About" content (batch 1) | 67 |
+| pages with hand-authored "About" content (batch 1) | 79 |
 | pages noindexed (batch 1, out of sitemap) | 140 |
 | pages in the index | 79 |
-| remaining noindex/consolidate candidates (indexed, score<200) | 8 |
+| remaining noindex/consolidate candidates (indexed, score<200) | 0 |
 
 ## Distribution — noscript body length (what Google sees, INDEXED pages only)
 
@@ -50,36 +50,36 @@ These have the least unique indexable text. Options per page:
 
 | # | score | desc | dup? | genres | noscript | unique | url |
 |---|---|---|---|---|---|---|---|
-| 1 | 171 | 141 | · | 2 | 452 | 252 | [ninjablade](https://play.poki2.online/game/n/ninjablade/) |
-| 2 | 171 | 141 | · | 2 | 452 | 252 | [foofoo](https://play.poki2.online/game/f/foofoo/) |
-| 3 | 172 | 157 | · | 1 | 452 | 252 | [om-bounce](https://play.poki2.online/game/o/om-bounce/) |
-| 4 | 173 | 158 | · | 1 | 452 | 252 | [bubblefish](https://play.poki2.online/game/b/bubblefish/) |
-| 5 | 174 | 159 | · | 1 | 452 | 252 | [skywire](https://play.poki2.online/game/s/skywire/) |
-| 6 | 175 | 160 | · | 1 | 452 | 252 | [springninja](https://play.poki2.online/game/s/springninja/) |
-| 7 | 181 | 151 | · | 2 | 452 | 252 | [mathgame](https://play.poki2.online/game/m/mathgame/) |
-| 8 | 189 | 159 | · | 2 | 452 | 252 | [jellyslice](https://play.poki2.online/game/j/jellyslice/) |
-| 9 | 201 | 156 | · | 3 | 452 | 252 | [papery-planes](https://play.poki2.online/game/p/papery-planes/) |
-| 10 | 201 | 141 | · | 4 | 452 | 252 | [snowbattle](https://play.poki2.online/game/s/snowbattle/) |
-| 11 | 203 | 158 | · | 3 | 452 | 252 | [edgenotfound](https://play.poki2.online/game/e/edgenotfound/) |
-| 12 | 305 | 158 | · | 2 | 452 | 252 | [craftmine](https://play.poki2.online/game/c/craftmine/) |
-| 13 | 398 | 142 | · | 1 | 452 | 252 | [meme2048](https://play.poki2.online/game/m/meme2048/) |
-| 14 | 415 | 141 | · | 2 | 452 | 252 | [trollboxing](https://play.poki2.online/game/t/trollboxing/) |
-| 15 | 416 | 143 | · | 2 | 452 | 252 | [vex6](https://play.poki2.online/game/v/vex6/) |
-| 16 | 419 | 158 | · | 0 | 452 | 252 | [papaspizzaria](https://play.poki2.online/game/p/papaspizzaria/) |
-| 17 | 420 | 154 | · | 1 | 452 | 252 | [endlesswar3](https://play.poki2.online/game/e/endlesswar3/) |
-| 18 | 422 | 156 | · | 1 | 452 | 252 | [hexgl](https://play.poki2.online/game/h/hexgl/) |
-| 19 | 426 | 144 | · | 1 | 452 | 252 | [n-gon](https://play.poki2.online/game/n/n-gon/) |
-| 20 | 427 | 145 | · | 3 | 452 | 252 | [death-run-3d](https://play.poki2.online/game/d/death-run-3d/) |
-| 21 | 428 | 140 | · | 2 | 452 | 252 | [miniputt](https://play.poki2.online/game/m/miniputt/) |
-| 22 | 428 | 144 | · | 2 | 452 | 252 | [paperio2](https://play.poki2.online/game/p/paperio2/) |
-| 23 | 429 | 153 | · | 3 | 452 | 252 | [zcj2](https://play.poki2.online/game/z/zcj2/) |
-| 24 | 429 | 141 | · | 2 | 452 | 252 | [rolly-vortex](https://play.poki2.online/game/r/rolly-vortex/) |
-| 25 | 430 | 144 | · | 2 | 452 | 252 | [minesweeper](https://play.poki2.online/game/m/minesweeper/) |
-| 26 | 431 | 154 | · | 1 | 452 | 252 | [ctr-holiday](https://play.poki2.online/game/c/ctr-holiday/) |
-| 27 | 431 | 157 | · | 1 | 452 | 252 | [just-one-boss](https://play.poki2.online/game/j/just-one-boss/) |
-| 28 | 433 | 140 | · | 3 | 452 | 252 | [zombiescantjump](https://play.poki2.online/game/z/zombiescantjump/) |
-| 29 | 434 | 149 | · | 2 | 452 | 252 | [tube-jumpers](https://play.poki2.online/game/t/tube-jumpers/) |
-| 30 | 435 | 155 | · | 1 | 452 | 252 | [getaway-shootout](https://play.poki2.online/game/g/getaway-shootout/) |
+| 1 | 398 | 142 | · | 1 | 452 | 252 | [meme2048](https://play.poki2.online/game/m/meme2048/) |
+| 2 | 415 | 141 | · | 2 | 452 | 252 | [trollboxing](https://play.poki2.online/game/t/trollboxing/) |
+| 3 | 416 | 143 | · | 2 | 452 | 252 | [vex6](https://play.poki2.online/game/v/vex6/) |
+| 4 | 419 | 158 | · | 0 | 452 | 252 | [papaspizzaria](https://play.poki2.online/game/p/papaspizzaria/) |
+| 5 | 420 | 154 | · | 1 | 452 | 252 | [endlesswar3](https://play.poki2.online/game/e/endlesswar3/) |
+| 6 | 422 | 156 | · | 1 | 452 | 252 | [hexgl](https://play.poki2.online/game/h/hexgl/) |
+| 7 | 426 | 144 | · | 1 | 452 | 252 | [n-gon](https://play.poki2.online/game/n/n-gon/) |
+| 8 | 427 | 145 | · | 3 | 452 | 252 | [death-run-3d](https://play.poki2.online/game/d/death-run-3d/) |
+| 9 | 428 | 140 | · | 2 | 452 | 252 | [miniputt](https://play.poki2.online/game/m/miniputt/) |
+| 10 | 428 | 144 | · | 2 | 452 | 252 | [paperio2](https://play.poki2.online/game/p/paperio2/) |
+| 11 | 429 | 153 | · | 3 | 452 | 252 | [zcj2](https://play.poki2.online/game/z/zcj2/) |
+| 12 | 429 | 141 | · | 2 | 452 | 252 | [rolly-vortex](https://play.poki2.online/game/r/rolly-vortex/) |
+| 13 | 430 | 144 | · | 2 | 452 | 252 | [minesweeper](https://play.poki2.online/game/m/minesweeper/) |
+| 14 | 431 | 154 | · | 1 | 452 | 252 | [ctr-holiday](https://play.poki2.online/game/c/ctr-holiday/) |
+| 15 | 431 | 157 | · | 1 | 452 | 252 | [just-one-boss](https://play.poki2.online/game/j/just-one-boss/) |
+| 16 | 433 | 140 | · | 3 | 452 | 252 | [zombiescantjump](https://play.poki2.online/game/z/zombiescantjump/) |
+| 17 | 434 | 149 | · | 2 | 452 | 252 | [tube-jumpers](https://play.poki2.online/game/t/tube-jumpers/) |
+| 18 | 435 | 155 | · | 1 | 452 | 252 | [getaway-shootout](https://play.poki2.online/game/g/getaway-shootout/) |
+| 19 | 436 | 148 | · | 1 | 452 | 252 | [cupcake2048](https://play.poki2.online/game/c/cupcake2048/) |
+| 20 | 438 | 152 | · | 2 | 452 | 252 | [stack](https://play.poki2.online/game/s/stack/) |
+| 21 | 439 | 143 | · | 1 | 452 | 252 | [interactivebuddy](https://play.poki2.online/game/i/interactivebuddy/) |
+| 22 | 440 | 155 | · | 2 | 452 | 252 | [push-the-square](https://play.poki2.online/game/p/push-the-square/) |
+| 23 | 442 | 149 | · | 1 | 452 | 252 | [helicopter](https://play.poki2.online/game/h/helicopter/) |
+| 24 | 443 | 144 | · | 2 | 452 | 252 | [vex4](https://play.poki2.online/game/v/vex4/) |
+| 25 | 444 | 157 | · | 1 | 452 | 252 | [doge2048](https://play.poki2.online/game/d/doge2048/) |
+| 26 | 446 | 157 | · | 2 | 452 | 252 | [thisistheonlylevel](https://play.poki2.online/game/t/thisistheonlylevel/) |
+| 27 | 447 | 156 | · | 2 | 452 | 252 | [flappy-bird](https://play.poki2.online/game/f/flappy-bird/) |
+| 28 | 447 | 158 | · | 1 | 452 | 252 | [geodash](https://play.poki2.online/game/g/geodash/) |
+| 29 | 447 | 157 | · | 2 | 452 | 252 | [stormthehouse2](https://play.poki2.online/game/s/stormthehouse2/) |
+| 30 | 448 | 144 | · | 1 | 452 | 252 | [ctr-tr](https://play.poki2.online/game/c/ctr-tr/) |
 
 ## Recommended actions (priority order)
 

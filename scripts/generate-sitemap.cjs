@@ -103,7 +103,7 @@ for(const game of shown){
 	const char = slug[0].toLowerCase();
 	const loc = `${BASE}/game/${char}/${slug}/`;
 	const priority = game.featured ? '0.9' : '0.7';
-	const fingerprint = JSON.stringify([game.title, game.description, game.howToPlay, game.tags, game.input, game.featured, game.imgSrc, game.avalid, game.blog]);
+	const fingerprint = JSON.stringify([game.title, game.description, game.howToPlay, game.about, game.noindex, game.tags, game.input, game.featured, game.imgSrc, game.avalid, game.blog]);
 	lines.push(url(loc,'monthly',priority, lastmodFor(`game ${slug}`, sha(fingerprint)), game.imgSrc||null, game.title||null));
 	count++;
 }

@@ -702,7 +702,8 @@
       "192": "/icons/n/ninjablade/icon-192.png",
       "512": "/icons/n/ninjablade/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "about": "Attacks fly at you and your katana answers them: slice each incoming threat in half at exactly the right moment. Precision beats speed — a late slash still hits, a sloppy one whiffs and costs a life. Watch the wind-up animation of every attacker, and commit to the cut only when the blade is committed to you."
   },
   {
     "title": "Black Knight",
@@ -985,7 +986,8 @@
       "192": "/icons/c/craftmine/icon-192.png",
       "512": "/icons/c/craftmine/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A browser-based survival sandbox in the Minecraft mold: punch trees, mine stone and ores, then turn raw blocks into better tools at the crafting bench. Follow the classic progression — wooden pick, stone pick, then shelter before your first night — and never dig straight down; gravity and lava are both patient."
   },
   {
     "title": "CS:GO Clicker",
@@ -1356,7 +1358,8 @@
       "192": "/icons/e/edgenotfound/icon-192.png",
       "512": "/icons/e/edgenotfound/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "The Chrome dinosaur leaves its offline page for a web-themed adventure: run through a landscape of missing pages, 404 errors and browser quirks, jumping hazards the same one-button way. The theme changes the scenery, not the physics — small early jumps, read the terrain a beat ahead, and let the constant speed do the steering."
   },
   {
     "title": "Endless War 3",
@@ -1923,7 +1926,8 @@
       "192": "/icons/o/omnombounce/icon-192.png",
       "512": "/icons/o/omnombounce/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Om Nom bounces between trampolines to reach candy floating high out of reach. Each trampoline stretches under him and springs him higher the deeper it compresses, so timing the bounce — not tapping faster — is the whole game. Line up the next jump while mid-air, and let big drops build the height you need."
   },
   {
     "title": "Papaspizzaria",
@@ -2025,7 +2029,8 @@
       "192": "/icons/p/papery-planes/icon-192.png",
       "512": "/icons/p/papery-planes/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Fold a paper plane and glide it through tricky courses, adjusting lift, weight and angle as you fly. Nose up to climb and bleed speed, nose down to dive and trade height for distance — the best runs ride that trade deliberately instead of fighting it. Watch for updrafts on the course line and use them to recover altitude for free."
   },
   {
     "title": "Push The Square",
@@ -2117,7 +2122,8 @@
       "192": "/icons/s/snowbattle/icon-192.png",
       "512": "/icons/s/snowbattle/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A winter multiplayer brawl: lob snowballs at rivals while stacking snow into cover between volleys. Peeking costs nothing, standing in the open costs everything — build first, throw second. Leading your target matters at range, and reloading behind cover beats winning a race you started a hit behind."
   },
   {
     "title": "Soldier Legend",
@@ -3034,7 +3040,8 @@
       "192": "/icons/b/bubblefish/icon-192.png",
       "512": "/icons/b/bubblefish/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "about": "A classic bubble shooter underwater: shoot colored bubbles upward, and when three or more of a kind connect they pop and drop everything hanging beneath them. Bank shots off the side walls reach clusters you cannot hit straight, and popping a large overhanging group clears more board per shot than picking off singles."
   },
   {
     "title": "Candy Fusion",
@@ -4206,7 +4213,8 @@
       "192": "/icons/f/foofoo/icon-192.png",
       "512": "/icons/f/foofoo/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "popular",
+    "about": "Little Foo Foo hops through the forest in an endless hopper: time each jump over snakes and steer mid-air to land on mushrooms, which score and often mark the safe path. Rhythm beats reaction — the spawn patterns repeat, and the players who get far are the ones who commit to the next platform early instead of hesitating at the apex."
   },
   {
     "title": "Fox Fury",
@@ -4901,7 +4909,8 @@
       "192": "/icons/j/jellyslice/icon-192.png",
       "512": "/icons/j/jellyslice/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "Slice wobbling jelly blocks into exactly the number of equal portions the critters below are waiting for. The jelly jiggles after every cut, so plan the whole cut sequence before the first slice — a sloppy early cut leaves pieces too uneven to correct. Fewer, cleaner cuts score higher."
   },
   {
     "title": "Jomjom",
@@ -5270,7 +5279,8 @@
       "192": "/icons/m/mathgame/icon-192.png",
       "512": "/icons/m/mathgame/icon-512.png"
     },
-    "badge": "hot"
+    "badge": "hot",
+    "about": "Arithmetic questions pop up and you click the correct answer as fast as possible — the clock is the real opponent. Work in the order multiplication tables reward: memorized facts beat mental column math every time, and skipping a question you cannot see instantly is faster than fighting for it."
   },
   {
     "title": "Monster Candy",
@@ -6376,7 +6386,8 @@
       "192": "/icons/s/skywire/icon-192.png",
       "512": "/icons/s/skywire/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "The Nitrome classic: ride a cable car along sky-high wires, dodging birds, power lines and whatever else the mountain throws at the track. Two passengers ride on top, and every hit knocks one off — protect them by hugging the inside of every curve and easing through obstacle gaps rather than rushing them."
   },
   {
     "title": "Slot Chicken",
@@ -6478,7 +6489,8 @@
       "192": "/icons/s/springninja/icon-192.png",
       "512": "/icons/s/springninja/icon-512.png"
     },
-    "badge": ""
+    "badge": "",
+    "about": "A ninja with a spring for a launch: compress, aim, and release to bounce between platforms that climb ever further apart. The release timing sets both distance and landing angle, so the perfect jump is about letting the spring go at the same point every time. Land on platform centers — edges slide."
   },
   {
     "title": "Square Crush",
