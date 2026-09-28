@@ -71,6 +71,41 @@
       color: white;
       text-decoration: none
     }
+
+    .popular {
+      margin: 20px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      max-width: 560px
+    }
+
+    .popular a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(155, 231, 255, 0.08);
+      border: 1px solid rgba(155, 231, 255, 0.25);
+      color: #9be7ff;
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .popular a:hover {
+      background: rgba(155, 231, 255, 0.18)
+    }
+
+    .cat-links {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #9fb6d7
+    }
+
+    .cat-links a {
+      color: #9fb6d7;
+      font-weight: 600
+    }
   </style>
   <meta name="description"
     content="The page you requested cannot be found. Return to Poki2 to discover more free online games.">
@@ -115,6 +150,31 @@
       <a class="btn" href="/">Go Home</a>
       <a style="margin-left:12px;color:#9fb6d7" href="javascript:history.back()">Go Back</a>
     </div>
+
+    <div class="meta" style="margin-top:20px">Looking for one of these popular games?</div>
+    <div class="popular">
+      <a href="/game/2/2048/">2048</a>
+      <a href="/game/a/among-us/">Among Us</a>
+      <a href="/game/m/minecraft/">Eaglercraft</a>
+      <a href="/game/p/papaspizzaria/">Papa's Pizzeria</a>
+      <a href="/game/w/wordle/">Wordle</a>
+      <a href="/game/k/krunker/">Krunker</a>
+      <a href="/game/t/temple-run-2/">Temple Run 2</a>
+      <a href="/game/f/flappy-bird/">Flappy Bird</a>
+      <a href="/game/s/stealingthediamond/">Stealing the Diamond</a>
+      <a href="/game/d/deal-or-no-deal/">Deal or No Deal</a>
+      <a href="/game/n/ninjablade/">Ninja Blade</a>
+      <a href="/game/h/hexgl/">HexGL</a>
+    </div>
+    <div class="cat-links">
+      Browse by category:
+      <a href="/tag/action/">Action</a> ·
+      <a href="/tag/puzzle/">Puzzle</a> ·
+      <a href="/tag/classic/">Classic</a> ·
+      <a href="/tag/platformer/">Platformer</a> ·
+      <a href="/tag/multiplayer/">Multiplayer</a>
+    </div>
+
     <div class="meta">If this was a game resource, please verify the resource exists or contact the site administrator.
     </div>
     <div class="meta" style="margin-top:8px">Redirecting to site home in <span id="poki-404-count">10</span>s…</div>

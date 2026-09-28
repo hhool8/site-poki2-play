@@ -194,6 +194,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   ${game.noindex ? '<meta name="robots" content="noindex, follow">' : ''}
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${pageUrl}">
+  <link rel="alternate" type="application/rss+xml" title="Poki2 — Free Online Games" href="/rss.xml">
 
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
