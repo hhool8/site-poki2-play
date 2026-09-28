@@ -57,3 +57,36 @@
 4. Reddit r/WebGames 首帖（选 5 个有 about 内容的热门游戏做合集帖）
 5. Wikidata 条目（1 小时）
 6. 排期实现 embed 生成器（#61），完成后 Product Hunt
+
+## 自动化（P13-A，2026-09-27 接入）
+
+脚本位于 `tools/backlinks/`，产物写入 `backlinks/`。npm 入口：
+
+| 命令 | 作用 |
+|---|---|
+| `npm run backlinks:pack` | 生成本周外链素材包 `backlinks/packs/YYYY-WW.md`（Reddit 帖草稿 + 目录站文案，按 ISO 周轮换 5 款游戏） |
+| `npm run backlinks:check` | 抓取 `backlinks/placements.json` 里登记的外链落点，检测 `poki2.online` 链接是否存活，产出 `backlinks/placement-report.md` |
+| `npm run backlinks:ping` | 从 sitemap 抽取 URL 推送 IndexNow（Bing/Yandex/Seznam），加速收录。首次需 build+deploy 使 `<key>.txt` 上线 |
+| `npm run backlinks:free` | 免注册自动提交（HypeStat/SiteWorthTraffic 统计建页、Ping-O-Matic 聚合 ping、urlscan.io 公开扫描）。**14 天冷却**防 spam 模式，`--force` 越过 |
+| `npm run backlinks:all` | pack + check + ping 三步串行（free 不在其中，见下方说明） |
+
+运维约定：
+
+- **新外链登记**：每发布一个外链（Reddit 帖、目录站条目、GitHub profile 等），把 URL 加进 `backlinks/placements.json`，之后每周自动监控存活。Fandom 链接被撤（MISSING）即停，勿反复补。
+- **IndexNow key**：自动生成并写入 `backlinks/indexnow-key.txt` 与 `public/<key>.txt`。若推送返回 403，说明 key 文件未部署，重新 build+deploy 即可。
+- **已接入 WorkBuddy 定时任务**：每周一自动跑 `backlinks:all` 并输出汇总。
+- **明确不自动化**：Reddit/目录站自动发帖——违反平台 ToS，会导致封号与外链清零，提交动作保留人工。
+
+### 免注册渠道（P13-B，2026-09-27 实测）
+
+`backlinks:free` 覆盖三类免注册渠道，实测存活情况：
+
+| 渠道 | 状态 | 说明 |
+|---|---|---|
+| HypeStat | ✅ 已建页 | GET `hypestat.com/info/{域}` 即自动生成统计页 |
+| SiteWorthTraffic | 🟡 页面可访问 | 回显未确认，1 周后抽查 |
+| Ping-O-Matic | ✅ 已推送 | 聚合 ping 通知目录爬虫 |
+| urlscan.io | ⚠️ 需 API key | 匿名提交已关闭（401），免费注册后设置环境变量 `URLSCAN_API_KEY` |
+| WebWiki / StatShow / SimilarSites / Cubestat | ❌ 拦截或失联 | 脚本自动记 death 计数，连续 3 次失败自动跳过 |
+
+**定位必须明确**：这类链接权重近零（多为 nofollow、无主题相关性），价值 = 收录加速 + 新域链接档案去空白，**不是排名策略**。Google 对批量自动链接的态度是忽略或惩罚，因此脚本内置 14 天冷却，切勿 `--force` 频繁运行。真正搬排名的仍是 P13 人工外链；2026 年更高性价比的免费渠道是记者引述平台（Featured/HARO 复活版、Qwoted、Source of Sources）——回答记者问题即可获得新闻站编辑外链，属人工动作。

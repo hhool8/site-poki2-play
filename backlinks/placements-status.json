@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-27T09:55:40.124Z",
+  "ok": 1,
+  "bad": 0,
+  "results": [
+    {
+      "url": "https://github.com/hhool8",
+      "note": "GitHub profile 链接（P13 #36）",
+      "checkedAt": "2026-09-27T09:55:39.360Z",
+      "httpStatus": 200,
+      "found": true,
+      "status": "OK"
+    }
+  ]
+}
