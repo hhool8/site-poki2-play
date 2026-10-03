@@ -1,6 +1,6 @@
 # SEO Roadmap — poki2.online
 > Prioritized SEO Backlog（优先级排列的 SEO 待办列表）
-> 本文件仅本地存档，不纳入版本管理。
+> 本文件纳入版本管理（自 2026-09-27 起随仓库提交）。
 
 ---
 
@@ -70,10 +70,13 @@
 
 ## P6 — 内容质量
 
-- [ ] 15. **404 页优化** — 加热门游戏推荐 + 分类链接
-- [ ] 16. **about / contact / privacy meta description 补全**
-- [x] 17. **`lastmod` 自动化** — 内容指纹 sidecar（`scripts/sitemap-lastmod.json`），未变保留旧日期，变了才更新，commit `8a5dd1d`
+- [x] 15. **404 页优化**（2026-09-29，commit `a2d8839`）— 12 个热门游戏 + 5 个分类内链，软 404 入口转为爬取路径
+- [x] 16. **about / contact / privacy meta description 补全** — 已全部有 description（审计零缺漏）
+- [x] 17. **`lastmod` 自动化** — 内容指纹 sidecar（`scripts/sitemap-lastmod.json`），未变保留旧日期，变了才更新，commit `8a5dd1d`；2026-10-03 增补 `npm run verify:lastmod` 漂移检查（commit `5c79ea5`）
 - [x] 18. **游戏页内容深度批次 1**（2026-09-27，commit `39a4739`）— 67 款知名游戏手写 about 内容（noscript 可见正文）；140 款无搜索需求冷门衍生游戏临时 noindex,follow + 移出 sitemap（可逆，`tools/content/apply-content-batch-1.cjs`）；sitemap 238→98 URL；待处理薄页 182→8（第二批队列）。审计报告 `seo-content-audit.md`
+- [x] 19. **批次 2 收尾**（2026-09-28，commit `df46a3b`）— 剩余 12 款索引内薄页全部手写 about，索引内薄页队列归零
+- [x] 20. **HTML 压缩步骤**（2026-10-03）— `npm run minify:html`（`scripts/minify-html.cjs`）在 hash:assets 之前折叠标签间缩进空白，565 文件 −18%（21% 为缩进空白），可见文本零变化
+- [x] 21. **contact 页薄内容修复**（2026-10-03）— 52 词 → 约 330 词，含可联系事项、技术自查、防诈骗说明
 
 ## P7 ✅ Tag 页分页
 
@@ -184,11 +187,15 @@
 | Tag 页 | 13（含 classic） |
 | Sitemap 总 URL | 98（79 game + 13 tag + 6 站点页） |
 | 页面自重复 | 0（原 218/219，commit `8a5dd1d` 修复） |
-| lastmod | 自动化（内容指纹 sidecar） |
-| 审计错误 | 0 |
-| 审计警告 | 0 |
-| 分支 | main = dev_seo = `8199db5` |
-| 最后部署 | 2026-03-06 |
+| 跨页重复内容 | 0（相似度 ≥80% 的页面对为 0，2026-10-03 审计） |
+| 孤立页 / 不可达页 | 0（内链图 BFS 自首页，2026-10-03 审计） |
+| 结构化数据缺字段 | 0（VideoGame/BreadcrumbList/FAQPage/WebSite/Organization 必填项校验） |
+| 低字数页（<200 词） | 0（contact 修复后；原 1） |
+| HTML 体积 | −18%（`npm run minify:html`，2026-10-03） |
+| lastmod | 自动化（内容指纹 sidecar）+ `npm run verify:lastmod` 漂移检查 |
+| 审计（Semrush 风格） | 1 错误（www CNAME，需 Cloudflare 手动）/ 警告 2 / 通知 3 |
+| 分支 | main = origin/main |
+| 最后部署 | 2026-10-03 |
 | Shard 子站 noindex | 25/25 ✅ 线上验证 |
 | JS 体积 | 49 KB（原 112 KB，−56%） |
 | CSS 体积 | 37 KB（原 53 KB，−31%） |
