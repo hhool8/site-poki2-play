@@ -44,7 +44,8 @@
     "_legacy:generate:icons": "node scripts/legacy/svg-to-raster.js",
     "_legacy:generate:production-icons": "node scripts/legacy/generate-production-icons.js",
     "_legacy:inject-ldjson": "node scripts/legacy/inject-ldjson.js --dir=dist --config=scripts/legacy/ldconfig.json",
-    "_legacy:build:with-inject": "npm run build && npm run _legacy:inject-ldjson"
+    "_legacy:build:with-inject": "npm run build && npm run _legacy:inject-ldjson",
+    "verify:lastmod": "node scripts/generate-sitemap.cjs --check"
   },
   "keywords": [],
   "author": "",

@@ -28,6 +28,7 @@ const SIDECAR  = path.join(__dirname, 'sitemap-lastmod.json');
 const OUT      = path.join(DIST, 'sitemap.xml');
 const SRC_OUT  = path.join(__dirname, '..', 'sitemap.xml');
 const TODAY    = new Date().toISOString().slice(0,10);
+const CHECK    = process.argv.includes('--check');
 
 const STATIC_PAGES = [
   ['/',            'index.html'],
@@ -58,10 +59,12 @@ let store = {};
 try { store = JSON.parse(fs.readFileSync(SIDECAR, 'utf8')); } catch { store = {}; }
 
 let bumped = 0, kept = 0;
+const stale = [];
 function lastmodFor(key, contentHash){
 	const prev = store[key];
 	if(prev && prev.hash === contentHash && prev.lastmod){ kept++; return prev.lastmod; }
 	bumped++;
+	if(CHECK){ stale.push({ key, prev: prev ? prev.lastmod : null }); return prev ? prev.lastmod : TODAY; }
 	store[key] = { hash: contentHash, lastmod: TODAY };
 	return TODAY;
 }
@@ -108,6 +111,21 @@ for(const game of shown){
 	count++;
 }
 lines.push('','</urlset>','');
+
+// --check: report drift without writing anything (exit 1 if the sidecar is behind).
+if(CHECK){
+	if(stale.length){
+		console.log(`\u26a0\ufe0f  lastmod sidecar is STALE for ${stale.length} URL(s) \u2014 the next build would bump their lastmod:`);
+		for(const s of stale.slice(0, 60)) console.log(`   - ${s.key} (was ${s.prev || 'new'})`);
+		if(stale.length > 60) console.log(`   ... and ${stale.length - 60} more`);
+		console.log('   Fix: run `npm run generate:sitemap` and commit scripts/sitemap-lastmod.json + sitemap.xml.');
+		process.exitCode = 1;
+	} else {
+		console.log(`\u2705 lastmod sidecar in sync: ${kept} URL(s) unchanged, no drift.`);
+	}
+	return;
+}
+
 fs.writeFileSync(OUT, lines.join('\n'), 'utf8'); fs.writeFileSync(SRC_OUT, lines.join('\n'), 'utf8');
 fs.writeFileSync(SIDECAR, JSON.stringify(store, null, 2) + '\n', 'utf8');
 console.log(`\u2705  Wrote sitemap.xml with ${count} game URLs + ${TAG_PAGES.length} tag URLs \u2192 dist/ + source`);
