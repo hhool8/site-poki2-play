@@ -5,6 +5,7 @@
  */
 const fs   = require('fs');
 const path = require('path');
+const { tagUrlPath } = require('./tag-slugs.cjs');
 
 const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
@@ -24,7 +25,7 @@ const TAG_PAGES = [
   ['adventure',   'Adventure'],
   ['racing',      'Racing'],
   ['shooting',    'Shooting'],
-  ['multiplayer', 'Multiplayer'],
+  ['multiplayer', '2 Player'],
   ['competitive', 'Competitive'],
   ['strategy',    'Strategy'],
   ['idle',        'Idle'],
@@ -140,10 +141,16 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   };
   const ld = JSON.stringify(ldObj);
 
-  const genreTagKeys = tags.filter(t => TAG_LABELS[t]);
+  // Genre links must point at a page that exists. TAG_LABELS also covers tags
+  // with no generated hub (`singleplayer`, `clicker`, `other`) — every game
+  // page used to link to /tag/singleplayer/, which 404s, and the breadcrumb
+  // JSON-LD advertised the same dead URL. Restricting to generated hub keys
+  // fixes both, and keeps the breadcrumb honest.
+  const linkedTagKeys = new Set(TAG_PAGES.map(([k]) => k));
+  const genreTagKeys = tags.filter(t => TAG_LABELS[t] && linkedTagKeys.has(t));
   const primaryTagKey  = genreTagKeys[0] || null;
   const primaryGenre   = primaryTagKey ? TAG_LABELS[primaryTagKey] : 'Games';
-  const genreTagUrl    = primaryTagKey ? `${BASE_URL}/tag/${primaryTagKey}/` : `${BASE_URL}/`;
+  const genreTagUrl    = primaryTagKey ? `${BASE_URL}/${tagUrlPath(primaryTagKey)}/` : `${BASE_URL}/`;
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -236,14 +243,14 @@ ${bodyTag}
     <nav aria-label="Breadcrumb">
       <ol>
         <li><a href="/">${SITE_NAME}</a></li>
-        ${primaryTagKey ? `<li><a href="/tag/${primaryTagKey}/">${esc(primaryGenre)}</a></li>` : `<li>${esc(primaryGenre)}</li>`}
+        ${primaryTagKey ? `<li><a href="/${tagUrlPath(primaryTagKey)}/">${esc(primaryGenre)}</a></li>` : `<li>${esc(primaryGenre)}</li>`}
         <li>${esc(game.title)}</li>
       </ol>
     </nav>
     <h1>${esc(game.title)}</h1>
     <p>${esc(desc)}</p>
     ${about ? `<h2>About ${esc(game.title)}</h2>\n    <p>${esc(about)}</p>` : ''}
-    ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/tag/${k}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
+    ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/${tagUrlPath(k)}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
     ${game.howToPlay && !htpDup ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
     ${(relatedGames && relatedGames.length) ? `<h2>More games like ${esc(game.title)}</h2>\n    <ul>\n${relatedGames.map(r => {
@@ -253,7 +260,7 @@ ${bodyTag}
     }).join('\n')}\n    </ul>` : ''}
     <nav aria-label="Game Categories">
       <ul>
-        ${TAG_PAGES.map(([k, l]) => `<li><a href="/tag/${k}/">${esc(l)} Games</a></li>`).join('\n        ')}
+        ${TAG_PAGES.map(([k, l]) => `<li><a href="/${tagUrlPath(k)}/">${esc(l)} Games</a></li>`).join('\n        ')}
       </ul>
     </nav>
     <p><a href="/">&#8592; All games</a></p>

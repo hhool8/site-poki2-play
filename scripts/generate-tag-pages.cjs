@@ -38,6 +38,8 @@ const WIKI = {
   sports:      { title: 'Sports video game',  url: 'https://en.wikipedia.org/wiki/Sports_video_game',  quote: 'a video game genre that simulates the practice of sports, including team sports, athletics and racing' },
   platformer:  { title: 'Platform game',      url: 'https://en.wikipedia.org/wiki/Platform_game',      quote: 'a video game genre in which the player controls a character who jumps and climbs between elevated platforms while avoiding obstacles' },
 };
+const { tagUrlPath } = require('./tag-slugs.cjs');
+
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(__dirname, '..', 'games.json');
 const MIN_GAMES  = 5;   // minimum games in a tag to warrant a page
@@ -155,7 +157,7 @@ function extractBody(htmlFile) {
 
 // ── Page builder ──────────────────────────────────────────────────────────────
 function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames = games, listGames = allTagGames) {
-  const tagBase = `${BASE_URL}/tag/${tag}/`;
+  const tagBase = `${BASE_URL}/${tagUrlPath(tag)}/`;
   const pageUrl = tagBase;
   const title   = `${cfg.headline} — ${SITE_NAME}`;
   const _ogImgGame = allTagGames.find(g => g.featured && g.imgSrc) || allTagGames.find(g => g.imgSrc);
@@ -232,12 +234,12 @@ ${gameListHtml}
   // Related categories (all other tags)
   const relatedTags = Object.entries(allTags).filter(([t]) => t !== tag);
   const relatedLinksHtml = relatedTags
-    .map(([t, c]) => `<li><a href="/tag/${t}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="20" height="20" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)} Games</a></li>`)
+    .map(([t, c]) => `<li><a href="/${tagUrlPath(t)}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="20" height="20" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)} Games</a></li>`)
     .join('\n        ');
   const relatedSectionHtml = `<section id="related-tags" class="related-tags-section">
   <h2>More Game Categories</h2>
   <ul class="related-tags-list">
-    ${relatedTags.map(([t, c]) => `<li><a href="/tag/${t}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="24" height="24" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)}</a></li>`).join('\n    ')}
+    ${relatedTags.map(([t, c]) => `<li><a href="/${tagUrlPath(t)}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="24" height="24" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)}</a></li>`).join('\n    ')}
   </ul>
 </section>`;
 
@@ -448,15 +450,15 @@ for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
   // Crawler-visible list: every game carrying this tag (incl. mobile-only),
   // so all generated /game/ pages receive an internal link from this hub.
   const listGames = (tagMapAll[tag] && tagMapAll[tag].length >= tagGames.length) ? tagMapAll[tag] : tagGames;
-  const dir = path.join(DIST, 'tag', tag);
+  const dir = path.join(DIST, ...tagUrlPath(tag).split('/'));
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(
     path.join(dir, 'index.html'),
     buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, tagGames, listGames),
     'utf8'
   );
-  console.log(`  /tag/${tag}/  (${tagGames.length} games, list: ${listGames.length})`);
+  console.log(`  /${tagUrlPath(tag)}/  (${tagGames.length} games, list: ${listGames.length})`);
   count++;
 }
 
-console.log(`\u2705  Generated ${count} tag pages in dist/tag/`);
+console.log(`\u2705  Generated ${count} tag pages in dist/`);

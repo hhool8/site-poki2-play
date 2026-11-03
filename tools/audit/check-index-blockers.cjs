@@ -88,6 +88,13 @@ for (const t of fs.readdirSync(tagDir)) {
   const f = path.join(tagDir, t, 'index.html');
   if (fs.existsSync(f)) addLinks(fs.readFileSync(f, 'utf8'), `/tag/${t.replace('.html','')}/`);
 }
+// Tag pages whose public slug differs from the internal key live at the dist
+// root instead of dist/tag/ (e.g. /2-player-games/), so the loop above misses
+// them and their outbound links would be reported as orphans.
+for (const slug of Object.values(require('../../scripts/tag-slugs.cjs').TAG_SLUGS)) {
+  const f = path.join(DIST, slug, 'index.html');
+  if (fs.existsSync(f)) addLinks(fs.readFileSync(f, 'utf8'), `/${slug}/`);
+}
 const orphans = pages.filter(p => !linkSources.has(p.url)).map(p => p.url);
 
 // report

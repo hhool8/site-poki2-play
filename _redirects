@@ -6,6 +6,13 @@
 /ads.txt / 410
 /app-ads.txt / 410
 
+# Tag page retitled to its public slug: /tag/multiplayer/ -> /2-player-games/
+# (scripts/tag-slugs.cjs). 301 rather than 302 so the old URL's signals transfer
+# to the new one instead of the two competing for "poki 2 player games".
+# Query strings (?page=N) are appended by the client after the redirect.
+/tag/multiplayer  /2-player-games/  301
+/tag/multiplayer/ /2-player-games/  301
+
 # Note: no SPA fallback — every real route is a static file; unknown paths must return 404.html
 # (a 200-rewrite to index.html would create soft-404 duplicate content and hurt GSC indexing)
 # Generated per-game redirects

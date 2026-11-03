@@ -20,6 +20,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { tagUrlPath } = require('./tag-slugs.cjs');
 
 const DIST  = path.join(__dirname, '..', 'dist');
 const GAMES = path.join(__dirname, '..', 'games.json');
@@ -35,7 +36,7 @@ const TAG_META = {
   arcade:      { emoji: '\u{1F47E}', label: 'Arcade' },
   competitive: { emoji: '\u{1F3C6}', label: 'Competitive' },
   idle:        { emoji: '\u{1F579}\uFE0F', label: 'Idle' },
-  multiplayer: { emoji: '\u{1F465}', label: 'Multiplayer' },
+  multiplayer: { emoji: '\u{1F465}', label: '2 Player' },
   platformer:  { emoji: '\u{1F3C3}', label: 'Platformer' },
   puzzle:      { emoji: '\u{1F9E9}', label: 'Puzzle' },
   racing:      { emoji: '\u{1F3CE}\uFE0F', label: 'Racing' },
@@ -95,7 +96,7 @@ function sectionHtml(tag, games) {
   return `        <section class="category-section" id="section-${tag}">
           <div class="section-header">
             <h2 class="section-title"><span class="emoji">${meta.emoji}</span> ${esc(meta.label)} Games</h2>
-            <a class="see-all" href="/tag/${tag}/">See all</a>
+            <a class="see-all" href="/${tagUrlPath(tag)}/">See all</a>
           </div>
           <div class="game-grid">
 ${cards}

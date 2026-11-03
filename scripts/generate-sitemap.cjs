@@ -22,6 +22,7 @@
 const fs   = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { tagUrlPath } = require('./tag-slugs.cjs');
 
 const BASE     = 'https://play.poki2.online';
 const DIST     = path.join(__dirname, '..', 'dist');
@@ -107,13 +108,15 @@ for(const t of TAG_PAGES){
 // `dateModified` is masked because the tag generator stamps today's UTC date
 // into the JSON-LD on every build, which would otherwise bump all 13 tags daily.
 function tagPageFingerprint(t){
-	const file = path.join(DIST, 'tag', t, 'index.html');
+	const file = path.join(DIST, ...tagUrlPath(t).split('/'), 'index.html');
 	if(!fs.existsSync(file)) return sha(`missing:${t}:${JSON.stringify(tagMembers[t])}`);
 	const html = fs.readFileSync(file, 'utf8').replace(/"dateModified":"[^"]*"/g, '"dateModified":""');
 	return sha(html);
 }
 for(const t of TAG_PAGES){
-	lines.push(url(`${BASE}/tag/${t}/`,'weekly','0.8', lastmodFor(`tag ${t}`, tagPageFingerprint(t))));
+	// Sidecar key stays `tag <internal key>` on purpose: the public slug can
+	// change without losing the accumulated lastmod history behind it.
+	lines.push(url(`${BASE}/${tagUrlPath(t)}/`,'weekly','0.8', lastmodFor(`tag ${t}`, tagPageFingerprint(t))));
 }
 
 lines.push('','  <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->');

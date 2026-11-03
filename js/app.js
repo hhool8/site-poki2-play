@@ -23,7 +23,7 @@
     arcade:      { emoji: "👾", label: "Arcade" },
     competitive: { emoji: "🏆", label: "Competitive" },
     idle:        { emoji: "🕹️", label: "Idle" },
-    multiplayer: { emoji: "👥", label: "Multiplayer" },
+    multiplayer: { emoji: "👥", label: "2 Player" },
     platformer:  { emoji: "🏃", label: "Platformer" },
     puzzle:      { emoji: "🧩", label: "Puzzle" },
     racing:      { emoji: "🏎️", label: "Racing" },
@@ -35,6 +35,22 @@
     other:       { emoji: "🎲", label: "Other" },
   };
 
+  /* ---------- Public tag slugs ----------
+   * Mirrors scripts/tag-slugs.cjs (browser code can't require() it).
+   * Internal keys stay the games.json tag string; only the public path changes,
+   * so /tag/multiplayer/ is now /2-player-games/ and 301'd in _redirects.
+   * Every URL this file builds MUST go through tagSlug(). */
+  const TAG_SLUG = { multiplayer: '2-player-games' };
+  const tagSlug = (t) => TAG_SLUG[t] || t;
+  // Path between the origin and the trailing slash. Untouched tags keep the
+  // /tag/<t>/ prefix — tagSlug() returns the bare key for them, so building
+  // `/${tagSlug(t)}/` would send every other category to /<t>/.
+  const tagPath = (t) => TAG_SLUG[t] || `tag/${t}`;
+  const tagKeyFromSlug = (slug) =>
+    Object.keys(TAG_SLUG).find((k) => TAG_SLUG[k] === slug) || slug;
+  // Matches any non-default public slug, e.g. /2-player-games/
+  const TAG_SLUG_RE = new RegExp('^/(' + Object.values(TAG_SLUG).join('|') + ')/?$', 'i');
+
   /* ---------- Tag intros (headline + desc) — kept small for runtime use ---------- */
   const TAG_INTRO = {
     puzzle:      { headline: 'Free Online Puzzle Games', desc: 'Challenge your brain with the best free puzzle games online. Solve riddles, match tiles, and test your logic — all playable instantly in your browser.' },
@@ -44,7 +60,7 @@
     racing:      { headline: 'Free Online Racing Games', desc: 'Hit the gas with the best free racing games online. Speed through challenging tracks, dodge rivals, and chase first place — playable instantly in your browser.' },
     sports:      { headline: 'Free Online Sports Games', desc: 'Compete in the best free online sports games — from basketball to soccer. Play solo or challenge opponents and climb the leaderboard. No download needed.' },
     strategy:    { headline: 'Free Online Strategy Games', desc: 'Outthink your opponents with the best free strategy games online. Plan every move, manage resources, and dominate the battlefield. Play instantly in your browser.' },
-    multiplayer: { headline: 'Free Online Multiplayer Games', desc: 'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real-time — no download, no install, just play instantly.' },
+    multiplayer: { headline: 'Poki 2 Player Games', desc: 'Play Poki 2 player games free in your browser — local two-player titles plus online multiplayer shooters. No download, no install, works on mobile.' },
     idle:        { headline: 'Free Online Idle & Clicker Games', desc: 'Sit back and let the numbers grow in the best free idle games online. Upgrade, automate, and unlock powerful boosts — instant play, no download required.' },
     arcade:      { headline: 'Free Online Arcade Games', desc: 'Relive the golden age of gaming with the best free arcade games online. Simple controls, addictive gameplay, and high scores to chase. Play instantly in any browser.' },
     platformer:  { headline: 'Free Online Platformer Games', desc: 'Jump, run, and dodge through dangerous levels in the best free platformer games online. Classic side-scrolling action playable instantly in your browser.' },
@@ -1063,9 +1079,14 @@
       let desc, canonical, title;
       if (view === 'category' && tag && TAG_META[tag]) {
         const label = TAG_META[tag].label || tag;
-        desc      = CAT_DESC[tag] || `Play free ${label.toLowerCase()} games online on Poki2.`;
-        canonical = `https://play.poki2.online/tag/${tag}/`;
-        title     = `${label} Games — Free Online | Poki2`;
+        const intro = TAG_INTRO[tag];
+        // Mirror the prerendered <title>/description exactly. These used to
+        // diverge: the static HTML shipped one title and this function
+        // overwrote it on load, so the retitled multiplayer hub still read
+        // "Multiplayer Games — Free Online" in the browser tab.
+        desc      = (intro && intro.desc) || CAT_DESC[tag] || `Play free ${label.toLowerCase()} games online on Poki2.`;
+        canonical = `https://play.poki2.online/${tagPath(tag)}/`;
+        title     = (intro && intro.headline) ? `${intro.headline} — Poki2` : `${label} Games — Free Online | Poki2`;
       } else {
         desc = HOME_DESC; canonical = 'https://play.poki2.online/'; title = HOME_TITLE;
       }
@@ -1168,7 +1189,7 @@
     }
     const buildTagUrl = (page) => {
       const p = Math.max(1, parseInt(page) || 1);
-      return p > 1 ? `/tag/${tag}/?page=${p}` : `/tag/${tag}/`;
+      return p > 1 ? `/${tagPath(tag)}/?page=${p}` : `/${tagPath(tag)}/`;
     };
 
     // Update URL to a single canonical tag page, keeping pagination in the
@@ -2593,13 +2614,13 @@
         const url = new URL(a.href, location.origin);
         if (url.origin !== location.origin) return;
 
-        // Match tag base: /tag/{tag}/ (optionally trailing slash)
-        const tagMatch = url.pathname.match(/^\/tag\/([^\/]+)\/?$/i);
+        // Match tag base: /tag/{tag}/ or a public slug like /2-player-games/
+        const tagMatch = url.pathname.match(/^\/tag\/([^\/]+)\/?$/i) || url.pathname.match(TAG_SLUG_RE);
         // Match favorites page: /favorites or /favorites/
         const favsMatch = url.pathname.match(/^\/favorites\/?$/i);
         if (tagMatch) {
           ev.preventDefault();
-          const tagKey = tagMatch[1].toLowerCase();
+          const tagKey = tagKeyFromSlug(tagMatch[1].toLowerCase());
           const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
           showCategory(tagKey, pageNum);
           return;
@@ -2808,8 +2829,9 @@
     const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
     // /game/{char}/{slug}/ → per-game SEO page: auto-open the detail modal (not the iframe)
     const gamePageMatch = (location.pathname || '').match(/^\/game\/[^\/]+\/([^\/]+)\/?$/i);
-    // /tag/{tag}/ → canonical tag page, with optional ?page=N handled client-side
-    const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)\/?$/i);
+    // /tag/{tag}/ or /2-player-games/ → canonical tag page, ?page=N client-side
+    const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)\/?$/i)
+      || (location.pathname || '').match(TAG_SLUG_RE);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://play.poki2.online/?play-vex5)
@@ -2839,8 +2861,8 @@
         showHome();
       }
     } else if (tagPageMatch && tagPageMatch[1]) {
-      // /tag/{tag}/ + optional ?page=N — tag category page
-      const tagKey = tagPageMatch[1].toLowerCase();
+      // /tag/{tag}/ or a public slug + optional ?page=N — tag category page
+      const tagKey = tagKeyFromSlug(tagPageMatch[1].toLowerCase());
       const tagPage = parseInt(searchParams.get('page') || '1', 10) || 1;
       console.log('[route] detected tag page:', tagKey, 'page', tagPage);
       showCategory(tagKey, tagPage);
