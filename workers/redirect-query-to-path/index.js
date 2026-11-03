@@ -15,7 +15,8 @@ async function handle(request) {
     }
     // normalize /games/<slug>/ to /games/<slug>
     const normalizedPath = pathname.replace(/\/$/, "");
-    // 特殊映射：/games/mobileapp_mobile/<slug>  -> https://mobileapp.poki2.online/mobile/<slug>/
+    // 特殊映射：/games/mobileapp_mobile/<slug> -> play.poki2.online/game/<c>/<slug>/
+    // （旧注释写成移动站 /mobile/<slug>/，但代码从来没有那样做过，服务端也不存在那个路径）
     const mMobile = normalizedPath.match(
       /^\/games\/mobileapp_mobile\/([^\/]+)(\/.*)?$/i,
     );

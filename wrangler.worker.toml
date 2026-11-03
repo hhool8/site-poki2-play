@@ -1,24 +1,24 @@
-# Wrangler config for deploying the redirect worker
-# Replace `YOUR_ACCOUNT_ID` and `poki2.online/*` with your values before publishing.
+# Wrangler config for deploying the legacy /games/* redirect worker.
+#
+# Deploy:  npx wrangler deploy --config=wrangler.worker.toml
+#
+# Do NOT add an [env.production] block here. Wrangler names an env'd deploy
+# `<name>-<env>`, so `--env production` uploads a *different* script
+# (`redirect-query-to-path-production`) that the route below does not point at.
+# That is exactly what happened: the route kept serving a build from 2026-04-24
+# while the fixed one-hop source sat in git undeployed, and an orphan
+# `redirect-query-to-path-production` accumulated with no route attached.
+# One config, one script name, one route.
 
 name = "redirect-query-to-path"
 main = "workers/redirect-query-to-path/index.js"
 compatibility_date = "2026-02-21"
 
-# Your Cloudflare account id (replace)
 account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
 
-# If true, deploy to *.workers.dev; if false, will deploy to the route below
-
+# No *.workers.dev endpoint; this worker is only reachable through the route.
 workers_dev = false
 
-# Route to bind the worker to (replace with your domain)
-# Narrow the route so the worker only intercepts legacy /games/* paths
-# This prevents accidental interception of /css/, /js/ and other static assets.
+# Deliberately narrow. An earlier revision matched `poki2.online/*` and
+# swallowed /css/, /js/ and other static assets before Pages could serve them.
 route = "poki2.online/games/*"
-
-# Optional: specify environment-specific overrides
-[env.production]
-# production should also be limited to /games/* only
-route = "poki2.online/games/*"
-account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
