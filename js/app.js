@@ -37,10 +37,11 @@
 
   /* ---------- Public tag slugs ----------
    * Mirrors scripts/tag-slugs.cjs (browser code can't require() it).
-   * Internal keys stay the games.json tag string; only the public path changes,
-   * so /tag/multiplayer/ is now /2-player-games/ and 301'd in _redirects.
+   * HISTORY: held `multiplayer: '2-player-games'` for ~2 hours on 2026-11-04,
+   * rolled back — the "poki 2 player games" hub lives on the apex host
+   * (https://poki2.online/2-player-games); play keeps /tag/multiplayer/.
    * Every URL this file builds MUST go through tagSlug(). */
-  const TAG_SLUG = { multiplayer: '2-player-games' };
+  const TAG_SLUG = {};
   const tagSlug = (t) => TAG_SLUG[t] || t;
   // Path between the origin and the trailing slash. Untouched tags keep the
   // /tag/<t>/ prefix — tagSlug() returns the bare key for them, so building
@@ -48,8 +49,13 @@
   const tagPath = (t) => TAG_SLUG[t] || `tag/${t}`;
   const tagKeyFromSlug = (slug) =>
     Object.keys(TAG_SLUG).find((k) => TAG_SLUG[k] === slug) || slug;
-  // Matches any non-default public slug, e.g. /2-player-games/
-  const TAG_SLUG_RE = new RegExp('^/(' + Object.values(TAG_SLUG).join('|') + ')/?$', 'i');
+  // Matches any non-default public slug, e.g. /2-player-games/.
+  // GUARD: with an empty map the naive '^/()/?$' compiles to something that
+  // matches the home path "/" and would hijack every same-origin link to the
+  // homepage as a tag click — so use a never-matching regex instead.
+  const TAG_SLUG_RE = Object.keys(TAG_SLUG).length
+    ? new RegExp('^/(' + Object.values(TAG_SLUG).join('|') + ')/?$', 'i')
+    : /(?!.)/;
 
   /* ---------- Tag intros (headline + desc) — kept small for runtime use ---------- */
   const TAG_INTRO = {

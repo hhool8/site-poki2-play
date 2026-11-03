@@ -4,21 +4,25 @@
  *
  * The internal key stays "multiplayer" because that is the string used in
  * every game's `tags` array; renaming it would mean rewriting 220 records.
- * Only the public path changes, so /tag/multiplayer/ becomes
- * /2-player-games/ and the old URL is 301'd in _redirects.
+ *
+ * HISTORY: the map held `multiplayer: '2-player-games'` for ~2 hours on
+ * 2026-11-04 (commit 93ff257). Rolled back the same day: the "poki 2 player
+ * games" hub lives on the apex host at https://poki2.online/2-player-games
+ * instead, and play's multiplayer tag keeps its neutral /tag/multiplayer/
+ * URL. /2-player-games/ on THIS host is 301'd back in _redirects.
+ * The map is kept (empty) because every URL builder routes through it —
+ * do not delete the helpers.
  *
  * Anything that builds a tag URL MUST go through tagSlug() — the generators
  * (tag pages, game pages, sitemap) and js/app.js each used to hardcode
  * `/tag/${tag}/`, which is exactly how a rename ends up half-applied.
  *
  * js/app.js is browser code and cannot require() this file, so it carries a
- * mirrored copy. Keep the two in sync; `npm run verify:tag-slugs` checks it.
+ * mirrored copy. Keep the two in sync.
  */
 'use strict';
 
-const TAG_SLUGS = {
-  multiplayer: '2-player-games',
-};
+const TAG_SLUGS = {};
 
 /** internal tag key -> public URL slug */
 const tagSlug = (tag) => TAG_SLUGS[tag] || tag;
@@ -28,11 +32,11 @@ const tagSlug = (tag) => TAG_SLUGS[tag] || tag;
  * between the origin and the trailing slash.
  *
  *   tagUrlPath('puzzle')      -> 'tag/puzzle'
- *   tagUrlPath('multiplayer') -> '2-player-games'
+ *   tagUrlPath('multiplayer') -> 'tag/multiplayer'
  *
  * Use this, never tagSlug(), when building a URL or a dist path — tagSlug()
  * returns the bare key for untouched tags, and building `/${tagSlug(t)}/`
- * silently relocated all 12 of them from /tag/<t>/ to /<t>/.
+ * would relocate all 12 tag pages from /tag/<t>/ to /<t>/.
  */
 const tagUrlPath = (tag) => TAG_SLUGS[tag] || `tag/${tag}`;
 

@@ -6,12 +6,13 @@
 /ads.txt / 410
 /app-ads.txt / 410
 
-# Tag page retitled to its public slug: /tag/multiplayer/ -> /2-player-games/
-# (scripts/tag-slugs.cjs). 301 rather than 302 so the old URL's signals transfer
-# to the new one instead of the two competing for "poki 2 player games".
+# 2026-11-04: the /2-player-games/ URL experiment was rolled back — the
+# "poki 2 player games" hub lives on the apex host (https://poki2.online/
+# 2-player-games) and this tag keeps its neutral /tag/multiplayer/ URL.
+# Reverse 301 so the briefly-live URL's signals return to the tag page.
 # Query strings (?page=N) are appended by the client after the redirect.
-/tag/multiplayer  /2-player-games/  301
-/tag/multiplayer/ /2-player-games/  301
+/2-player-games  /tag/multiplayer/  301
+/2-player-games/ /tag/multiplayer/  301
 
 # Note: no SPA fallback — every real route is a static file; unknown paths must return 404.html
 # (a 200-rewrite to index.html would create soft-404 duplicate content and hurt GSC indexing)
