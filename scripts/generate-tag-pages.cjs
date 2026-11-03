@@ -221,7 +221,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     const href = `/game/${char}/${slug}/`;
     return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
   }).join('\n');
-  const gameListSectionHtml = `<section class="tag-games" id="tag-games" aria-label="All ${esc(cfg.label)} games">
+  const gameListSectionHtml = `<section class="tag-games" id="tag-games" data-static-tag="${tag}" aria-label="All ${esc(cfg.label)} games">
   <h2>All ${esc(cfg.label)} Games (${listGames.length})</h2>
   <ul>
 ${gameListHtml}
@@ -253,7 +253,7 @@ ${gameListHtml}
   const heroSub = cfg.desc.split('.')[0] + '.';
   const totalCount = allTagGames.length;
   const pageCountNote = `Explore <strong>${totalCount}</strong> free ${esc(cfg.label)} games — no download required.`;
-  const tagIntroHtml = `<section class="tag-intro">
+  const tagIntroHtml = `<section class="tag-intro" data-static-tag="${tag}">
               <p class="tag-intro-desc">${esc(cfg.desc)}</p>
               <p class="tag-intro-count">${pageCountNote}</p>
             </section>`;
@@ -296,7 +296,7 @@ ${gameListHtml}
       a: `<p>Because the catalogue is curated rather than scraped. Poki2 carries ${games.length} playable browser games in total; four of them support more than one player, and we would rather say four than pad the page with single-player titles tagged "multiplayer" to look bigger. If you want a wider list — including games we do not host — the <a href="https://poki2.online/blog/best-2-player-browser-games">2-player browser games guide</a> covers the field.</p>`,
     });
   }
-  const faqHtml = `<section class="tag-faq" id="tag-faq">
+  const faqHtml = `<section class="tag-faq" id="tag-faq" data-static-tag="${tag}">
   <h2>${esc(cfg.label)} Games — Frequently Asked Questions</h2>
   ${faqs.map(f => `  <div class="faq-item">
     <h3 class="faq-q">${f.q}</h3>
@@ -308,7 +308,7 @@ ${gameListHtml}
   // class is stripped from the DOM on render, so prose placed there is only
   // ever seen by clients that do not run JavaScript — which is a bad trade and,
   // at enough volume, a bad look. This section stays where users can read it.
-  const twoPlayerHtml = tag !== 'multiplayer' ? '' : `<section class="tag-two-player" id="two-player" aria-label="Playing with two people">
+  const twoPlayerHtml = tag !== 'multiplayer' ? '' : `<section class="tag-two-player" id="two-player" data-static-tag="${tag}" aria-label="Playing with two people">
   <h2>Two players: what each game actually asks of you</h2>
   <p>"Multiplayer" on the web covers two very different evenings. One is a friend sitting next to you taking half the keyboard. The other is a match against people who are not in the room. Four games on Poki2 support a second player, and only one of them is the first kind — so here is the breakdown before you commit.</p>
   <table style="width:100%;border-collapse:collapse;margin:1rem 0">
@@ -477,7 +477,7 @@ const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 // Remove any existing tag-intro sections from the template so generator
 // inserts a single intro in the desired location (after #game-sections).
 const sanitizedBody = bodyInner
-  .replace(/<section class="tag-intro">[\s\S]*?<\/section>/gi, '')
+  .replace(/<section class="tag-intro"[^>]*>[\s\S]*?<\/section>/gi, '')
   // Strip prerendered home sections — tag pages must not embed homepage content
   .replace(/<!--HOME-STATIC:START-->[\s\S]*?<!--HOME-STATIC:END-->/g, '');
 const gameBodyContent = sanitizedBody

@@ -670,6 +670,7 @@
   /* ---------- Favorites view ---------- */
   function showFavorites() {
     currentView = 'favorites';
+    pruneStaticSections(null);
     if (document && document.body) document.body.classList.remove('full-bleed-footer');
     try { const sp = document.querySelector('.page-spacer'); if (sp) sp.remove(); } catch(e) {}
     $hero.style.display = 'none';
@@ -1060,6 +1061,24 @@
     return section;
   }
 
+  /* ---------- Static-section pruning ---------- */
+  // The generator stamps every static section it emits (two-player explainer,
+  // game list, FAQ) with data-static-tag="<tag>". The SPA renders views by
+  // patching #game-sections and never touches those siblings, so navigating
+  // client-side from e.g. /2-player-games/ to /tag/shooting/ used to leave the
+  // hub's prose — including "four games support a second player" — sitting
+  // under the shooting grid. Prune everything that does not belong to the
+  // current view; keepTag === null means a non-tag view (home/search/detail),
+  // where no static tag section belongs.
+  function pruneStaticSections(keepTag) {
+    try {
+      document.querySelectorAll('[data-static-tag]').forEach(el => {
+        if (keepTag && el.dataset && el.dataset.staticTag === keepTag) return;
+        try { if (el && el.parentNode) el.parentNode.removeChild(el); } catch (e) { /* ignore */ }
+      });
+    } catch (e) { /* ignore */ }
+  }
+
   /* ---------- Page meta (title / canonical / description) ---------- */
   function updatePageMeta(view, tag) {
     try {
@@ -1116,6 +1135,7 @@
       // '/'). Routing handlers that need to update the URL should do so
       // themselves before calling `showHome()`.
     currentView = "home";
+    pruneStaticSections(null); // no static tag section belongs on the home view
     window.__cardCount = 0; // reset so first-N eager logic works on re-render
     // Remove pinned footer helper when returning to home and hide footer until needed
     if (document && document.body) {
@@ -1288,6 +1308,8 @@
           try { if (el && el.parentNode) el.parentNode.removeChild(el); } catch (e) { /* ignore */ }
         });
       } catch (e) { /* ignore */ }
+      // Drop static sections emitted for a different tag (see pruneStaticSections).
+      pruneStaticSections(tag);
       // Inject visible pagination nav when there are multiple pages
       if (totalCatPages > 1) {
         const prevPage = safePageNum === 1 ? null : safePageNum - 1;
@@ -1509,6 +1531,7 @@
   } catch (e) { /* ignore footer control failures */ }
 
   function showSearch(query) {
+    pruneStaticSections(null);
     if (!query.trim()) {
       showHome();
       return;
@@ -1841,6 +1864,7 @@
 
   /* ---------- Game detail interstitial ---------- */
   function showDetail(game) {
+    pruneStaticSections(null);
     pendingGame = game;
     $detailImg.src = game.imgSrc || getFaviconCandidates(game.link)[0];
     $detailImg.alt = game.title || "";

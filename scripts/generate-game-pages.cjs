@@ -249,7 +249,7 @@ ${bodyTag}
     </nav>
     <h1>${esc(game.title)}</h1>
     <p>${esc(desc)}</p>
-    ${about ? `<h2>About ${esc(game.title)}</h2>\n    <p>${esc(about)}</p>` : ''}
+    ${about ? `<h2>About ${esc(game.title)}</h2>\n${about.split(/\n\s*\n/).map(p => `    <p>${esc(p.trim())}</p>`).join('\n')}` : ''}
     ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/${tagUrlPath(k)}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
     ${game.howToPlay && !htpDup ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}

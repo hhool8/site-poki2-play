@@ -28,8 +28,8 @@
     "featured": false,
     "badge": "",
     "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master. Supports keyboard and touch controls.",
-    "howToPlay": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master.",
-    "about": "Slide tiles with the arrow keys — identical numbers merge into their sum. The board fills up fast, so the classic strategy is to keep your highest tile locked in one corner and build a descending chain around it. Never swipe toward the corner where your big tile sits, and think one merge ahead before each move."
+    "howToPlay": "Push every tile in one direction with the arrow keys, WASD, or a swipe. Equal numbers merge into their sum, and a new tile appears after each move. Keep your biggest tile wedged in one corner and build down from it to stop the board locking up.",
+    "about": "2048 is a single-player sliding-tile puzzle released by Italian developer Gabriele Cirulli in 2014. The goal is to combine numbered tiles on a 4x4 grid until one tile reaches 2048. It went viral within days of launch and stayed one of the most-played browser games ever made: free, instant to load, and satisfying in both two-minute sessions and long ones.\n\nEvery move pushes all tiles in one direction. When two tiles carrying the same number collide they merge into one tile worth double, so two 2s become a 4 and two 4s become an 8. A new tile appears after each move, and the run ends when the board is full with no merges left.\n\nReaching 2048 is the first milestone, not the end. Plenty of players push on to 4096 and 8192, and every merge adds to the score, so the route to a high score is simply more merges per move.\n\nThe standard approach is to anchor your largest tile in one corner and never move it out. Play mostly with the two directions adjacent to that corner, keep the tiles around it in descending order, and avoid filling rows you still need. The board rewards planning two or three moves ahead far more than reacting to whatever has just appeared."
   },
   {
     "title": "Among Us",
@@ -89,13 +89,13 @@
     "featured": false,
     "badge": "",
     "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop brows.",
-    "howToPlay": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory.",
+    "howToPlay": "Pick a character, then use movement to create space and the action button to shoot - hold it to charge the shot. On defence, time the block instead of chasing, and switch to the closest player before the pass lands.",
     "icons": {
       "180": "/icons/b/basketball-stars/icon-180.png",
       "192": "/icons/b/basketball-stars/icon-192.png",
       "512": "/icons/b/basketball-stars/icon-512.png"
     },
-    "about": "1v1 or 2v2 basketball duels where you steal, dribble and shoot with simple controls. Timing beats spamming: fake a shot to send the defender jumping past you, then take the easy bucket. On defense, hold your position rather than lunging — a mistimed steal leaves you flat-footed."
+    "about": "Basketball Stars is an arcade basketball game built for short, fast matches. You pick a character, then play one-on-one or two-on-two on a half court, chaining dribbles, blocks and dunks into a single possession.\n\nOffence runs on timing rather than playbooks. Move to create space, charge a shot for power, and dash past a defender rather than around him. Defence is the same set of buttons read backwards: contest the shot, time the block, and switch to the nearest player before the pass arrives. A dunk close to the rim is worth more than a jump shot and swings the momentum.\n\nMatches are short enough to decide in a couple of minutes, which is why it works better as a browser game than as a simulation. It plays on keyboard or touch, and two players can share one keyboard for a local match."
   },
   {
     "title": "Battle for Gondor",
@@ -1800,13 +1800,13 @@
     "featured": false,
     "badge": "",
     "description": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion. Supports keyboard and touch controls.",
-    "howToPlay": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion.",
+    "howToPlay": "Reveal tiles and read the numbers: each one counts the mines in the eight squares around it. Flag what you have proved, chord the numbers you have satisfied, and work in from the edges where the neighbour counts are smaller.",
     "icons": {
       "180": "/icons/m/minesweeper/icon-180.png",
       "192": "/icons/m/minesweeper/icon-192.png",
       "512": "/icons/m/minesweeper/icon-512.png"
     },
-    "about": "The classic logic puzzle: numbers tell you how many of the eight surrounding cells hide mines, and deduction — not luck — clears the board. Look for the 1-2-1 and 1-2-2-1 patterns, flag only when certain, and guess only when the math leaves no alternative."
+    "about": "Minesweeper is a single-player logic puzzle played on a grid of covered tiles. Somewhere under the grid are mines and every other tile is safe. Reveal all the safe tiles without setting one off and the board is cleared.\n\nLeft-click reveals a tile. A safe tile shows a number from 1 to 8 counting the mines among its eight neighbours, or opens blank when none of them are mined - and a blank tile cascades through every connected blank, which is how large areas open up at once. Right-click, or long-press on touch, plants a flag on a tile you believe is mined. Double-clicking a number whose flag count already matches its value reveals all its remaining neighbours at once; that move is called chording, and it is the fastest way to clear an area you have already solved.\n\nOn Microsoft-specification boards the first click is always safe, because mines are placed only after that first reveal. Everything after it is deduction: the numbers are complete information, so a move that is not backed by a count is a guess.\n\nThe patterns are what make the game fast. A 1-2-1 reading along the edge of an unknown strip puts the mines under the two outer tiles and leaves the middle safe. Two 1s sharing a single unknown neighbour mean that neighbour is mined. Corners have three neighbours and edges five, so edges resolve first - working from the outside in is quicker than diving into the middle of a board.\n\nNot every board is solvable by logic alone. A meaningful share of Expert boards end in a forced 50/50, where two tiles share the last mine and no count separates them. The mine counter in the corner at least tells you how many are still unaccounted for, which often settles the final moves without guessing."
   },
   {
     "title": "Mini-putt",
