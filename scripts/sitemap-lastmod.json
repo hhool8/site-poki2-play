@@ -1,58 +1,58 @@
 {
   "page /": {
-    "hash": "8c6f9008e6c9b084bcabe1980a720c8f47220f72",
-    "lastmod": "2026-10-03"
+    "hash": "f8dca0dc7fe05658401d38d634868b216056ea72",
+    "lastmod": "2026-11-03"
   },
   "tag puzzle": {
-    "hash": "9d8145add80e398e3f6d299466a39ddc6913ab94",
+    "hash": "e3f02b25f32e355b7d7093b86fce076031e84b1d",
     "lastmod": "2026-09-27"
   },
   "tag adventure": {
-    "hash": "7abca8b877c4b5d7b2dca84eea32b229b52ef933",
+    "hash": "1fa6912e81b7889dd7b2cadfb580de7457d29396",
     "lastmod": "2026-09-27"
   },
   "tag shooting": {
-    "hash": "b772a6f7758c15ac390c33acbca07deca9a23bd9",
+    "hash": "21d1d7c32b8ae14ab9e1fd01ab832a43279d2144",
     "lastmod": "2026-09-27"
   },
   "tag action": {
-    "hash": "5a19d93dcb97734fbc671db0269e88c28a7b5074",
+    "hash": "1e62bf8eb5251ea9b1ad81043d11c014ef05a62a",
     "lastmod": "2026-09-27"
   },
   "tag racing": {
-    "hash": "7dbfad2cc595e14c75579140d25d600f6223d35a",
+    "hash": "83eadf785c7c4edd62fd7098b852090dda28c809",
     "lastmod": "2026-09-27"
   },
   "tag sports": {
-    "hash": "2ea1200ea66b9f14cf4dab6268dcd6291198c113",
+    "hash": "116a91d22a8cda266e3ab4c7e132e0e4b26d5e23",
     "lastmod": "2026-09-27"
   },
   "tag strategy": {
-    "hash": "cc0251d527ecbb0f8e0964b94a0033fa602ac3c7",
+    "hash": "dfed064398be6bdd24d0ba8cc62322712cce24b5",
     "lastmod": "2026-09-27"
   },
   "tag multiplayer": {
-    "hash": "425201f562546c681debb4cdb0af196be24de61c",
-    "lastmod": "2026-09-27"
+    "hash": "f25a607a6b0f8c1ca52448e17250b1fdd2b6d121",
+    "lastmod": "2026-11-03"
   },
   "tag idle": {
-    "hash": "d693c1c8e88951d2e25ab24300eb90eb095de003",
+    "hash": "5cff6a9dc61ecac53782bd985a322cf3f7fb666a",
     "lastmod": "2026-09-27"
   },
   "tag arcade": {
-    "hash": "5a9cbf2d49719013eb8ea061371f99fc20d19bb9",
+    "hash": "110c94ed279dad414fb9dcfdb3005ff0aeec1c5a",
     "lastmod": "2026-09-27"
   },
   "tag platformer": {
-    "hash": "cade0d9b6d038cbb777678540dd169312458f9f7",
+    "hash": "6c495f820bf20e0e201aa1133af129649317c628",
     "lastmod": "2026-09-27"
   },
   "tag competitive": {
-    "hash": "aaf21730d12e9c80c610527e3a0b2ee1e54d8716",
+    "hash": "4e7cb2d41e06932e9c853fed2b1d6771e825885f",
     "lastmod": "2026-09-27"
   },
   "tag classic": {
-    "hash": "1c5520833cb03fed903095f297f1b0f5a7ea483c",
+    "hash": "0015adb361f1ac1f3a4a3496e58ab1b94ce45c62",
     "lastmod": "2026-09-27"
   },
   "game 2048": {

@@ -14,7 +14,9 @@
  *
  * Fingerprint sources:
  *   - game pages : game fields in games.json (title/desc/howToPlay/tags/...)
- *   - tag pages  : the sorted set of game slugs currently in that tag
+ *   - tag pages  : the rendered tag page (dist/tag/<t>/index.html), i.e. copy
+ *                  AND game list. The sitemap step runs after generate:tagpages,
+ *                  so the file is always present.
  *   - site pages : the source HTML file content
  */
 const fs   = require('fs');
@@ -97,8 +99,21 @@ const tagMembers = {};
 for(const t of TAG_PAGES){
 	tagMembers[t] = shown.filter(g => (g.tags||[]).includes(t)).map(g => normalizeHref(g.link)).sort();
 }
+
+// Fingerprint the rendered page, not just its membership list. The previous
+// fingerprint was sha(JSON.stringify(tagMembers[t])) — which meant rewriting a
+// tag page's title/H1/FAQ reported "no change", and the sitemap went on
+// advertising a month-old lastmod for a page that had just been rewritten.
+// `dateModified` is masked because the tag generator stamps today's UTC date
+// into the JSON-LD on every build, which would otherwise bump all 13 tags daily.
+function tagPageFingerprint(t){
+	const file = path.join(DIST, 'tag', t, 'index.html');
+	if(!fs.existsSync(file)) return sha(`missing:${t}:${JSON.stringify(tagMembers[t])}`);
+	const html = fs.readFileSync(file, 'utf8').replace(/"dateModified":"[^"]*"/g, '"dateModified":""');
+	return sha(html);
+}
 for(const t of TAG_PAGES){
-	lines.push(url(`${BASE}/tag/${t}/`,'weekly','0.8', lastmodFor(`tag ${t}`, sha(JSON.stringify(tagMembers[t])))));
+	lines.push(url(`${BASE}/tag/${t}/`,'weekly','0.8', lastmodFor(`tag ${t}`, tagPageFingerprint(t))));
 }
 
 lines.push('','  <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->');
