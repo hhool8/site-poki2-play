@@ -3,26 +3,6 @@
     "hash": "8c6f9008e6c9b084bcabe1980a720c8f47220f72",
     "lastmod": "2026-10-03"
   },
-  "page /about/": {
-    "hash": "153ae64628e763380d77302a7536435b2d0292a9",
-    "lastmod": "2026-09-28"
-  },
-  "page /privacy/": {
-    "hash": "08393f830ec4f517707ff7e60076cfd5a247727e",
-    "lastmod": "2026-09-28"
-  },
-  "page /terms/": {
-    "hash": "cd785eddd55b61a6885efdc590dd0178a5d17da7",
-    "lastmod": "2026-09-28"
-  },
-  "page /contact/": {
-    "hash": "b7c06c52e006e935bab13da1c619cdddd4a2590d",
-    "lastmod": "2026-10-03"
-  },
-  "page /dmca/": {
-    "hash": "6151c0f0f24850b88f8904f8b15610af59c362d5",
-    "lastmod": "2026-09-28"
-  },
   "tag puzzle": {
     "hash": "9d8145add80e398e3f6d299466a39ddc6913ab94",
     "lastmod": "2026-09-27"
@@ -950,5 +930,25 @@
   "game snakebird": {
     "hash": "ee7c56fa481069d8a4c4b8f47ba1d1ee052218cd",
     "lastmod": "2026-09-27"
+  },
+  "page /about": {
+    "hash": "153ae64628e763380d77302a7536435b2d0292a9",
+    "lastmod": "2026-09-28"
+  },
+  "page /privacy": {
+    "hash": "08393f830ec4f517707ff7e60076cfd5a247727e",
+    "lastmod": "2026-09-28"
+  },
+  "page /terms": {
+    "hash": "cd785eddd55b61a6885efdc590dd0178a5d17da7",
+    "lastmod": "2026-09-28"
+  },
+  "page /contact": {
+    "hash": "b7c06c52e006e935bab13da1c619cdddd4a2590d",
+    "lastmod": "2026-10-03"
+  },
+  "page /dmca": {
+    "hash": "6151c0f0f24850b88f8904f8b15610af59c362d5",
+    "lastmod": "2026-09-28"
   }
 }

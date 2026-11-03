@@ -30,13 +30,17 @@ const SRC_OUT  = path.join(__dirname, '..', 'sitemap.xml');
 const TODAY    = new Date().toISOString().slice(0,10);
 const CHECK    = process.argv.includes('--check');
 
+// No trailing slash on the static pages: /about/ answers 308 -> /about, so listing
+// the slashed form made the sitemap advertise a redirect as the canonical URL
+// (and contradict each page's own <link rel="canonical">). Game pages are the
+// opposite -- /game/<c>/<slug>/ is the URL that returns 200, so they keep the slash.
 const STATIC_PAGES = [
   ['/',            'index.html'],
-  ['/about/',      'about.html'],
-  ['/privacy/',    'privacy.html'],
-  ['/terms/',      'terms.html'],
-  ['/contact/',    'contact.html'],
-  ['/dmca/',       'dmca.html'],
+  ['/about',       'about.html'],
+  ['/privacy',     'privacy.html'],
+  ['/terms',       'terms.html'],
+  ['/contact',     'contact.html'],
+  ['/dmca',        'dmca.html'],
 ];
 
 const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive','classic'];
