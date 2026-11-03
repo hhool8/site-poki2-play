@@ -1,32 +1,48 @@
-# Cloudflare Pages custom headers
+# Cloudflare Pages custom headers — play.poki2.online
+#
+# Match semantics: Pages matches these patterns against the REQUEST path and
+# normalises `/` to /index.html (verified: the /index.html cache block fires on
+# the home request). Extensionless pretty URLs mean `/*.html` never matches a
+# page request.
+#
+# Edge-caching HTML needs a zone-level Cache Rule in addition to s-maxage here
+# (same limitation as poki2.online — see that repo's public/_headers). These
+# declarations make the response header correct either way; the zone rule
+# authorises the edge to actually store HTML.
 
+# --- Security: one block, site-wide. Do not re-declare these on inner paths:
+# Pages concatenates headers when two blocks match the same request, which is
+# where the duplicated x-frame-options / permissions-policy pairs came from.
 /*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  X-Frame-Options: SAMEORIGIN
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-
-
-/* Security + Defaults */
-/* Apply site-wide security headers */
-/* Note: HSTS only applies on HTTPS in production */
-/
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
 
-/* HTML pages: short cache so updates propagate quickly */
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
+# --- HTML: edge cache TTL only (s-maxage), browsers always revalidate.
+# No browser max-age, so a visitor can never serve stale HTML from disk after
+# a deploy; the edge may lag a deploy by up to s-maxage (same policy as apex).
+# NOTE: rules match the REQUEST path — `/` does not match /index.html, so the
+# root needs its own block (same reason apex lists `/` explicitly).
+/
+  Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
 
-/* root document */
 /index.html
-  Cache-Control: public, max-age=0, must-revalidate
-  Permissions-Policy: gamepad=*, autoplay=*, fullscreen=*
+  Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
 
-/* JS/CSS: long-term caching, immutable, and vary on Accept-Encoding */
+/tag/*
+  Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
+
+/game/*
+  Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400
+
+# No `/*.html` block: Pages concatenates Cache-Control when two blocks match
+# one request (verified on /index.html — got a double s-maxage header). Direct
+# .html hits are rare here and default to no edge caching, the safe direction.
+
+# --- Static assets ---
+
 /js/*
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
@@ -35,23 +51,11 @@
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
 
-/* Assets (images/fonts): long cache and compressed negotiation */
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
 
-/* Service worker: ensure browser checks for updates */
+# Service worker: browser must always revalidate to pick up deploys.
 /sw.js
   Cache-Control: public, max-age=0, must-revalidate
   Service-Worker-Allowed: /
-
-/* Game pages (dynamic-ish): short cache but allow stale while revalidate */
-/game/*/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-
-/* Fallback for other static files (fonts, icons) */
-/* e.g. assets/icon/* already covered; these provide a safe default */
-/assets/icon/*
-  Cache-Control: public, max-age=31536000, immutable
-  Vary: Accept-Encoding
-

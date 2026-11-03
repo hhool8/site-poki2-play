@@ -88,7 +88,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop brows.",
+    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop browsers.",
     "howToPlay": "Pick a character, then use movement to create space and the action button to shoot - hold it to charge the shot. On defence, time the block instead of chasing, and switch to the closest player before the pass lands.",
     "icons": {
       "180": "/icons/b/basketball-stars/icon-180.png",
@@ -120,7 +120,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game. Supports keyboard and touch controls. Runs in any modern browser on .",
+    "description": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game.",
     "icons": {
       "180": "/icons/b/battleforgondor/icon-180.png",
@@ -150,7 +150,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "There's a big red button. The instructions say don't press it. You'll press it anyway. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "description": "There's a big red button. The instructions say don't press it. You'll press it anyway. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "There's a big red button. The instructions say don't press it. You'll press it anyway.",
     "icons": {
       "180": "/icons/b/bigredbutton/icon-180.png",
@@ -392,7 +392,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle. Supports keyboard and touch controls. Runs in any modern browser on mobile and .",
+    "description": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle.",
     "icons": {
       "180": "/icons/c/cubeninja/icon-180.png",
@@ -423,7 +423,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "description": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies.",
     "icons": {
       "180": "/icons/b/battledaybrawl/icon-180.png",
@@ -555,7 +555,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An action platformer with gunplay inspired by classic run-and-gun games. Supports keyboard and touch controls. Runs in any modern browser on mobile and deskt.",
+    "description": "An action platformer with gunplay inspired by classic run-and-gun games. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "An action platformer with gunplay inspired by classic run-and-gun games.",
     "icons": {
       "180": "/icons/s/sambogart/icon-180.png",
@@ -590,7 +590,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "description": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos.",
     "icons": {
       "180": "/icons/n/ninjakidvszombies/icon-180.png",
@@ -728,7 +728,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Wield your sword as the Black Knight, defending your keep from relentless invaders. Supports keyboard and touch controls. Optimized for mobile browsers — pla.",
+    "description": "Wield your sword as the Black Knight, defending your keep from relentless invaders. Supports keyboard and touch controls. Optimized for mobile browsers — play instantly.",
     "howToPlay": "Wield your sword as the Black Knight, defending your keep from relentless invaders.",
     "icons": {
       "180": "/icons/b/blackknight/icon-180.png",
@@ -1227,7 +1227,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Position your troops and shoot down enemy waves before they destroy your precious tank. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "description": "Position your troops and shoot down enemy waves before they destroy your precious tank. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Position your troops and shoot down enemy waves before they destroy your precious tank.",
     "icons": {
       "180": "/icons/d/defend-the-tank/icon-180.png",
@@ -1351,7 +1351,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors. Supports keyboard and touch controls. Best experienced on desktop b.",
+    "description": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors. Supports keyboard and touch controls. Best experienced on desktop browsers.",
     "howToPlay": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors.",
     "icons": {
       "180": "/icons/e/edgenotfound/icon-180.png",
@@ -1471,7 +1471,7 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels.",
     "icons": {
       "180": "/icons/g/geometrydashscratch/icon-180.png",
@@ -2613,7 +2613,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "description": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps.",
     "icons": {
       "180": "/icons/v/vex3/icon-180.png",
@@ -2810,7 +2810,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers. Supports keyboard and touch controls. Runs in any modern browser .",
+    "description": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers.",
     "icons": {
       "180": "/icons/b/bdot/icon-180.png",
@@ -2844,7 +2844,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses. Supports keyboard and touch controls. Runs in any modern browser on mob.",
+    "description": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses.",
     "icons": {
       "180": "/icons/b/blackbats/icon-180.png",
@@ -3033,7 +3033,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": true,
-    "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field.",
     "icons": {
       "180": "/icons/b/bubblefish/icon-180.png",
@@ -3065,7 +3065,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "description": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score.",
     "icons": {
       "180": "/icons/c/candyfusion/icon-180.png",
@@ -3096,7 +3096,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "description": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms.",
     "icons": {
       "180": "/icons/c/captainroger/icon-180.png",
@@ -3128,7 +3128,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Recruit soldiers and lead them into battle in this auto-brawler strategy game. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "description": "Recruit soldiers and lead them into battle in this auto-brawler strategy game. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Recruit soldiers and lead them into battle in this auto-brawler strategy game.",
     "icons": {
       "180": "/icons/c/captainwar/icon-180.png",
@@ -3357,7 +3357,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap. Supports keyboard and touch controls. Runs in any modern browser .",
+    "description": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap.",
     "icons": {
       "180": "/icons/c/circleball/icon-180.png",
@@ -3589,7 +3589,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "description": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions.",
     "icons": {
       "180": "/icons/d/dangerous/icon-180.png",
@@ -3961,7 +3961,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out. Supports keyboard and touch controls. Runs in any modern browser .",
+    "description": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out.",
     "icons": {
       "180": "/icons/f/fast/icon-180.png",
@@ -4031,7 +4031,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Cast your line, react to bites, and reel in as many fish as possible before time runs out. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "Cast your line, react to bites, and reel in as many fish as possible before time runs out. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Cast your line, react to bites, and reel in as many fish as possible before time runs out.",
     "icons": {
       "180": "/icons/f/fishingfrenzy/icon-180.png",
@@ -4171,7 +4171,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Attend flight school and complete aerial training missions to earn your wings. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "description": "Attend flight school and complete aerial training missions to earn your wings. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Attend flight school and complete aerial training missions to earn your wings.",
     "icons": {
       "180": "/icons/f/flyingschool/icon-180.png",
@@ -4274,7 +4274,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive.",
     "icons": {
       "180": "/icons/f/freedomroad/icon-180.png",
@@ -4308,7 +4308,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action. Supports keyboard and touch controls. Runs in any modern browser on .",
+    "description": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action.",
     "icons": {
       "180": "/icons/h/hungryfrog/icon-180.png",
@@ -4342,7 +4342,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A conceptual narrative experience that immerses you in an unexpected interactive story. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "description": "A conceptual narrative experience that immerses you in an unexpected interactive story. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A conceptual narrative experience that immerses you in an unexpected interactive story.",
     "icons": {
       "180": "/icons/f/fullimmersion/icon-180.png",
@@ -4471,7 +4471,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drop your hook at just the right moment to snag fish swimming below the surface. Supports keyboard and touch controls. Runs in any modern browser on mobile a.",
+    "description": "Drop your hook at just the right moment to snag fish swimming below the surface. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Drop your hook at just the right moment to snag fish swimming below the surface.",
     "icons": {
       "180": "/icons/g/gofishing/icon-180.png",
@@ -4570,7 +4570,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fly a little green bird through lush jungles, collecting seeds and dodging predators. Supports keyboard and touch controls. Best experienced on desktop brows.",
+    "description": "Fly a little green bird through lush jungles, collecting seeds and dodging predators. Supports keyboard and touch controls. Best experienced on desktop browsers.",
     "howToPlay": "Fly a little green bird through lush jungles, collecting seeds and dodging predators.",
     "icons": {
       "180": "/icons/g/greenwings/icon-180.png",
@@ -4603,7 +4603,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music. Supports keyboard and touch controls. Runs in any modern browser on mob.",
+    "description": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music.",
     "icons": {
       "180": "/icons/g/groovyski/icon-180.png",
@@ -4799,7 +4799,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards.",
     "icons": {
       "180": "/icons/h/hungrybob/icon-180.png",
@@ -5068,7 +5068,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "description": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way.",
     "icons": {
       "180": "/icons/j/jumppydragon/icon-180.png",
@@ -5101,7 +5101,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A chivalrous knight defends the realm through a series of turn-based combat encounters. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "description": "A chivalrous knight defends the realm through a series of turn-based combat encounters. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "A chivalrous knight defends the realm through a series of turn-based combat encounters.",
     "icons": {
       "180": "/icons/k/knightoftheday/icon-180.png",
@@ -5237,7 +5237,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flip cards to find matching pairs before the timer runs out. A classic memory game. Supports keyboard and touch controls. Runs in any modern browser on mobil.",
+    "description": "Flip cards to find matching pairs before the timer runs out. A classic memory game. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Flip cards to find matching pairs before the timer runs out. A classic memory game.",
     "icons": {
       "180": "/icons/m/matchingtime/icon-180.png",
@@ -5402,7 +5402,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators. Supports keyboard and touch controls. Runs in any modern browser on mobi.",
+    "description": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators.",
     "icons": {
       "180": "/icons/n/nest/icon-180.png",
@@ -5713,7 +5713,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend your face from an endless barrage of incoming pies by dodging left and right. Supports keyboard and touch controls. Runs in any modern browser on mobi.",
+    "description": "Defend your face from an endless barrage of incoming pies by dodging left and right. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Defend your face from an endless barrage of incoming pies by dodging left and right.",
     "icons": {
       "180": "/icons/p/pieattack/icon-180.png",
@@ -5921,7 +5921,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sprint through levels and leap into portals to teleport around deadly hazards. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "description": "Sprint through levels and leap into portals to teleport around deadly hazards. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Sprint through levels and leap into portals to teleport around deadly hazards.",
     "icons": {
       "180": "/icons/p/portalrunner/icon-180.png",
@@ -5958,7 +5958,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "description": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump.",
     "icons": {
       "180": "/icons/p/pyramidjump/icon-180.png",
@@ -6167,7 +6167,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors. Supports keyboard and touch controls. Runs in any modern browser on mobil.",
+    "description": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors.",
     "icons": {
       "180": "/icons/r/rocketpop/icon-180.png",
@@ -6993,7 +6993,7 @@
     "use_overlay_title": false,
     "show": true,
     "featured": false,
-    "description": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets. Supports keyboard and touch controls. Runs in any modern browser .",
+    "description": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets. Supports keyboard and touch controls. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets.",
     "icons": {
       "180": "/icons/u/uforun/icon-180.png",
