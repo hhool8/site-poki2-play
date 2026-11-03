@@ -1,0 +1,30 @@
+{
+  "_why": "Same test as the apex host: advertise the pages we stand behind instead of all 98. Google crawled 70 of these and indexed none, so the old list was not buying crawl attention — it was buying a verdict. This is sitemap scope only: nothing is deleted, nothing is noindexed, every page stays live and linked from /game/ and the tag hubs. Reversible by removing an entry and rebuilding.",
+  "_measured": "2026-11-04 · play 0 indexed / 70 crawled-not-indexed / 28 unknown (of 98)",
+  "_review": "2026-11-18 — re-run check_indexation.py for play and compare.",
+
+  "tags": ["multiplayer", "puzzle", "idle", "classic", "competitive", "shooting", "action"],
+
+  "games": [
+    "2048",
+    "wordle",
+    "pacman",
+    "temple-run-2",
+    "tube-jumpers",
+    "there-is-no-game",
+    "among-us",
+    "minecraft",
+    "hexgl",
+    "btts",
+    "tosstheturtle",
+    "stealingthediamond",
+    "papaspizzaria",
+    "ninjablade",
+    "bubblefish",
+    "foofoo",
+    "zombiescantjump",
+    "deal-or-no-deal"
+  ],
+
+  "_note": "Slugs are the game's own link tail (normalizeHref), not a slugified title — Eaglercraft is published as /game/m/minecraft/, Big Tower Tiny Square as /game/b/btts/, Ninja Blade as /game/n/ninjablade/. Selection rule: the 14 games already carrying the editor's `featured` flag, minus the two thinnest (math-game, troll-boxing), plus six titles that carry real search demand independent of this catalogue (2048, Wordle, Pac-Man, Temple Run 2, Tube Jumpers, There Is No Game). Tags kept are the six with the largest real inventory and least overlap with the /2-player-games/ hub."
+}

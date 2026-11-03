@@ -24,6 +24,13 @@ const path = require('path');
 const crypto = require('crypto');
 const { tagUrlPath } = require('./tag-slugs.cjs');
 
+// Sitemap scope (2026-11-04). Google crawled 70 of these 98 URLs and indexed
+// none of them; the list was not buying attention, it was buying a verdict.
+// Advertise the pages we stand behind. This is scope only — nothing is deleted,
+// nothing is noindexed, and every page stays reachable from /game/ and the tag
+// hubs. Reversible: drop an entry, rebuild.
+const SCOPE = JSON.parse(fs.readFileSync(path.join(__dirname, 'sitemap-scope.json'), 'utf8'));
+
 const BASE     = 'https://play.poki2.online';
 const DIST     = path.join(__dirname, '..', 'dist');
 const GAMES    = path.join(__dirname, '..', 'games.json');
@@ -37,16 +44,15 @@ const CHECK    = process.argv.includes('--check');
 // the slashed form made the sitemap advertise a redirect as the canonical URL
 // (and contradict each page's own <link rel="canonical">). Game pages are the
 // opposite -- /game/<c>/<slug>/ is the URL that returns 200, so they keep the slash.
+// Institutional pages (/about /privacy /terms /contact /dmca) are deliberately
+// out of the advertised set — they are not search targets, and on a site with
+// one indexed page every non-target URL in the list dilutes the signal.
 const STATIC_PAGES = [
   ['/',            'index.html'],
-  ['/about',       'about.html'],
-  ['/privacy',     'privacy.html'],
-  ['/terms',       'terms.html'],
-  ['/contact',     'contact.html'],
-  ['/dmca',        'dmca.html'],
 ];
 
-const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive','classic'];
+const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive','classic']
+	.filter(t => SCOPE.tags.includes(t));
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function sha(s){ return crypto.createHash('sha1').update(s).digest('hex'); }
@@ -87,6 +93,10 @@ if(!fs.existsSync(GAMES)){ console.error('games.json not found'); process.exit(1
 const games = JSON.parse(fs.readFileSync(GAMES,'utf8'));
 // noindex pages must not be in the sitemap (contradictory signals for Google)
 const shown = games.filter(g => g.show && !g.noindex);
+// Advertised games = the short list in sitemap-scope.json. `shown` is left
+// intact above so tag membership / fingerprints keep describing the real
+// catalogue; only the <url> entries are scoped.
+const inScope = (slug) => SCOPE.games.includes(slug);
 
 const lines = ['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"','        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">','','  <!-- Site pages -->'];
 for(const [locPath, srcFile] of STATIC_PAGES){
@@ -125,6 +135,7 @@ for(const game of shown){
 	const slug = normalizeHref(game.link);
 	if(!slug || seen.has(slug)) continue;
 	seen.add(slug);
+	if(!inScope(slug)) continue;
 	const char = slug[0].toLowerCase();
 	const loc = `${BASE}/game/${char}/${slug}/`;
 	const priority = game.featured ? '0.9' : '0.7';

@@ -100,9 +100,14 @@ const TAG_CONFIG = {
     // same-screen two-player — the rest advertise single-player play, and 4 even
     // carry both `singleplayer` and `multiplayer`. A title promising two-player
     // play is not backed by the catalog. Fix the catalog first, then the title.
+    //
+    // 2026-11-04 (later): the description had the same problem, quietly — it
+    // promised "real players worldwide in real time" for a four-game page. The
+    // body now states exactly what the four games do, so the description has to
+    // match it or the page argues with its own snippet.
     label:    'Multiplayer',
     headline: 'Free Online Multiplayer Games',
-    desc:     'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real time. No download, no install, just play.',
+    desc:     'Four free multiplayer games you can actually play with someone else — one on a shared keyboard, three in a match. No download, no install, just play.',
   },
   idle:        {
     label:    'Idle',
@@ -270,6 +275,27 @@ ${gameListHtml}
     q: `Can I play ${esc(cfg.label)} games on mobile?`,
     a: `<p>Yes. ${esc(cfg.label)} games on Poki2 run in any modern mobile browser and support touch controls (keyboard support is available on desktop). There is nothing to install.</p>`,
   });
+
+  // ── Two-player specifics (hub only) ──────────────────────────────────────
+  // The hub was a 4-game page with three templated FAQs, which is exactly the
+  // shape Google answers with "Crawled - currently not indexed". What it was
+  // missing is the thing a searcher actually needs: which of these games take a
+  // second person, and how. Every claim below comes from the game's own entry in
+  // games.json (about/howToPlay/input), not from genre folklore.
+  if (tag === 'multiplayer') {
+    faqs.push({
+      q: 'Which of these games can two people play on one keyboard?',
+      a: `<p>Tube Jumpers, and that is the honest answer. It takes up to four players on a single keyboard — everyone shares the same keys and the same screen. <a href="/game/b/basketball-stars/">Basketball Stars</a> is also keyboard-controlled and plays as a 1v1 or 2v2 duel, but it is designed around two players taking turns on the controls rather than sharing them.</p>`,
+    });
+    faqs.push({
+      q: 'Do I need an account or a second device?',
+      a: `<p>No account is needed for anything on this page. Same-keyboard games need one device. Among Us and Krunker are built around matches with other players, so for those a second device on the same match is the point of the game — check what the game itself asks for when it loads.</p>`,
+    });
+    faqs.push({
+      q: 'Why are there only four multiplayer games here?',
+      a: `<p>Because the catalogue is curated rather than scraped. Poki2 carries ${games.length} playable browser games in total; four of them support more than one player, and we would rather say four than pad the page with single-player titles tagged "multiplayer" to look bigger. If you want a wider list — including games we do not host — the <a href="https://poki2.online/blog/best-2-player-browser-games">2-player browser games guide</a> covers the field.</p>`,
+    });
+  }
   const faqHtml = `<section class="tag-faq" id="tag-faq">
   <h2>${esc(cfg.label)} Games — Frequently Asked Questions</h2>
   ${faqs.map(f => `  <div class="faq-item">
@@ -278,8 +304,27 @@ ${gameListHtml}
   </div>`).join('\n')}
 </section>`;
 
-  const faqLd = JSON.stringify({
-    '@context': 'https://schema.org',
+  // Visible two-player explainer (hub only). Deliberately NOT .tag-intro: that
+  // class is stripped from the DOM on render, so prose placed there is only
+  // ever seen by clients that do not run JavaScript — which is a bad trade and,
+  // at enough volume, a bad look. This section stays where users can read it.
+  const twoPlayerHtml = tag !== 'multiplayer' ? '' : `<section class="tag-two-player" id="two-player" aria-label="Playing with two people">
+  <h2>Two players: what each game actually asks of you</h2>
+  <p>"Multiplayer" on the web covers two very different evenings. One is a friend sitting next to you taking half the keyboard. The other is a match against people who are not in the room. Four games on Poki2 support a second player, and only one of them is the first kind — so here is the breakdown before you commit.</p>
+  <table style="width:100%;border-collapse:collapse;margin:1rem 0">
+    <thead><tr><th style="text-align:left;padding:.5rem;border-bottom:1px solid rgba(128,128,128,.35)">Game</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid rgba(128,128,128,.35)">Players</th><th style="text-align:left;padding:.5rem;border-bottom:1px solid rgba(128,128,128,.35)">Controls</th></tr></thead>
+    <tbody>
+      <tr><td style="padding:.5rem"><a href="/game/t/tube-jumpers/">Tube Jumpers</a></td><td style="padding:.5rem">Up to 4, one keyboard</td><td style="padding:.5rem">Keyboard only</td></tr>
+      <tr><td style="padding:.5rem"><a href="/game/b/basketball-stars/">Basketball Stars</a></td><td style="padding:.5rem">1v1 or 2v2</td><td style="padding:.5rem">Keyboard or touch</td></tr>
+      <tr><td style="padding:.5rem"><a href="/game/a/among-us/">Among Us</a></td><td style="padding:.5rem">4–15 in a match</td><td style="padding:.5rem">Keyboard or touch</td></tr>
+      <tr><td style="padding:.5rem"><a href="/game/k/krunker/">Krunker</a></td><td style="padding:.5rem">Online FPS match</td><td style="padding:.5rem">Keyboard or touch</td></tr>
+    </tbody>
+  </table>
+  <p>Tube Jumpers is the shared-keyboard one: up to four people bouncing on tubes above the water, last one standing, everyone crowding the same set of keys. Basketball Stars is keyboard-driven too, but it is a duel — 1v1 or 2v2 — so it plays best when each player has their own turn at the controls. Among Us and Krunker are built around matches with other players rather than a shared keyboard.</p>
+  <p>Everything else in the catalogue is single-player, which is why this page is short. If you want a wider list that includes games we do not host, the guides <a href="https://poki2.online/blog/best-2-player-browser-games">The best 2-player browser games</a> and <a href="https://poki2.online/blog/best-2-player-games-guide">How 2-player browser games work</a> are the honest version.</p>
+</section>`;
+
+  const faqLd = JSON.stringify({    '@context': 'https://schema.org',
     '@type':    'FAQPage',
     mainEntity: faqs.map(f => ({
       '@type': 'Question',
@@ -298,7 +343,7 @@ ${gameListHtml}
     )
     .replace(
       '<div id="game-sections"></div>',
-      `<div id="game-sections"></div>\n\n${tagIntroHtml}\n\n${gameListSectionHtml}\n\n${faqHtml}`
+      `<div id="game-sections"></div>\n\n${twoPlayerHtml}\n\n${tagIntroHtml}\n\n${gameListSectionHtml}\n\n${faqHtml}`
     );
 
   return `<!DOCTYPE html>
