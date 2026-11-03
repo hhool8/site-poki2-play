@@ -47,7 +47,7 @@ const TAG_META = {
 };
 const TAG_ORDER = [
   'action', 'puzzle', 'adventure', 'racing', 'shooting', 'multiplayer',
-  'competitive', 'strategy', 'idle', 'arcade', 'sports', 'platformer', 'classic',
+  'competitive', 'strategy', 'idle', 'arcade', 'sports', 'platformer',
 ];
 const SECTION_LIMIT = 12;
 

@@ -129,11 +129,6 @@ const TAG_CONFIG = {
     headline: 'Free Online Competitive Games',
     desc:     'Rise to the top in the best free competitive games online. Go head-to-head, prove your skills, and claim the number one spot. Play now in your browser.',
   },
-  classic:     {
-    label:    'Classic',
-    headline: 'Free Online Classic Games',
-    desc:     'Revisit the all-time greats in our classic games collection — timeless browser titles from the Flash era and beyond, all free to play instantly in your browser.',
-  },
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

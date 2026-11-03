@@ -51,7 +51,7 @@ const STATIC_PAGES = [
   ['/',            'index.html'],
 ];
 
-const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive','classic']
+const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports','strategy','multiplayer','idle','arcade','platformer','competitive']
 	.filter(t => SCOPE.tags.includes(t));
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }

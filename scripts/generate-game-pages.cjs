@@ -32,7 +32,6 @@ const TAG_PAGES = [
   ['arcade',      'Arcade'],
   ['sports',      'Sports'],
   ['platformer',  'Platformer'],
-  ['classic',     'Classic'],
 ];
 
 const TAG_LABELS = {

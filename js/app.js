@@ -86,7 +86,6 @@
     "arcade",
     "sports",
     "platformer",
-    "classic",
   ];
   // Maximum games to show per category section (configurable, computed per device/orientation)
   let SECTION_LIMIT; // set below after detecting mobile/orientation

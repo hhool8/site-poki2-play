@@ -14,6 +14,12 @@
 /2-player-games  /tag/multiplayer/  301
 /2-player-games/ /tag/multiplayer/  301
 
+# /tag/classic/ deleted 2026-11-04 (user call): 38 mostly-single-player games
+# under a "classic" umbrella with a thin, boilerplate-heavy page. 301 to the
+# home so the URL's signals are not stranded on a 404.
+/tag/classic  /  301
+/tag/classic/ /  301
+
 # Note: no SPA fallback — every real route is a static file; unknown paths must return 404.html
 # (a 200-rewrite to index.html would create soft-404 duplicate content and hurt GSC indexing)
 # Generated per-game redirects
