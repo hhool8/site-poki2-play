@@ -95,13 +95,14 @@ const TAG_CONFIG = {
     desc:     'Outthink your opponents with the best free strategy games online. Plan every move, manage resources, and dominate the battlefield. Play in your browser.',
   },
   multiplayer: {
-    // Deliberately titled around the query "poki 2 player games": Bing reads
-    // "poki 2" as a two-player intent (top 10 is poki.com/en/two-player plus
-    // poki-named clone domains), and "Free Online Multiplayer Games" matched
-    // neither the brand token nor the "2 player" phrase.
-    label:    '2 Player',
-    headline: 'Poki 2 Player Games',
-    desc:     'Play Poki 2 player games free in your browser — local two-player titles plus online multiplayer shooters. No download, no install, works on mobile.',
+    // Do NOT retitle this around "poki 2 player games". Tried on 2026-11-04 and
+    // reverted: the tag has 14 members and only 1 (Tube Jumpers) is actually
+    // same-screen two-player — the rest advertise single-player play, and 4 even
+    // carry both `singleplayer` and `multiplayer`. A title promising two-player
+    // play is not backed by the catalog. Fix the catalog first, then the title.
+    label:    'Multiplayer',
+    headline: 'Free Online Multiplayer Games',
+    desc:     'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real time. No download, no install, just play.',
   },
   idle:        {
     label:    'Idle',
