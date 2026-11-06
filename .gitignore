@@ -83,3 +83,8 @@ public/og/
 
 # ignore orig
 orig/
+# IndexNow 推送指纹：本机状态，不入库（丢了只会全量重推一次，无害）
+backlinks/indexnow-state.json
+
+# Local agent memory (project working memory) — do not commit
+.workbuddy/

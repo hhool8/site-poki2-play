@@ -133,6 +133,9 @@ Prerequisites
 Common scripts (see `package.json`)
 - `npm run build` — generate OG images, build CSS/JS, hash assets, and copy site files into `dist/`.
 - `npm run publish:pages` — publish `./dist` to Cloudflare Pages using `wrangler`.
+- `npm run deploy` — publish, then announce every changed page to IndexNow (Bing / Yandex / Seznam).
+  Use this one for production deploys: `publish:pages` on its own leaves the search engines to
+  rediscover the change on their own schedule.
 
 Local build example
 ```bash

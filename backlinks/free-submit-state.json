@@ -1,13 +1,13 @@
 {
-  "lastRun": "2026-09-27T10:02:45.268Z",
+  "lastRun": "2026-10-12T03:29:51.074Z",
   "dead": {
     "HypeStat": 0,
-    "SimilarSites": 1,
-    "WebWiki": 1,
+    "SimilarSites": 0,
+    "WebWiki": 0,
     "SiteWorthTraffic": 0,
-    "StatShow": 1,
-    "Cubestat": 1,
-    "URLScan (anon scan)": 1,
+    "StatShow": 2,
+    "Cubestat": 2,
+    "URLScan (anon scan)": 0,
     "Ping-O-Matic": 0
   }
 }
