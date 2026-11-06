@@ -2094,13 +2094,24 @@
   const $orientSkipBtn = $("orient-skip-btn");
 
   let loadingTimer = null;
+  let loadingFallbackTimer = null;
   let currentGameOrientation = "both";
+
+  // The iframe 'load' event only fires once EVERY subresource of the game
+  // page has finished - including megabytes of audio and image atlases the
+  // player will not see for minutes. Measured 2026-11-06: a cold load of
+  // mobileapp.poki2.online/mobile/zcj2/ took 25s (warm browser cache 0.45s),
+  // while the game's own Phaser loader was already on screen at 1.5s.
+  // Holding this overlay for that whole wait showed a simulated progress bar
+  // stuck at 90% on a black screen, which reads as an unresponsive site.
+  // 'load' stays the fast path; this budget is the backstop.
+  const LOADING_FALLBACK_MS = 3000;
 
   function startLoadingProgress() {
     let progress = 0;
     $loadingBar.style.width = "0%";
     $loadingPercent.textContent = "0%";
-    clearInterval(loadingTimer);
+    stopLoadingProgress();
     loadingTimer = setInterval(() => {
       // Simulate progress: fast at start, slows down near 90%
       const remaining = 90 - progress;
@@ -2109,12 +2120,23 @@
       $loadingBar.style.width = Math.round(progress) + "%";
       $loadingPercent.textContent = Math.round(progress) + "%";
     }, 200);
+    // Hand the screen to the game even if 'load' never arrives. The game
+    // brings its own real loading screen, so there is nothing left to wait for.
+    loadingFallbackTimer = setTimeout(() => finishLoadingProgress(false), LOADING_FALLBACK_MS);
   }
 
-  function finishLoadingProgress() {
+  function stopLoadingProgress() {
     clearInterval(loadingTimer);
-    $loadingBar.style.width = "100%";
-    $loadingPercent.textContent = "100%";
+    clearTimeout(loadingFallbackTimer);
+  }
+
+  // realLoad === false means we gave up waiting for 'load' - do not claim 100%.
+  function finishLoadingProgress(realLoad) {
+    stopLoadingProgress();
+    if (realLoad !== false) {
+      $loadingBar.style.width = "100%";
+      $loadingPercent.textContent = "100%";
+    }
     setTimeout(() => {
       $loadingOverlay.classList.remove("show");
       // Check orientation on mobile after game loaded
@@ -2318,7 +2340,7 @@
     currentGame = null;
     gamePaused = false;
     userExitedFullscreen = false;
-    clearInterval(loadingTimer);
+    stopLoadingProgress();
     clearTimeout(barHideTimer);
     $overlayBar.classList.remove("bar-hidden");
     // restore overlay interaction in case it was passthrough
@@ -2619,6 +2641,7 @@
   window.addEventListener("popstate", (e) => {
     if ($overlay.classList.contains("open")) {
       $overlay.classList.remove("open");
+      stopLoadingProgress();
       $iframe.src = "about:blank";
       document.body.style.overflow = "";
       if (currentView === "home") renderRecentSection();
