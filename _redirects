@@ -20,6 +20,19 @@
 /tag/classic  /  301
 /tag/classic/ /  301
 
+# Migration debris (2026-11-06). This host was migrated away from poki2.online;
+# a wide path-prefix redirect once carried whole prefixes across hosts, and
+# some paths survived in Google's history with nothing behind them here.
+#
+# /omica is a flat game slug with no page behind it: the shard layout used
+# o.poki2.online/omica/ and the current one uses /game/o/omica/, and neither
+# exists — there is no "omica" in the catalogue (only om-bounce and
+# ojelloonline under /game/o/). It appears in no sitemap and no page links
+# to it, so 410 is the honest answer: this URL existed in a former structure
+# and is gone for good. Redirecting it to a near-miss game would be inventing
+# a destination.
+/omica  /  410
+
 # Note: no SPA fallback — every real route is a static file; unknown paths must return 404.html
 # (a 200-rewrite to index.html would create soft-404 duplicate content and hurt GSC indexing)
 # Generated per-game redirects
@@ -465,3 +478,19 @@
 /games/zoostuner/ /game/z/zoostuner/ 301
 /games/snakebird /game/s/snakebird/ 301
 /games/snakebird/ /game/s/snakebird/ 301
+
+# /blog/* belongs to the apex host — the articles live at
+# poki2.online/blog/<slug> and always did (the apex repo's very first commit
+# already carried src/content/blog/). A /blog/ path arriving on this host is
+# a cross-host leak from the poki2.online → play.poki2.online migration, so
+# it goes back to the host that owns it. 301, not 410: the destination is a
+# real page, and the correct answer to "this URL is on the wrong host" is to
+# send it home.
+#
+# Placed last on purpose. Cloudflare Pages applies the first matching rule,
+# and a splat placed above the specific rules would shadow every future
+# /blog/<slug> exception. As the fallback it belongs after them.
+#
+# Sampled by the apex property's "Crawled - currently not indexed"
+# validation, which 404'd on it and could therefore not pass.
+/blog/*  https://poki2.online/blog/:splat  301
