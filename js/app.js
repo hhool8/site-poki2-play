@@ -329,6 +329,35 @@
     });
   } catch (e) { /* ignore */ }
 
+  /* Static depth article: prerendered editorial copy (h1 + about + how to play
+     + tips) that lives in the real DOM for pages marked depth:true. It is baked
+     for exactly one URL, so it is shown only while the SPA is on that URL —
+     otherwise client-side navigation would leave one game's copy under another
+     game's player. Deliberately NOT removed: it is the only unique body text a
+     JS-rendering crawler sees on a game page. */
+  (function bindGameArticle() {
+    const art = document.getElementById('game-article');
+    if (!art) return;
+    const slug = (art.getAttribute('data-slug') || '').replace(/[^a-z0-9-]/gi, '');
+    const re = slug ? new RegExp('/game/[a-z]/' + slug + '/?$') : null;
+    function sync() {
+      let own = false;
+      try { own = !!re && re.test(location.pathname); } catch (e) { own = false; }
+      art.style.display = own ? '' : 'none';
+      art.setAttribute('aria-hidden', own ? 'false' : 'true');
+      /* On the article's own URL, drop the home feed that the SPA renders behind
+         the game interstitial. Otherwise this URL is one article buried under
+         forty game cards that are identical on all 269 game URLs — the same
+         near-duplicate body text that made these pages unindexable in the first
+         place. Class-based so the SPA's own inline display changes still win as
+         soon as the class is removed on navigation. */
+      try { document.body.classList.toggle('game-article-open', own); } catch (e) {}
+    }
+    sync();
+    window.addEventListener('popstate', sync);
+    document.addEventListener('click', function () { setTimeout(sync, 0); }, true);
+  })();
+
   /** Escape text for safe insertion into innerHTML */
   function escapeHtml(str) {
     return String(str)

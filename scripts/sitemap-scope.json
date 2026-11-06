@@ -46,8 +46,13 @@
     "jellydoods",
     "matchtime",
     "stickpanda",
-    "zapaliens"
+    "zapaliens",
+    "miniputt",
+    "ctr",
+    "babaisyou",
+    "chrome-dino"
   ],
   "_batch3": "2026-11-06 pilot: 18 games enriched with hand-authored unique `about` (apply-content-batch-3.cjs) and de-noindexed, added to sitemap scope to validate the enrich -> de-noindex -> index path. Remove entries + rebuild to revert.",
+  "_depth1": "2026-11-06 depth experiment: miniputt, ctr, babaisyou, chrome-dino got ~350 words each (about + howToPlay + tips, apply-content-depth-1.cjs) and are rendered into the real DOM as .game-article. Admitted to scope because they satisfy G2 more strictly than anything else here. Disjoint from batch-3 and batch-4 so the two tests stay separable.",
   "_note": "Slugs are the game's own link tail (normalizeHref), not a slugified title — Eaglercraft is published as /game/m/minecraft/, Big Tower Tiny Square as /game/b/btts/, Ninja Blade as /game/n/ninjablade/. Selection rule: the 14 games already carrying the editor's `featured` flag, minus the two thinnest (math-game, troll-boxing), plus six titles that carry real search demand independent of this catalogue (2048, Wordle, Pac-Man, Temple Run 2, Tube Jumpers, There Is No Game). Tags kept are the six with the largest real inventory and least overlap with the two-player hub (apex /2-player-games, play /tag/multiplayer/)."
 }

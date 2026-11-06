@@ -70,6 +70,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://play.poki2.online/game/b/babaisyou/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/b/babaisyou/icon-512.png</image:loc>
+      <image:title>BaBa Is You</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://play.poki2.online/game/z/zombiescantjump/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -120,6 +130,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://play.poki2.online/game/c/chrome-dino/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/c/chrome-dino/icon-512.png</image:loc>
+      <image:title>Chrome Dino</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/c/ctr/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/c/cuttherope/icon-512.png</image:loc>
+      <image:title>Cut the Rope</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://play.poki2.online/game/d/deal-or-no-deal/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -147,6 +177,16 @@
     <image:image>
       <image:loc>https://play.poki2.online/icons/e/eaglercraft/icon-512.png</image:loc>
       <image:title>Eaglercraft</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/m/miniputt/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/m/miniputt/icon-512.png</image:loc>
+      <image:title>Mini-putt</image:title>
     </image:image>
   </url>
   <url>

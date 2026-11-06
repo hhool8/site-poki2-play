@@ -71,6 +71,49 @@ function esc(str) {
     .replace(/>/g, '&gt;');
 }
 
+/**
+ * Build the real-DOM article for a depth page.
+ *
+ * This markup sits in <main> next to #game-sections, so it survives JS
+ * execution (app.js only rewrites its own containers and deletes the noscript
+ * fallback). It carries the page's h1 and its editorial copy, which is what a
+ * JS-rendering crawler otherwise never sees on this site.
+ *
+ * Visibility is scoped by data-slug: app.js hides the block as soon as the SPA
+ * shows a view other than the URL the block was baked into, so client-side
+ * navigation cannot leave one game's copy under another game's player.
+ */
+function buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenre, slug) {
+  const paras = about.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+  const htp   = (game.howToPlay || '').trim();
+  const chips = inputs.length
+    ? inputs.map(i => `          <li>${esc(i)}</li>`).join('\n')
+    : '';
+  const genreLine = genreTagKeys.length
+    ? genreTagKeys.map(k => `<a href="/${tagUrlPath(k)}/">${esc(TAG_LABELS[k])}</a>`).join(', ')
+    : esc(primaryGenre);
+
+  return `
+    <!-- Depth article: real DOM, not noscript. See buildArticle() in scripts/generate-game-pages.cjs -->
+    <section class="game-article" id="game-article" data-slug="${esc(slug)}" aria-labelledby="game-article-title">
+      <div class="game-article-inner">
+        <header class="game-article-head">
+          <h1 class="game-article-title" id="game-article-title">${esc(game.title)}</h1>
+          <p class="game-article-meta">${genreLine}${inputs.length ? ` &middot; ${inputs.map(esc).join(' / ')}` : ''}</p>
+        </header>
+        <p class="game-article-lede">${esc(desc)}</p>
+        <h2>About ${esc(game.title)}</h2>
+${paras.map(p => `        <p>${esc(p)}</p>`).join('\n')}
+${htp ? `        <h2>How to play ${esc(game.title)}</h2>\n        <p>${esc(htp)}</p>` : ''}
+${chips ? `        <h2>Controls</h2>\n        <ul class="game-article-controls">\n${chips}\n        </ul>` : ''}
+        <h2>Tips</h2>
+        <ul class="game-article-tips">
+${tips.map(t => `          <li>${esc(t)}</li>`).join('\n')}
+        </ul>
+      </div>
+    </section>`;
+}
+
 function buildPage(game, bodyTag, bodyInner, relatedGames) {
   const slug     = normalizeHref(game.link);
   const tags     = game.tags || [];
@@ -96,6 +139,15 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   // section (and the matching FAQ question) when it adds nothing unique.
   const htpNorm = (game.howToPlay || '').trim().toLowerCase().replace(/[.!?]+$/, '');
   const htpDup  = htpNorm.length > 0 && desc.toLowerCase().includes(htpNorm);
+
+  // Depth mode: render the editorial copy into the real DOM instead of only
+  // inside <noscript>. Reason (measured 2026-11-06): js/app.js deletes noscript
+  // blocks that contain an h1, and the SPA renders neither an h1 nor the about
+  // text, so a JS-rendered game page carried no unique body text at all - the
+  // shape behind 194 "Crawled - currently not indexed" URLs. Opt-in per game
+  // via `depth: true` so the change can be measured on a small sample first.
+  const tips    = (Array.isArray(game.tips) ? game.tips : []).map(t => String(t).trim()).filter(Boolean);
+  const depthOn = game.depth === true && !!about && tips.length > 0;
   const char     = slug[0].toLowerCase();
   const _iconRel = (game.icons && (game.icons['192'] || game.icons['512'])) || game.imgSrc;
   const game_icon = _iconRel
@@ -150,6 +202,10 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   const primaryTagKey  = genreTagKeys[0] || null;
   const primaryGenre   = primaryTagKey ? TAG_LABELS[primaryTagKey] : 'Games';
   const genreTagUrl    = primaryTagKey ? `${BASE_URL}/${tagUrlPath(primaryTagKey)}/` : `${BASE_URL}/`;
+
+  // Depth article markup. Rendered into <main> as real DOM (see buildArticle),
+  // so the page carries an h1 and unique body text even after JS runs.
+  const article = depthOn ? buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenre, slug) : '';
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -246,12 +302,12 @@ ${bodyTag}
         <li>${esc(game.title)}</li>
       </ol>
     </nav>
-    <h1>${esc(game.title)}</h1>
-    <p>${esc(desc)}</p>
-    ${about ? `<h2>About ${esc(game.title)}</h2>\n${about.split(/\n\s*\n/).map(p => `    <p>${esc(p.trim())}</p>`).join('\n')}` : ''}
+    ${depthOn ? '' : `<h1>${esc(game.title)}</h1>`}
+    ${depthOn ? '' : `<p>${esc(desc)}</p>`}
+    ${about && !depthOn ? `<h2>About ${esc(game.title)}</h2>\n${about.split(/\n\s*\n/).map(p => `    <p>${esc(p.trim())}</p>`).join('\n')}` : ''}
     ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/${tagUrlPath(k)}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
-    ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
-    ${game.howToPlay && !htpDup ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
+    ${inputs.length && !depthOn ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
+    ${game.howToPlay && !htpDup && !depthOn ? `<h2>How to play ${esc(game.title)}</h2>\n    <p>${esc(game.howToPlay)}</p>` : ''}
     ${(relatedGames && relatedGames.length) ? `<h2>More games like ${esc(game.title)}</h2>\n    <ul>\n${relatedGames.map(r => {
       const rs = normalizeHref(r.link);
       const rc = rs[0].toLowerCase();
@@ -264,7 +320,7 @@ ${bodyTag}
     </nav>
     <p><a href="/">&#8592; All games</a></p>
   </noscript>
-${bodyInner}
+${article ? bodyInner.replace(/<\/main>/i, `${article}\n    </main>`) : bodyInner}
 </body>
 </html>`;
 }

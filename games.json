@@ -260,13 +260,20 @@
     "featured": false,
     "badge": "",
     "description": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality. Supports keyboard and touch controls.",
-    "howToPlay": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality.",
+    "howToPlay": "Move with the arrow keys or WASD, or swipe on a touch screen, and use the same input to push word blocks one tile at a time. You cannot pull, so a block pushed into a corner is stuck there. Read the sentences on the grid before moving: they tell you which noun is YOU, which object is WIN, and which nouns are STOP (they block you) or PUSH (they shift when you walk into them). If a level seems unwinnable, break a rule rather than solving it - pushing a word out of a sentence is often the entire puzzle.",
     "icons": {
       "180": "/icons/b/babaisyou/icon-180.png",
       "192": "/icons/b/babaisyou/icon-192.png",
       "512": "/icons/b/babaisyou/icon-512.png"
     },
-    "about": "Every rule on the level grid is made of movable word tiles: push \"BABA IS YOU\", \"WALL IS STOP\" or \"FLAG IS WIN\" to rewrite how the world works. There is often more than one winning rule set — if the obvious solution is blocked, try making a different object \"IS YOU\", or push \"WIN\" somewhere new."
+    "about": "Baba Is You turns the rules into physical objects. Every level is a grid of words, and any sentence you can form from three blocks - NOUN IS PROPERTY - becomes true for as long as the sentence stands. Push the blocks around with your character and the world rewrites itself mid-move.\n\nThe sentence BABA IS YOU is what makes you the small white creature. Break it and you stop being that thing; assemble WALL IS YOU and you become the wall. FLAG IS WIN is the goal, but the flag is only the goal while that sentence is intact - scatter it and the level has no win condition until you build a new one.\n\nLevels are built around the sentence you assume is fixed. The solution is usually to notice that one word in it is reachable, and that moving it is a legal move you have been treating as scenery.",
+    "tips": [
+      "Find BABA IS YOU first. If you are not controlling Baba, another NOUN IS YOU sentence is running, and that noun is what you actually move.",
+      "Words are the only objects that matter. Before planning a route, count which words you can reach without crossing something that is STOP.",
+      "Breaking a sentence is a move. Removing WIN from the flag does not lose the level - it clears the old goal so you can build a new one.",
+      "If a push traps a word in a corner and the level becomes unsolvable, restart instead of hunting for a workaround. The puzzle is the sentence, not the maze."
+    ],
+    "depth": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2/",
@@ -896,13 +903,20 @@
     "featured": false,
     "badge": "",
     "description": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls. Supports keyboard and touch controls.",
-    "howToPlay": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls.",
+    "howToPlay": "Jump with space or the up arrow and duck with the down arrow; on a touch screen the same two actions are available on tap. Running into a cactus ends the run, so duck under a pterodactyl that flies high and jump over one that flies low. Do not hold the jump: a short tap clears a low obstacle and lands you in time for the next one, while a long press leaves you in the air with nothing left to give. The score counts up in the corner and the speed rises with it, so the objective is not to win but to keep the run alive.",
     "icons": {
       "180": "/icons/c/chrome-dino/icon-180.png",
       "192": "/icons/c/chrome-dino/icon-192.png",
       "512": "/icons/c/chrome-dino/icon-512.png"
     },
-    "about": "The offline dinosaur runner from Chrome, playable full-screen: press space to jump cacti, duck under pterodactyls, and survive as the world speeds up. The trick to long runs is rhythm — jump on the beat of the cacti pattern rather than when panic says so, and duck-jump late birds."
+    "about": "Chrome Dino is the runner that lives in Chrome’s offline page, and it has stayed popular because it asks for exactly one skill: timing. A small dinosaur runs to the right through an empty desert, cacti and pterodactyls arrive from the right, and the only two things you can do are jump and duck.\n\nThe difficulty is not in the obstacles but in the acceleration. The scroll speed climbs the longer you survive, so a gap cleared at 200 points becomes a reflex problem at 800, and the same cactus pattern that felt generous starts arriving with no time to think. The palette inverts as the score climbs, which is the game’s only way of saying it has got faster.\n\nThere is no final level and no ending screen. A run lasts until one mistimed jump, which makes this a game about attention rather than strategy: most long runs end because the player stopped watching the ground.",
+    "tips": [
+      "Duck instead of jumping when a bird is high. Jumping into a high pterodactyl is the most common way a good run ends.",
+      "Tap jump, never hold it. A short press lands you before the next cactus; a held press strands you above it with no second jump.",
+      "Watch the space between obstacles, not the dinosaur. Your eyes should sit a screen ahead of the sprite you control.",
+      "The game speeds up without announcing it. When the pattern starts feeling fast, that is the game and not your nerves - shorten the jump, not the reaction."
+    ],
+    "depth": true
   },
   {
     "title": "circlO",
@@ -1043,13 +1057,20 @@
     "featured": false,
     "badge": "",
     "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls. Free to play instantly.",
-    "howToPlay": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom!",
+    "howToPlay": "Swipe across a rope, or click and drag through it, to cut it. The candy keeps whatever momentum it already has, so cutting the rope that holds it still drops it straight down, while cutting one side of a two-rope hold starts a swing. Time each cut to the swing rather than to your nerves: release too early and the candy falls short, too late and it sails past Om Nom. Pass through stars to collect them, and restart the level if a cut leaves you with no rope left to work with.",
     "icons": {
       "180": "/icons/c/cuttherope/icon-180.png",
       "192": "/icons/c/cuttherope/icon-192.png",
       "512": "/icons/c/cuttherope/icon-512.png"
     },
-    "about": "Cut the Rope: cut ropes in the right order to swing a piece of candy into Om Nom's mouth, collecting stars along the way. Physics is everything — momentum from one swing should feed the next cut, and bubbles, spikes and air cushions turn later levels into little Rube Goldberg puzzles."
+    "about": "Cut the Rope is a physics puzzle with one verb: cut. A piece of candy hangs from ropes above Om Nom, and the job is to sever them in an order that swings the sweet into his mouth instead of past it, into spikes, or off the edge of the screen.\n\nThe first levels need a single cut. Then the game adds bubbles that lift the candy, air cushions that puff it sideways, and spikes that punish a careless arc. Stars hang along the route, and the three-star solution is almost always a different cut order than the one that merely feeds him.\n\nThe tension is that every cut is permanent. There is no undo, so a level is really a short plan: which rope holds the candy, which one builds the swing, and which one releases it at the moment the arc passes the mouth.",
+    "tips": [
+      "Cut the rope that holds the candy last when you can. The swing you build with the other ropes is what carries it across a gap.",
+      "A bubble is a pause button, not a lift: let it carry the candy up, then burst it at the top of the arc so the fall lands in the mouth.",
+      "Chase stars on a second attempt. Going for all three on the first run usually means a cut order that cannot reach the mouth at all.",
+      "When a level looks impossible, the answer is usually the rope you have been ignoring, not the one you keep cutting."
+    ],
+    "depth": true
   },
   {
     "title": "Cut the Rope Holiday",
@@ -1832,14 +1853,21 @@
     "use_overlay_title": false,
     "featured": false,
     "description": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole. Supports keyboard and touch controls.",
-    "howToPlay": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole.",
+    "howToPlay": "Choose a direction, set the strength of the putt, then send the ball away and let the course do the rest. Read the slope before committing: a putt that arrives at the cup with speed left will roll past it, so aim to arrive slow. When a wall sits between you and the hole, play the rebound instead of trying to curve around it, and treat every bounce as an extra shot you can plan for. Each hole resets the ball, so a ruined hole costs strokes but never progress.",
     "icons": {
       "180": "/icons/m/miniputt/icon-180.png",
       "192": "/icons/m/miniputt/icon-192.png",
       "512": "/icons/m/miniputt/icon-512.png"
     },
     "badge": "",
-    "about": "Miniature golf with clean physics: read the slope, set the power, and sink putts under par. Bank shots off walls are more reliable than straight lines on most holes, and gentle taps on downhill greens beat firm ones — the ball breaks more than your eye says."
+    "about": "Mini-putt is miniature golf with honest physics: every hole is a short course of slopes, walls and obstacles, and the entire game is one decision - how hard to hit the ball and in which direction. There are no power-ups, no timers and no opponents, so a hole is either solved or it is not.\n\nThe courses read like putting greens rather than obstacle courses. Slopes curve the ball after it lands, walls turn a straight shot into a rebound, and an overhit ball can wander back past your feet. The further you go, the more the holes ask for a bank shot instead of a direct line.\n\nProgress is scored the way golf is scored: every hole has a par, and finishing under it matters more than finishing quickly. Because the ball keeps its momentum, the skill is not aiming at the hole - it is aiming at the point where the slope will carry the ball the rest of the way.",
+    "tips": [
+      "On a downhill green, hit roughly half the power you think you need. The slope supplies the rest, and an overhit putt usually ends further from the cup than it started.",
+      "Walls are more predictable than they look: the angle you arrive at is the angle you leave at, so line up a bank shot before attempting a narrow gap.",
+      "Play for par rather than for the highlight. Two safe putts beat one hero shot that rebounds off three walls.",
+      "Look at where the hole sits relative to the slope, not relative to the ball. The last third of the putt is what decides where it stops."
+    ],
+    "depth": true
   },
   {
     "title": "Missiles",
