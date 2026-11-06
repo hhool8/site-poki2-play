@@ -13,37 +13,37 @@
   <!-- Tag / category pages -->
   <url>
     <loc>https://play.poki2.online/tag/puzzle/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://play.poki2.online/tag/shooting/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://play.poki2.online/tag/action/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://play.poki2.online/tag/multiplayer/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://play.poki2.online/tag/idle/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://play.poki2.online/tag/competitive/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -77,6 +77,26 @@
     <image:image>
       <image:loc>https://play.poki2.online/icons/z/zombiescantjump/icon-512.png</image:loc>
       <image:title>Zombies Can't Jump</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/d/dronewars/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/d/dronewars/icon-512.png</image:loc>
+      <image:title>Drone Wars</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/s/silverarrow/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/s/silverarrow/icon-512.png</image:loc>
+      <image:title>Silver Arrow</image:title>
     </image:image>
   </url>
   <url>
@@ -200,6 +220,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://play.poki2.online/game/b/bubblecn/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/b/bubbleitsteven/icon-512.png</image:loc>
+      <image:title>Bubble It Steven</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://play.poki2.online/game/b/bubblefish/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -207,6 +237,36 @@
     <image:image>
       <image:loc>https://play.poki2.online/icons/b/bubblefish/icon-512.png</image:loc>
       <image:title>Bubble Fish</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/c/candyfusion/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/c/candyfusion/icon-512.png</image:loc>
+      <image:title>Candy Fusion</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/c/captainroger/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/c/captainroger/icon-512.png</image:loc>
+      <image:title>Captain Roger</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/d/dotgame/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/d/dotgame/icon-512.png</image:loc>
+      <image:title>Dot Game</image:title>
     </image:image>
   </url>
   <url>
@@ -220,6 +280,86 @@
     </image:image>
   </url>
   <url>
+    <loc>https://play.poki2.online/game/f/funnysoccer/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/f/funnysoccer/icon-512.png</image:loc>
+      <image:title>Funny Soccer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/g/gettwelve/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/g/gettwelve/icon-512.png</image:loc>
+      <image:title>Get Twelve</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/g/greedygnomes/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/g/greedygnomes/icon-512.png</image:loc>
+      <image:title>Greedy Gnomes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/j/jellydoods/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/j/jellydoods/icon-512.png</image:loc>
+      <image:title>Jelly Doods</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/j/jomjom/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/j/jomjom/icon-512.png</image:loc>
+      <image:title>Jomjom</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/m/matchtime/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/m/matchingtime/icon-512.png</image:loc>
+      <image:title>Matching Time</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/m/monstercandy/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/m/monstercandy/icon-512.png</image:loc>
+      <image:title>Monster Candy</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/o/ojelloonline/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/o/ojello/icon-512.png</image:loc>
+      <image:title>Ojello</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://play.poki2.online/game/p/pacman/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -227,6 +367,46 @@
     <image:image>
       <image:loc>https://play.poki2.online/icons/p/pacman/icon-512.png</image:loc>
       <image:title>Pacman</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/p/piratekid/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/p/piratekid/icon-512.png</image:loc>
+      <image:title>Pirate Kid</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/s/stickpanda/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/s/stickpanda/icon-512.png</image:loc>
+      <image:title>Stick Panda</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/w/woodblock/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/w/woodblock/icon-512.png</image:loc>
+      <image:title>Wood Block</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://play.poki2.online/game/z/zapaliens/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/z/zapaliens/icon-512.png</image:loc>
+      <image:title>Zapaliens</image:title>
     </image:image>
   </url>
 

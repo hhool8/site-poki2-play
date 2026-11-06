@@ -28,7 +28,26 @@
     "bubblefish",
     "foofoo",
     "zombiescantjump",
-    "deal-or-no-deal"
+    "deal-or-no-deal",
+    "bubblecn",
+    "candyfusion",
+    "gettwelve",
+    "silverarrow",
+    "dotgame",
+    "woodblock",
+    "jomjom",
+    "funnysoccer",
+    "ojelloonline",
+    "dronewars",
+    "monstercandy",
+    "piratekid",
+    "greedygnomes",
+    "captainroger",
+    "jellydoods",
+    "matchtime",
+    "stickpanda",
+    "zapaliens"
   ],
+  "_batch3": "2026-11-06 pilot: 18 games enriched with hand-authored unique `about` (apply-content-batch-3.cjs) and de-noindexed, added to sitemap scope to validate the enrich -> de-noindex -> index path. Remove entries + rebuild to revert.",
   "_note": "Slugs are the game's own link tail (normalizeHref), not a slugified title — Eaglercraft is published as /game/m/minecraft/, Big Tower Tiny Square as /game/b/btts/, Ninja Blade as /game/n/ninjablade/. Selection rule: the 14 games already carrying the editor's `featured` flag, minus the two thinnest (math-game, troll-boxing), plus six titles that carry real search demand independent of this catalogue (2048, Wordle, Pac-Man, Temple Run 2, Tube Jumpers, There Is No Game). Tags kept are the six with the largest real inventory and least overlap with the two-player hub (apex /2-player-games, play /tag/multiplayer/)."
 }

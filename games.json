@@ -496,7 +496,8 @@
       "512": "/icons/d/dronewars/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Pilot a combat drone through enemy formations, weaving between missiles while returning fire in tight aerial dogfights. Keep your speed up so you stay a hard target, and use terrain and wreckage as cover when the screen fills with tracers. Survive each wave to face faster, meaner squadrons."
   },
   {
     "title": "Luxahoy",
@@ -668,7 +669,8 @@
       "512": "/icons/s/silverarrow/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Draw your bow and loose arrows at targets scattered across each timed stage — speed matters, but a clean hit beats a rushed one. Read the wind and the target's drift, then release at the moment the aim settles. Missed shots cost seconds you cannot win back, so pace your volleys and let the clock work for you."
   },
   {
     "title": "Ninja Blade",
@@ -3009,7 +3011,8 @@
       "512": "/icons/b/bubbleitsteven/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Line up your shots and fire colored bubbles into the cluster above — when three or more of the same hue touch they pop, and everything hanging beneath them drops away. Bank shots off the side walls to reach pockets you cannot hit head-on, and clear the whole board before the bubbles creep down to the launcher."
   },
   {
     "title": "Bubble Fish",
@@ -3073,7 +3076,8 @@
       "512": "/icons/c/candyfusion/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Slide matching candy tiles together to fuse them into richer, higher-value sweets, chaining merges to build a combo before the board fills. Every fusion scores, but the smart plays come from setting up a cascade that keeps feeding itself. Watch the grid edges — a cleared lane opens room for the next big combination."
   },
   {
     "title": "Captain Roger",
@@ -3104,7 +3108,8 @@
       "512": "/icons/c/captainroger/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Take Captain Roger's ship through asteroid fields and alien swarms in a top-down space shooter. Strafe to dodge incoming fire while keeping your guns on the nearest threat, and grab power-ups that drift past to upgrade your loadout. Clear each sector before the screen overwhelms you."
   },
   {
     "title": "Captain War",
@@ -3728,7 +3733,8 @@
       "512": "/icons/d/dotgame/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "The classic dots-and-boxes duel: take turns drawing a line between two adjacent dots, and claim a square the moment you complete its fourth side. Trap your opponent into handing you box after box by leaving open thirds they cannot avoid closing. The player who fences off the most territory wins."
   },
   {
     "title": "Drop Circle",
@@ -4382,7 +4388,8 @@
       "512": "/icons/f/funnysoccer/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Ragdoll physics turn every match into glorious chaos: wobbling players bounce off the ball and each other as you scramble to score before the whistle. Timing your kick matters more than aiming, since the silly physics decides where the ball actually goes. Score the most goals before the clock runs down."
   },
   {
     "title": "Get Twelve",
@@ -4414,7 +4421,8 @@
       "512": "/icons/g/gettwelve/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Merge numbered tiles by sliding equal values together, doubling them each time as you push toward the magic number twelve. The board tightens with every move, so plan merges two steps ahead instead of grabbing the obvious pair. A wrong slide strands a tile you cannot pair — and the game ends when no move remains."
   },
   {
     "title": "Goblin Machine",
@@ -4545,7 +4553,8 @@
       "512": "/icons/g/greedygnomes/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Garden tower defense: place towers along the gnomes' path to stop them stealing your vegetables, then upgrade what works as the raids get bolder. Position for overlapping range rather than lining the first opening, and spend early gold on a strong core. Hold the garden through every wave."
   },
   {
     "title": "Green Wings",
@@ -4875,7 +4884,8 @@
       "512": "/icons/j/jellydoods/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Help the wobbly Jelly Doods creatures reach their goal across a slippery world of physics puzzles, stretching and bouncing them past hazards. Each squish changes how they move, so read the surface before you fling — a careless launch slides them into the pit. Patience beats force on every level."
   },
   {
     "title": "Jelly Slice",
@@ -4943,7 +4953,8 @@
       "512": "/icons/j/jomjom/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Connect groups of identical Jomjom creatures by dragging a path through them, then pop the whole cluster for points before the board reshuffles. Longer chains score exponentially more, so look for the biggest same-color blob rather than the nearest pair. Clear the objective in each level before moves or time run out."
   },
   {
     "title": "Jump Kitty",
@@ -5245,7 +5256,8 @@
       "512": "/icons/m/matchingtime/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Flip cards two at a time to uncover matching pairs before the timer drains — memory is the only weapon. Build a mental map of where each symbol hid after a failed flip, and chase the pairs you already half-remember. Clear the deck before the clock beats you."
   },
   {
     "title": "Math Game",
@@ -5312,7 +5324,8 @@
       "512": "/icons/m/monstercandy/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Each little monster craves a specific candy — draw a line to route the right colored sweet into its waiting mouth without crossing wires. The puzzles layer in more monsters and tighter paths, so you must plan the whole feeding order before the first candy drops. Satisfy every creature to clear the board."
   },
   {
     "title": "Monster Eater",
@@ -5514,7 +5527,8 @@
       "512": "/icons/o/ojello/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Stretch and squish the jelly Ojello blob to squeeze it through narrow gaps and past spikes in each physics puzzle. The blob deforms to fit, but over-stretch and it snaps back or tears — find the exact shape the opening demands. Each level is a new constraint on how far one patient pull can take you."
   },
   {
     "title": "Pacman",
@@ -5824,7 +5838,8 @@
       "512": "/icons/p/piratekid/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "A pint-sized pirate swings from island to island, slashing sea monsters and scooping up buried treasure across side-scrolling platforming runs. Time your jumps between decks and cannons, and grab the loot before the tide pulls you onward. Every island ends with a stash worth the risky leap."
   },
   {
     "title": "Pitana",
@@ -6592,7 +6607,8 @@
       "512": "/icons/s/stickpanda/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Guide a stick-figure panda across bamboo bridges and ledges in a precision platformer where one mistimed step means a fall. Judge each gap by feel rather than sight, and keep a steady rhythm through the trickier stretches. Reach the far side without tumbling into the ravine."
   },
   {
     "title": "Stick Panda Xmas",
@@ -7067,7 +7083,8 @@
       "512": "/icons/w/woodblock/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Drag wooden blocks from the tray and drop them onto the grid to fill complete rows and columns, which then clear and free up space. Plan where each piece lands before you commit — a stray gap strands a block you cannot place later. The run ends when the board has no room left for the next piece."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky/",
@@ -7135,7 +7152,8 @@
       "512": "/icons/z/zapaliens/icon-512.png"
     },
     "badge": "",
-    "noindex": true
+    "noindex": false,
+    "about": "Zap descending alien invaders before they land in this neon arcade shooter with a difficulty curve that never lets up. Move to keep a lane open, and prioritize the formations that drop fastest. Chain quick kills to build a score that climbs as fast as the invasion."
   },
   {
     "title": "Zombie Night",
