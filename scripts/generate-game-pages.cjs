@@ -102,6 +102,12 @@ function buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenr
           <p class="game-article-meta">${genreLine}${inputs.length ? ` &middot; ${inputs.map(esc).join(' / ')}` : ''}</p>
         </header>
         <p class="game-article-lede">${esc(desc)}</p>
+        <div class="game-article-cta">
+          <button type="button" class="game-article-play" data-article-play="${esc(slug)}">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 5.5v13a1 1 0 0 0 1.53.85l10-6.5a1 1 0 0 0 0-1.7l-10-6.5A1 1 0 0 0 8 5.5z" fill="currentColor"/></svg>
+            <span>Play ${esc(game.title)}</span>
+          </button>
+        </div>
         <h2>About ${esc(game.title)}</h2>
 ${paras.map(p => `        <p>${esc(p)}</p>`).join('\n')}
 ${htp ? `        <h2>How to play ${esc(game.title)}</h2>\n        <p>${esc(htp)}</p>` : ''}

@@ -70,6 +70,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://play.poki2.online/game/b/basketball-stars/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://play.poki2.online/icons/b/basketball-stars/icon-512.png</image:loc>
+      <image:title>Basketball Stars</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://play.poki2.online/game/b/babaisyou/</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>

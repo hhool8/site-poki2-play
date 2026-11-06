@@ -1746,6 +1746,14 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
 .game-article li{margin:0 0 8px;font-size:.95rem;line-height:1.65;color:var(--text)}
 .game-article-controls{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .game-article-controls li{margin:0;background:var(--brand-light);color:var(--brand-dark);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:600;text-transform:capitalize}
+/* Play CTA. Depth article pages do not open the detail modal, so this is the
+   only entry point into the game from them. */
+.game-article-cta{margin:16px 0 2px}
+.game-article-play{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 22px;border:0;border-radius:999px;background:var(--brand);color:#fff;font:inherit;font-size:.98rem;font-weight:700;cursor:pointer;transition:transform .12s ease,filter .12s ease}
+.game-article-play:hover{filter:brightness(1.06)}
+.game-article-play:active{transform:scale(.98)}
+.game-article-play:focus-visible{outline:3px solid var(--brand-dark);outline-offset:2px}
+.game-article-play svg{flex:0 0 auto}
 @media (max-width:640px){
   .game-article{margin:18px auto 30px;padding:0 14px}
   .game-article-inner{padding:18px 16px 20px}

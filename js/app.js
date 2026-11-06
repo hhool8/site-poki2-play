@@ -356,6 +356,17 @@
     sync();
     window.addEventListener('popstate', sync);
     document.addEventListener('click', function () { setTimeout(sync, 0); }, true);
+    /* Play CTA rendered by buildArticle(). The article page has no detail modal,
+       so this is the only way into the game from here. */
+    document.addEventListener('click', function (ev) {
+      const btn = ev.target && ev.target.closest ? ev.target.closest('[data-article-play]') : null;
+      if (!btn) return;
+      const want = (btn.getAttribute('data-article-play') || '').replace(/[^a-z0-9-]/gi, '');
+      const game = (rawGames || []).find((g) => normalizeHref(g.link) === want);
+      if (!game) return;
+      ev.preventDefault();
+      openGame(game);
+    }, false);
   })();
 
   /** Escape text for safe insertion into innerHTML */
@@ -1156,7 +1167,7 @@
   }
 
   /* ---------- Views ---------- */
-  function showHome() {
+  function showHome(opts) {
     // Guard: if the user is mid-search, any showHome() triggered by popstate /
     // hashchange / init race conditions should be ignored. The search view
     // handles its own display. Intentional Home navigation must clear the
@@ -1168,6 +1179,7 @@
       // (e.g. an All/Favorites button that wants the address bar to show
       // '/'). Routing handlers that need to update the URL should do so
       // themselves before calling `showHome()`.
+    const skipSections = !!(opts && opts.skipSections);
     currentView = "home";
     pruneStaticSections(null); // no static tag section belongs on the home view
     window.__cardCount = 0; // reset so first-N eager logic works on re-render
@@ -1183,10 +1195,12 @@
     $gameSections.innerHTML = "";
     $gameSections.style.display = "";
     $skeleton.style.display = "none";
-    renderRecentSection();
-    // Trending Now — featured + badged games
-    const _tr = renderTrendingSection();
-    if (_tr) $gameSections.insertBefore(_tr, $gameSections.firstChild);
+    if (!skipSections) {
+      renderRecentSection();
+      // Trending Now — featured + badged games
+      const _tr = renderTrendingSection();
+      if (_tr) $gameSections.insertBefore(_tr, $gameSections.firstChild);
+    }
 
     // Reset lazy loading state
     loadedSections = 0;
@@ -1195,11 +1209,15 @@
     // Render ALL category sections immediately — every H2 ships with its
     // games. Lazy-loading sections on scroll left later sections as bare
     // headings with empty grids in no-scroll renders (crawlers/SEO checks).
-    for (const tag of TAG_ORDER) {
-      const sec = renderSection(tag, SECTION_LIMIT);
-      if (sec) $gameSections.appendChild(sec);
+    // Depth pages pass skipSections: the article is the page, and the feed is
+    // the near-duplicate body text this page type exists to avoid.
+    if (!skipSections) {
+      for (const tag of TAG_ORDER) {
+        const sec = renderSection(tag, SECTION_LIMIT);
+        if (sec) $gameSections.appendChild(sec);
+      }
+      loadedSections = TAG_ORDER.length;
     }
-    loadedSections = TAG_ORDER.length;
 
     highlightSidebarItem(null);
     updateChipActive('__all');
@@ -1984,6 +2002,38 @@
       $detail.classList.add("open");
     }
   }
+  /* The game whose prerendered article belongs to the current URL, or null.
+     Used by the router and by popstate so that a depth page keeps its article
+     after the in-game overlay closes (the back button calls history.back()). */
+  function depthArticleGame() {
+    const art = document.getElementById('game-article');
+    if (!art) return null;
+    const slug = (art.getAttribute('data-slug') || '');
+    if (!slug) return null;
+    const m = (location.pathname || '').match(/^\/game\/[^\/]+\/([^\/]+)\/?$/i);
+    if (!m || m[1] !== slug) return null;
+    return (rawGames || []).find((g) => normalizeHref(g.link) === slug) || null;
+  }
+
+  /* Depth pages (game.depth === true): the prerendered article IS the page.
+     Measured 2026-11-06 — on /game/{c}/{slug}/ the detail modal opened on load,
+     sat at z-index 2000 over everything, set #content[aria-hidden=true] and
+     locked body scroll, so a 300-600 word article existed in the DOM for
+     crawlers and was physically unreachable for people. The 221-card home feed
+     was rendered underneath it at the same time, which is the near-duplicate
+     body text the depth experiment exists to remove. This does neither: render
+     the shell, discard the feed, keep this game's meta, leave the article on
+     screen. The article's own Play button calls openGame(). */
+  function showDepthArticle(game) {
+    showHome({ skipSections: true });
+    try { $gameSections.innerHTML = ''; } catch (e) {}
+    try { $gameSections.style.display = 'none'; } catch (e) {}
+    try { _injectGameMeta(game); } catch (e) {}
+    currentView = 'article';
+    try { document.body.classList.add('game-article-open'); } catch (e) {}
+    try { window.scrollTo({ top: 0, behavior: 'auto' }); } catch (e) {}
+  }
+
   function hideDetail() {
     $detail.classList.remove("open");
     document.body.classList.remove('detail-open');
@@ -2391,8 +2441,6 @@
     $sidebar.classList.contains("open") ? closeSidebar() : openSidebar(),
   );
   if ($sidebarOverlay) $sidebarOverlay.addEventListener("click", closeSidebar);
-  if ($overlayBack) $overlayBack.addEventListener("click", closeGame);
-  if ($overlayFs) $overlayFs.addEventListener("click", toggleFullscreen);
   if ($pauseResume) $pauseResume.addEventListener("click", resumeFullscreen);
   if ($pauseQuit) $pauseQuit.addEventListener("click", closeGame);
   if ($clearRecent) $clearRecent.addEventListener("click", clearRecent);
@@ -2578,7 +2626,14 @@
     }
     const st = e.state;
     if (st && st.view === "category") showCategory(st.tag, st.page || 1);
-    else showHome();
+    else {
+      // Closing the in-game overlay calls history.back(), which lands here. If
+      // this URL owns a depth article, restore the article view instead of the
+      // home feed — otherwise the near-duplicate feed reappears in the DOM.
+      const depthGame = depthArticleGame();
+      if (depthGame) showDepthArticle(depthGame);
+      else showHome();
+    }
   });
 
   /* Ensure hash-based navigation keeps footer pinned (fixes direct/hash navigation on mobile) */
@@ -2601,6 +2656,12 @@
     $barTrigger = document.getElementById("bar-trigger");
     $overlayBack = document.getElementById("overlay-back");
     $overlayFs = document.getElementById("overlay-fs");
+    /* The in-game back and fullscreen buttons were bound at IIFE top level,
+       where $overlayBack / $overlayFs are still null — they are only assigned
+       in this handler. So both buttons had no listener at all and the overlay
+       could not be dismissed from inside the game on any page. Bound here. */
+    if ($overlayBack) $overlayBack.addEventListener("click", closeGame);
+    if ($overlayFs) $overlayFs.addEventListener("click", toggleFullscreen);
     // Detail interstitial refs
     $detail = document.getElementById("game-detail");
     $detailImg = document.getElementById("detail-img");
@@ -2935,8 +2996,15 @@
       console.log('[route] detected game detail page, slug:', slug);
       const game = rawGames.find((g) => normalizeHref(g.link) === slug);
       if (game) {
-        showHome(); // render the home grid beneath the modal
-        showDetail(game);
+        const art = document.getElementById('game-article');
+        const artSlug = art ? (art.getAttribute('data-slug') || '') : '';
+        if (art && artSlug === slug) {
+          // depth page: the article is the landing page, the modal would bury it
+          showDepthArticle(game);
+        } else {
+          showHome(); // render the home grid beneath the modal
+          showDetail(game);
+        }
       } else {
         console.warn('[route] no matching game for slug (game page):', slug);
         showHome();

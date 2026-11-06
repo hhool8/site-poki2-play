@@ -88,14 +88,21 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "",
-    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop browsers.",
-    "howToPlay": "Pick a character, then use movement to create space and the action button to shoot - hold it to charge the shot. On defence, time the block instead of chasing, and switch to the closest player before the pass lands.",
+    "description": "1v1 and 2v2 half-court basketball in the browser. Charge your shot, dash into space, and finish at the rim instead of settling for a jumper.",
+    "howToPlay": "Pick a character and start a match, one-on-one or two-on-two, on a single half court. Move with the keyboard and use the action control for everything else: it charges a shot while you hold it with the ball, jumps to block on defence, and reaches in for a steal when you are close to the dribbler. Because one control covers shooting, blocking and stealing, the game asks you to decide before you press rather than after - an early steal is a free lane for your opponent and an early release is a blocked shot. On offence, create separation first and shoot second. On defence, stay between your man and the hoop, then jump when the shot starts instead of when the ball is already in the air.",
     "icons": {
       "180": "/icons/b/basketball-stars/icon-180.png",
       "192": "/icons/b/basketball-stars/icon-192.png",
       "512": "/icons/b/basketball-stars/icon-512.png"
     },
-    "about": "Basketball Stars is an arcade basketball game built for short, fast matches. You pick a character, then play one-on-one or two-on-two on a half court, chaining dribbles, blocks and dunks into a single possession.\n\nOffence runs on timing rather than playbooks. Move to create space, charge a shot for power, and dash past a defender rather than around him. Defence is the same set of buttons read backwards: contest the shot, time the block, and switch to the nearest player before the pass arrives. A dunk close to the rim is worth more than a jump shot and swings the momentum.\n\nMatches are short enough to decide in a couple of minutes, which is why it works better as a browser game than as a simulation. It plays on keyboard or touch, and two players can share one keyboard for a local match."
+    "about": "Basketball Stars compresses basketball into a half court and two to four players. There is no referee, no clock management and no season: you pick a character, the ball is checked, and the possession ends in either a bucket or a turnover. That compression is the entire design, and it is why a match lasts about as long as a coffee break.\n\nOffence is built on one idea: you cannot shoot over a defender who is set, so you have to move him first. A charged shot is accurate but slow to release, which makes the release a commitment - start it with a hand in your face and the block arrives before the ball leaves your hands. Dribbling and the dash exist to break that symmetry. Carry the ball into open space and shoot before the defender recovers, or attack the rim, where a dunk converts at a far higher rate than a mid-range jumper and pulls the defence inward for the next possession.\n\nDefence is the same toolkit read the other way. Standing between your opponent and the rim is worth more than chasing the ball, because a contest that arrives on time beats a steal attempt that does not. The steal is a gamble with a visible cost: miss it and you are a step behind with the ball already moving. Blocks are the reliable play, since they only ask for the timing of the jump rather than a read of the dribble.\n\nThe half-court format is what keeps this readable as a browser game. With a single hoop in play, every possession ends in the same place, so a newcomer can follow the ball instead of the whole floor. Two players can share one keyboard for a local match, which makes it a better fit for a shared laptop than most competitive browser games, and the version here needs no install, no account and no download.",
+    "tips": [
+      "Start the charge before you are open and release when you are. Standing still with a full charge is the most predictable thing you can do on a half court.",
+      "Take the rim when the lane opens. A dunk is worth more than a jumper, and it pulls a defender inward for the possession after it.",
+      "Do not reach for a steal unless you are already between your man and the basket. A missed steal is a two-point gift in the other direction.",
+      "In two-on-two, switch to the player nearest the ball before the pass leaves the handler. The switch is free; the recovery is not."
+    ],
+    "depth": true
   },
   {
     "title": "Battle for Gondor",
