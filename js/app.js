@@ -847,17 +847,31 @@
 
     const list = limit ? games.slice(0, limit) : games;
 
-    // Populate in batches during idle time
+    // First batch renders SYNCHRONOUSLY so every section always ships with
+    // visible cards in no-scroll renders (crawlers/SEO checks) and the LCP
+    // candidate is not delayed by idle scheduling. Remaining cards populate
+    // in small idle batches — BATCH (4) must stay BELOW SECTION_LIMIT
+    // (12 desktop / 9 mobile), otherwise each "batch" degenerates into one
+    // full-grid append and the main thread blocks again (see CWV lab 11-25).
+    const BATCH = 4;
+    let start = 0;
+    if (list.length) {
+      const frag = document.createDocumentFragment();
+      for (; start < Math.min(BATCH, list.length); start++) {
+        frag.appendChild(createCard(list[start]));
+      }
+      grid.appendChild(frag);
+    }
+
     (async () => {
-      const BATCH = 12;
-      for (let i = 0; i < list.length; i += BATCH) {
+      for (let i = start; i < list.length; i += BATCH) {
         const frag = document.createDocumentFragment();
         for (let j = i; j < Math.min(i + BATCH, list.length); j++) {
           frag.appendChild(createCard(list[j]));
         }
         grid.appendChild(frag);
         // yield to the browser
-        await scheduleIdle(() => {}, { timeout: 40 });
+        await scheduleIdle(() => {}, { timeout: 80 });
       }
     })();
 
@@ -971,12 +985,12 @@
     }
     $recentGrid.innerHTML = "";
     (async () => {
-      const BATCH = 8;
+      const BATCH = 4;
       for (let i = 0; i < list.length; i += BATCH) {
         const frag = document.createDocumentFragment();
         for (let j = i; j < Math.min(i + BATCH, list.length); j++) frag.appendChild(createCard(list[j]));
         $recentGrid.appendChild(frag);
-        await scheduleIdle(() => {}, { timeout: 30 });
+        await scheduleIdle(() => {}, { timeout: 80 });
       }
     })();
   }
@@ -1096,7 +1110,23 @@
     section.innerHTML = `<div class="section-header"><h2 class="section-title"><span class="emoji">🔥</span> Trending Now</h2>${showAll ? `<button class="see-all" data-tag="trending">See all (${deduped.length})</button>` : ''}</div>`;
     const grid = document.createElement('div');
     grid.className = 'game-grid';
-    for (const g of deduped.slice(0, SECTION_LIMIT)) grid.appendChild(createCard(g));
+    // First 4 cards synchronously (LCP candidates sit above the fold); the
+    // rest of the visible limit populates in small idle batches so this
+    // does not become one long main-thread task (CWV lab 11-25).
+    const TREND_BATCH = 4;
+    const vis = deduped.slice(0, SECTION_LIMIT);
+    let tStart = 0;
+    const frag0 = document.createDocumentFragment();
+    for (; tStart < Math.min(TREND_BATCH, vis.length); tStart++) frag0.appendChild(createCard(vis[tStart]));
+    grid.appendChild(frag0);
+    (async () => {
+      for (let i = tStart; i < vis.length; i += TREND_BATCH) {
+        const frag = document.createDocumentFragment();
+        for (let j = i; j < Math.min(i + TREND_BATCH, vis.length); j++) frag.appendChild(createCard(vis[j]));
+        grid.appendChild(frag);
+        await scheduleIdle(() => {}, { timeout: 80 });
+      }
+    })();
     section.appendChild(grid);
     const btn = section.querySelector('.see-all');
     if (btn) btn.addEventListener('click', () => {

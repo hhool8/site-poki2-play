@@ -1,12 +1,12 @@
 {
   "page /": {
-    "hash": "ea1e7ba8af62bdf4b8953beffa87ece80f41898a",
-    "lastmod": "2026-11-03",
+    "hash": "6e2418fe3f7ba4d844bcbaa6966544525b8ee23e",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag puzzle": {
-    "hash": "739dbbc5f7236289b315ab44175ebee006db72db",
-    "lastmod": "2026-11-06",
+    "hash": "610f56ac607533788332c9ae322387c833104fb8",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag adventure": {
@@ -14,13 +14,13 @@
     "lastmod": "2026-09-27"
   },
   "tag shooting": {
-    "hash": "6ffc8d237b0d787ff6ccf972489963faee4d2dda",
-    "lastmod": "2026-11-06",
+    "hash": "082b92a52bd848a2b1e14e8db39cc92b1020f7b2",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag action": {
-    "hash": "0489c50f19c1dd2a2c4448ab27efba7970854a83",
-    "lastmod": "2026-11-06",
+    "hash": "01bd15dfad3d2c38ec2ef86f63b72a36271bc1bc",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag racing": {
@@ -36,13 +36,13 @@
     "lastmod": "2026-09-27"
   },
   "tag multiplayer": {
-    "hash": "2c957da7686dae514f084a229950b4bc4f40f2f0",
-    "lastmod": "2026-11-06",
+    "hash": "9d8ae549b12b8ea784bbf4d571dfc5f821112feb",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag idle": {
-    "hash": "f6899eb6439172ddced08778a09389bd55accd30",
-    "lastmod": "2026-11-06",
+    "hash": "ca16eb07eab8e880c1adeb3d815f45d97eebde85",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag arcade": {
@@ -54,8 +54,8 @@
     "lastmod": "2026-09-27"
   },
   "tag competitive": {
-    "hash": "f3fef01dcdcd3e7a191f2f6236295647c5f1eb91",
-    "lastmod": "2026-11-06",
+    "hash": "57cb937cd4593044e5f93d3f0542cec34fc5c15b",
+    "lastmod": "2026-11-24",
     "v": 2
   },
   "tag classic": {
