@@ -96,22 +96,42 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Game Categories","itemListElement":[{"@type":"SiteNavigationElement","position":1,"name":"Action Games","url":"https://play.poki2.online/tag/action/"},{"@type":"SiteNavigationElement","position":2,"name":"Puzzle Games","url":"https://play.poki2.online/tag/puzzle/"},{"@type":"SiteNavigationElement","position":3,"name":"Adventure Games","url":"https://play.poki2.online/tag/adventure/"},{"@type":"SiteNavigationElement","position":4,"name":"Racing Games","url":"https://play.poki2.online/tag/racing/"},{"@type":"SiteNavigationElement","position":5,"name":"Shooting Games","url":"https://play.poki2.online/tag/shooting/"},{"@type":"SiteNavigationElement","position":6,"name":"2 Player Games","url":"https://play.poki2.online/2-player-games/"},{"@type":"SiteNavigationElement","position":7,"name":"Competitive Games","url":"https://play.poki2.online/tag/competitive/"},{"@type":"SiteNavigationElement","position":8,"name":"Strategy Games","url":"https://play.poki2.online/tag/strategy/"},{"@type":"SiteNavigationElement","position":9,"name":"Idle Games","url":"https://play.poki2.online/tag/idle/"},{"@type":"SiteNavigationElement","position":10,"name":"Arcade Games","url":"https://play.poki2.online/tag/arcade/"},{"@type":"SiteNavigationElement","position":11,"name":"Sports Games","url":"https://play.poki2.online/tag/sports/"},{"@type":"SiteNavigationElement","position":12,"name":"Platformer Games","url":"https://play.poki2.online/tag/platformer/"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Poki2 Play?","acceptedAnswer":{"@type":"Answer","text":"Poki2 Play is the curated free browser-games collection at play.poki2.online — instant play in your browser, no download and no account."}},{"@type":"Question","name":"Do I need to download or install anything to play?","acceptedAnswer":{"@type":"Answer","text":"No. Every game runs directly in the browser tab and works on desktop, Chromebook, and mobile — just open a game and play."}},{"@type":"Question","name":"Are the games free?","acceptedAnswer":{"@type":"Answer","text":"Yes. All games are free to play, with no sign-up and no account required."}},{"@type":"Question","name":"Can I play on my phone or tablet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most of the collection supports touch controls, and the layout adapts to small screens. Games that need a keyboard or mouse say so on their page."}},{"@type":"Question","name":"How do I find a specific game?","acceptedAnswer":{"@type":"Answer","text":"Use the search box at the top of the page, or browse by category. Every game also has its own page under /game/ that opens directly."}}]}</script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"></script>
+    <!-- Google tag (gtag.js), deferred: the script download itself starts
+         only after first paint settles (idle, first interaction, or 4 s
+         fallback — whichever comes first). app.js owns the main thread at
+         startup; the GTM container (~350 KB JS) would otherwise contend
+         with it and push TBT past 12 s. dataLayer pushes queue safely
+         before the script arrives. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       window.__poki2GaConfigured = window.__poki2GaConfigured || false;
       function gtag(){dataLayer.push(arguments);}
       function poki2PlayInitAnalytics(){
         if (window.__poki2GaConfigured) return;
-        gtag('config', 'G-KTE3BWDVHC', { send_page_view: true });
         window.__poki2GaConfigured = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC';
+        document.head.appendChild(s);
+        gtag('config', 'G-KTE3BWDVHC', { send_page_view: true });
       }
       gtag('js', new Date());
       gtag('consent', 'default', {
         analytics_storage: 'denied',
         wait_for_update: 500
       });
+      // Grant analytics storage by default on this property (no consent UI
+      // on this host), and start the deferred load.
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      (function(){
+        var fired = false;
+        function kick(){ if (!fired) { fired = true; poki2PlayInitAnalytics(); } }
+        if ('requestIdleCallback' in window) requestIdleCallback(kick, { timeout: 4000 });
+        else setTimeout(kick, 4000);
+        ['pointerdown','keydown','touchstart'].forEach(function(ev){
+          window.addEventListener(ev, kick, { once: true, passive: true });
+        });
+      })();
     </script>
 </head>
   <!-- No-JS users: hide the loading skeleton; prerendered static sections are already in the markup -->
