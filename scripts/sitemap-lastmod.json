@@ -1,23 +1,27 @@
 {
   "page /": {
-    "hash": "e0c080cbd797ef00571667e23ee0cf9821c8bc6e",
-    "lastmod": "2026-11-03"
+    "hash": "ea1e7ba8af62bdf4b8953beffa87ece80f41898a",
+    "lastmod": "2026-11-03",
+    "v": 2
   },
   "tag puzzle": {
-    "hash": "cd2327bde9e663d54df816b07cb10fdd8485861d",
-    "lastmod": "2026-11-06"
+    "hash": "739dbbc5f7236289b315ab44175ebee006db72db",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag adventure": {
     "hash": "1914465f7e9d580a5cf70a5d84a10933df2b5293",
     "lastmod": "2026-09-27"
   },
   "tag shooting": {
-    "hash": "f987b667a5ac353ff687c848898cb431cde9aa97",
-    "lastmod": "2026-11-06"
+    "hash": "6ffc8d237b0d787ff6ccf972489963faee4d2dda",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag action": {
-    "hash": "b9d563d13d11619ea695563d8a414ce7dbd4a33e",
-    "lastmod": "2026-11-06"
+    "hash": "0489c50f19c1dd2a2c4448ab27efba7970854a83",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag racing": {
     "hash": "5e3feb03ad6157ba6169de64fba84806d233f762",
@@ -32,12 +36,14 @@
     "lastmod": "2026-09-27"
   },
   "tag multiplayer": {
-    "hash": "7556794966310a4eabc3c14234f5060406f0f9d6",
-    "lastmod": "2026-11-06"
+    "hash": "2c957da7686dae514f084a229950b4bc4f40f2f0",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag idle": {
-    "hash": "d40055e63e96aac4f6957491e8d2e34b38243dbf",
-    "lastmod": "2026-11-06"
+    "hash": "f6899eb6439172ddced08778a09389bd55accd30",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag arcade": {
     "hash": "2853a0b626e7453a6794533d053e811ae989816a",
@@ -48,24 +54,28 @@
     "lastmod": "2026-09-27"
   },
   "tag competitive": {
-    "hash": "4d92e8606f9dc9524fe5fbfbfa33559b0cbea81f",
-    "lastmod": "2026-11-06"
+    "hash": "f3fef01dcdcd3e7a191f2f6236295647c5f1eb91",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "tag classic": {
     "hash": "cb5b10005c2a897ddd08e4dbe00c3a09d140eddd",
     "lastmod": "2026-11-03"
   },
   "game 2048": {
-    "hash": "a08465277281eb8a75900e4662dff8285227e497",
-    "lastmod": "2026-11-03"
+    "hash": "af3dcd318fd60b42530d939f984460a27f37a514",
+    "lastmod": "2026-11-03",
+    "v": 2
   },
   "game among-us": {
-    "hash": "9230fd6302657bc9a74b4856f79107384cb68e82",
-    "lastmod": "2026-09-27"
+    "hash": "29f1915edaf645a3313404f14e31d55ae56b70f3",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game basketball-stars": {
-    "hash": "f048a81c2e20ca0191fe9f07a17943d87794d6fb",
-    "lastmod": "2026-11-06"
+    "hash": "c2abec9d273066a82e3a3c91495601c2e18cd59a",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game battleforgondor": {
     "hash": "349001d00912fcc15f4448718e82d31c29c14771",
@@ -84,16 +94,18 @@
     "lastmod": "2026-09-27"
   },
   "game babaisyou": {
-    "hash": "e339b4f6d4b1ea7dcd37c4494b778d0efb2a8fc5",
-    "lastmod": "2026-11-06"
+    "hash": "a1f05599de3c85de6a0ecd22fd1e56b21916a24e",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game zcj2": {
     "hash": "5f25b5b761615963a9b41ef559e513558909e0b3",
     "lastmod": "2026-09-27"
   },
   "game zombiescantjump": {
-    "hash": "086ee590156edb2cdd45bca36f83904e74ca5179",
-    "lastmod": "2026-09-27"
+    "hash": "9614ca606bb2b67034b790b42231d6d41cfeaf80",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game runneryodas": {
     "hash": "ff8b8b5f0e4ee6b7846275e87beda335b6a01cc7",
@@ -112,8 +124,9 @@
     "lastmod": "2026-09-27"
   },
   "game dronewars": {
-    "hash": "d29f6015f92e5bc4815d6a1dad395b2420d289ae",
-    "lastmod": "2026-11-06"
+    "hash": "aafd804ef03e18fec5af14b37494e6a458a6c04d",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game luxahoy": {
     "hash": "e6aa6cb2b591d0eec20568a571c21c4c7d000253",
@@ -132,12 +145,14 @@
     "lastmod": "2026-09-27"
   },
   "game silverarrow": {
-    "hash": "4433e376f2c96ea012bb114fe220ca2861c75d98",
-    "lastmod": "2026-11-06"
+    "hash": "9bdb7acf9eb0e4b93c439184a5fc417086a1b7cb",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game ninjablade": {
-    "hash": "2572bc1711aecdabd1789ef15ad8e7bfede7bf0a",
-    "lastmod": "2026-09-27"
+    "hash": "7d44defdd16bad91daebdbb93291085253589291",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game blackknight": {
     "hash": "47d2b51fb78a82c804ea53302253b3d0a93326c9",
@@ -148,8 +163,9 @@
     "lastmod": "2026-09-27"
   },
   "game btts": {
-    "hash": "baae7569a8a8fd024e65808e43546a56107a681a",
-    "lastmod": "2026-09-27"
+    "hash": "36a009647a774cb903685b628fb3ee75b1e55375",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game cannon-basketball-4": {
     "hash": "b00adf67d156fa0a099423b939bad5fa1854e05f",
@@ -160,8 +176,9 @@
     "lastmod": "2026-09-27"
   },
   "game chrome-dino": {
-    "hash": "851c43b1d8e865fa9a87b07ce56298e351e2ced1",
-    "lastmod": "2026-11-06"
+    "hash": "1c4abc55f371318167f8e4cb1c89c45a15e69cf8",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game circlo": {
     "hash": "07192df6408352e4a4feea9e21fab7c795a5761c",
@@ -180,8 +197,9 @@
     "lastmod": "2026-09-27"
   },
   "game ctr": {
-    "hash": "8cb8273c999cb2d4c6480df9f16d45e50716145d",
-    "lastmod": "2026-11-06"
+    "hash": "486109b0b6350ec2729b54da6a2d5e5d808eaa1c",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game ctr-holiday": {
     "hash": "8ebf097117e3513cdb480e6d111f9f09c60e0526",
@@ -196,8 +214,9 @@
     "lastmod": "2026-09-27"
   },
   "game deal-or-no-deal": {
-    "hash": "5d9173c17b756baf80bb0c5624d7d33a33dc222e",
-    "lastmod": "2026-09-27"
+    "hash": "eb4ffea2d2490a8f690251bb25d722053d143af7",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game death-run-3d": {
     "hash": "4ac80ce08546bca6b89ac9f0e9eb73ef8427318b",
@@ -256,8 +275,9 @@
     "lastmod": "2026-09-27"
   },
   "game hexgl": {
-    "hash": "4ce5b17cd2195f1e5bd6534e7b38e6db4423f230",
-    "lastmod": "2026-09-27"
+    "hash": "1da2c7b9cad927e665a0d73f0a70762198740a2a",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game interactivebuddy": {
     "hash": "93acb7fb515cd0a7d931307f644a2def6cd5aab7",
@@ -276,16 +296,18 @@
     "lastmod": "2026-09-27"
   },
   "game minecraft": {
-    "hash": "4a533d599060f07f7ee948a7645b5bf4875c3902",
-    "lastmod": "2026-09-27"
+    "hash": "5f41cf234be1444a59e19a26839893024d384312",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game minesweeper": {
     "hash": "caf878b44a2be91d353e7e7073e31b2d9181ce16",
     "lastmod": "2026-09-27"
   },
   "game miniputt": {
-    "hash": "21ee2d1bb4d6e7b9119370166fcb785812a5eddc",
-    "lastmod": "2026-11-06"
+    "hash": "9eeca6ae8f3bee7cec16e8a421d256b07a8f5841",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game missiles": {
     "hash": "0dc17bc45b8255dbd8ef27a30055d287c36c3f40",
@@ -300,8 +322,9 @@
     "lastmod": "2026-09-27"
   },
   "game papaspizzaria": {
-    "hash": "9a0368b840b2f293202e2627fea153adf1232595",
-    "lastmod": "2026-09-27"
+    "hash": "c483cc1502e0f38a29a44ad1181b31d2fbf80990",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game paperio2": {
     "hash": "604faed019ede5758dce69ec4a30fd7be2c04ee3",
@@ -336,8 +359,9 @@
     "lastmod": "2026-09-27"
   },
   "game stealingthediamond": {
-    "hash": "4ad7e91455f320a12654a275a65ff837ec7e56c0",
-    "lastmod": "2026-09-27"
+    "hash": "a4145af258da5288127491389a66b6b05b822863",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game stickwar": {
     "hash": "6cac7b7574dd89bce3d41968211e2a0186365b08",
@@ -352,8 +376,9 @@
     "lastmod": "2026-09-27"
   },
   "game temple-run-2": {
-    "hash": "6a0a0c16a2edaea2b9ae897e95b3cd763ac27ae2",
-    "lastmod": "2026-09-27"
+    "hash": "79dd3f8d0b3ef02927435090fb95960e49e64b08",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game thebattle": {
     "hash": "925f6ffdc0d4064319756fdc87cb980aef028216",
@@ -368,20 +393,23 @@
     "lastmod": "2026-09-27"
   },
   "game there-is-no-game": {
-    "hash": "2112a9971286324604e10f455b66870f15a706ca",
-    "lastmod": "2026-09-27"
+    "hash": "f15a69862ae850ec39168fd0190cba6420b4eff2",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game thisistheonlylevel": {
     "hash": "0a2388e89af6706bd0d7a8ed104c9e694563e252",
     "lastmod": "2026-09-27"
   },
   "game tosstheturtle": {
-    "hash": "60e4f91fb5dc2bd57848015ac50ab540186f21d6",
-    "lastmod": "2026-09-27"
+    "hash": "619b1be8639b849ae3a45bfd5293a6998181385b",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game tube-jumpers": {
-    "hash": "ee1c460c4320df3b4a0c74678e3fa8a84b30e9d6",
-    "lastmod": "2026-09-27"
+    "hash": "ce3a33cc4d4d8df2e5f78fe4ae4290261944c239",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game vex3": {
     "hash": "8a5c3158857b95585c85e1c0c4f7f124720c213f",
@@ -396,8 +424,9 @@
     "lastmod": "2026-09-27"
   },
   "game wordle": {
-    "hash": "6d25dbf1120f55f53b746d5164e6fc5d9647927f",
-    "lastmod": "2026-09-27"
+    "hash": "6e2ae77a2dc774dfe3c791319bc4448e172b490b",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game alienattack": {
     "hash": "731d38c869f90e97b6d2ad3b8b86af06379c20ad",
@@ -432,20 +461,24 @@
     "lastmod": "2026-09-27"
   },
   "game bubblecn": {
-    "hash": "dc145a29658f57aa719c68935d58dfa690a57682",
-    "lastmod": "2026-11-06"
+    "hash": "c9a0a4b949153cff9763062a7e60ff2ee2389cbc",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game bubblefish": {
-    "hash": "3294c04eae672913cec0a96a927106b4a01e93cb",
-    "lastmod": "2026-11-03"
+    "hash": "af1da85fe974403a65096d9c6950b867a4d2e244",
+    "lastmod": "2026-11-03",
+    "v": 2
   },
   "game candyfusion": {
-    "hash": "ddd4af807637fe36cfe99b2d978543f49aec62b8",
-    "lastmod": "2026-11-06"
+    "hash": "979e5925dead1332e4d3c7e931f4c59582043922",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game captainroger": {
-    "hash": "68a59c8a337009bf717cee9ce7bcc796a917bfc3",
-    "lastmod": "2026-11-06"
+    "hash": "1caee2b1222c4c2ccb32d589a6ebf26d70063d98",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game captainwar": {
     "hash": "e8faf15afef50a403c22aa659cbe8f892c6f9271",
@@ -520,8 +553,9 @@
     "lastmod": "2026-09-27"
   },
   "game dotgame": {
-    "hash": "b7249971609494aac35fe6367c5cf879af272a91",
-    "lastmod": "2026-11-06"
+    "hash": "e7ceccb8473c658f603b299e0d4c114c0c2b5e6a",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game dropcircle": {
     "hash": "a5535b22ca1e27efb04cb89d002b813bd3210a3e",
@@ -576,8 +610,9 @@
     "lastmod": "2026-09-27"
   },
   "game foofoo": {
-    "hash": "7ea65851d6604306fbd7da8c9f0fbc26c6dbbceb",
-    "lastmod": "2026-09-27"
+    "hash": "c46f6e0f6c895816c624ae8aec7fba3870f8a18d",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game foxfury": {
     "hash": "f3446ba8e0c2ce33235305f8ac9ae60a29e9414c",
@@ -596,12 +631,14 @@
     "lastmod": "2026-09-27"
   },
   "game funnysoccer": {
-    "hash": "fbe120c3a521e2bfc06490d2d7337872d9bb7948",
-    "lastmod": "2026-11-06"
+    "hash": "5cfbf97348f5dbd2ff9a33499ee6422958cbeb32",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game gettwelve": {
-    "hash": "fc92c11140ed9579a3ad988ba3090eeaa0815001",
-    "lastmod": "2026-11-06"
+    "hash": "f11fd48787b7478a19f84b681e84c85044e036bd",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game goblinmachine": {
     "hash": "bdb1c777df023a7eafccaf3cd69b173534df365b",
@@ -616,8 +653,9 @@
     "lastmod": "2026-09-27"
   },
   "game greedygnomes": {
-    "hash": "5cdd0a03e0d83b36012382342e83e3f438549df8",
-    "lastmod": "2026-11-06"
+    "hash": "1f0dc226fdba35796ec3277082d5ce7ef35d519c",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game greenwings": {
     "hash": "f5eae4b7dea6701412104177fb8692be63685773",
@@ -652,16 +690,18 @@
     "lastmod": "2026-09-27"
   },
   "game jellydoods": {
-    "hash": "20f44602c0dec0897e860ae47609a2c53d9bafe7",
-    "lastmod": "2026-11-06"
+    "hash": "62b7c9117d0d44b7a1898395f675024ed2a7ab45",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game jellyslice": {
     "hash": "071c608e38b77120c7de8047e24b6084148f5c01",
     "lastmod": "2026-09-27"
   },
   "game jomjom": {
-    "hash": "e0bb49a2d3294e1c4298fbc4f900e5df24995c85",
-    "lastmod": "2026-11-06"
+    "hash": "60caae3a57aa92732086853593d254023fd260ae",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game jumpkitty": {
     "hash": "eac0479b2f8fd766b87c63a7db11de0e704c0a67",
@@ -692,16 +732,18 @@
     "lastmod": "2026-09-27"
   },
   "game matchtime": {
-    "hash": "cca133378d7a98c423053a6aba8cd10f6350914f",
-    "lastmod": "2026-11-06"
+    "hash": "372609fdc5b6032c76ef5dd83df00259cef57e76",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game mathgame": {
     "hash": "22a73933997829dbcbbc52ad5aa30c1896fc407c",
     "lastmod": "2026-09-27"
   },
   "game monstercandy": {
-    "hash": "addbf17064d49b4067bd629967d03be608d48bb6",
-    "lastmod": "2026-11-06"
+    "hash": "24a030a0ed40322d34fa54716bfe25fadc39dd12",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game monstereater": {
     "hash": "2e041ab493190cb88c0d5cc19d269ce9c4daeeea",
@@ -724,12 +766,14 @@
     "lastmod": "2026-09-27"
   },
   "game ojelloonline": {
-    "hash": "90facd86e3cf52493a1bddb3d26f8c1cf31051d0",
-    "lastmod": "2026-11-06"
+    "hash": "ad90048ab2f14ce3ff6f8b3d7da9435b86b89c4a",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game pacman": {
-    "hash": "222780072ada1eaefcdd1550cda0347ad342c344",
-    "lastmod": "2026-09-27"
+    "hash": "e0927581d6fd395f1a4c17f7f67b1209d7c8583e",
+    "lastmod": "2026-09-27",
+    "v": 2
   },
   "game pancakeboss": {
     "hash": "7c940c6690ef1d8ab130209c9dcd7ab93029f1d1",
@@ -760,8 +804,9 @@
     "lastmod": "2026-09-27"
   },
   "game piratekid": {
-    "hash": "20c83c615121221adabf404f0c7096c3e7828cc7",
-    "lastmod": "2026-11-06"
+    "hash": "e7164d34cef68448d9225f73f18b51628ef9738a",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game pitana": {
     "hash": "5c6bc6633e060283552fa58afcc0600112387f47",
@@ -848,8 +893,9 @@
     "lastmod": "2026-09-27"
   },
   "game stickpanda": {
-    "hash": "d319aecce920c3c6ecba1be6064c2f2164954f7e",
-    "lastmod": "2026-11-06"
+    "hash": "19a1cbeb5f87c9632d83b284be693a4a3c1b25fe",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game stickpandaxmas": {
     "hash": "fe9fb2429ce4d20807a2c06a4e0afac1bcea3096",
@@ -904,16 +950,18 @@
     "lastmod": "2026-09-27"
   },
   "game woodblock": {
-    "hash": "a1107a3b1eef2a063c2769a6cadec8b5d2a535e2",
-    "lastmod": "2026-11-06"
+    "hash": "19da552471ce0d764af864f9b401f1e841edb0e9",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game xtypesky": {
     "hash": "949b27e4f65e8c01096404787344f32c3a96475e",
     "lastmod": "2026-09-27"
   },
   "game zapaliens": {
-    "hash": "d7a016ab5e2f79b5f461d4e0bc1990b845a25911",
-    "lastmod": "2026-11-06"
+    "hash": "75e6f7aafcd83590eb35188ab3e0bca7baa19b86",
+    "lastmod": "2026-11-06",
+    "v": 2
   },
   "game zombienight": {
     "hash": "68af56d706671a6afc4c70c6851336fffde3b489",

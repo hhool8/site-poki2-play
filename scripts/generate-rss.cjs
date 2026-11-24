@@ -39,8 +39,23 @@ function pageUrl(slug) {
   return `${BASE}/game/${slug[0].toLowerCase()}/${slug}/`;
 }
 function lastmodFor(url) {
-  const e = sidecar[`page ${url}`];
-  return e ? e.lastmod : new Date().toISOString().slice(0, 10);
+  // The sidecar keys game pages as `game <slug>`, not `page <full URL>`; the only
+  // `page` keys are the homepage. The old lookup therefore missed for EVERY item
+  // and fell back to today's date, so every rebuild re-dated the whole feed while
+  // claiming (in this file's own docstring) that items only change when content
+  // changes. Derive the slug from the URL and use the key the sitemap writes.
+  try {
+    const p = new URL(url).pathname.replace(/\/+$/, '');
+    const slug = p.split('/').pop();
+    const gameKey = `game ${slug}`;
+    if (sidecar[gameKey]) return sidecar[gameKey].lastmod;
+  } catch {}
+  // Genuinely unseen URL: it has no recorded change history, so today is the
+  // honest answer — it is new to the feed. Logged so an unexpected fallback is
+  // visible rather than silent.
+  const today = new Date().toISOString().slice(0, 10);
+  console.warn(`   rss: no sidecar lastmod for ${url} — using ${today}`);
+  return today;
 }
 function rfc822(d) {
   return new Date(d + 'T12:00:00Z').toUTCString();
