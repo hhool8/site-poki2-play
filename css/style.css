@@ -246,6 +246,15 @@ input{font:inherit}
 .faq-q{font-size:1.05rem;font-weight:700;margin:0 0 6px}
 .faq-item p{margin:0;line-height:1.6}
 
+/* Homepage FAQ (reuses .tag-faq styles; spacing tuned for the home flow) */
+.home-faq{margin:28px auto 8px}
+.home-faq code{
+  background:rgba(127,127,127,.14);
+  padding:1px 5px;
+  border-radius:4px;
+  font-size:.92em;
+}
+
 /* Visible static game index on tag pages (crawlable internal links) */
 .tag-games{
   padding:16px 20px;

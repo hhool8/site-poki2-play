@@ -94,6 +94,7 @@
         type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://play.poki2.online/","name":"Poki2 — Play 200+ Free Online Games, No Download","inLanguage":"en"}</script>
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Game Categories","itemListElement":[{"@type":"SiteNavigationElement","position":1,"name":"Action Games","url":"https://play.poki2.online/tag/action/"},{"@type":"SiteNavigationElement","position":2,"name":"Puzzle Games","url":"https://play.poki2.online/tag/puzzle/"},{"@type":"SiteNavigationElement","position":3,"name":"Adventure Games","url":"https://play.poki2.online/tag/adventure/"},{"@type":"SiteNavigationElement","position":4,"name":"Racing Games","url":"https://play.poki2.online/tag/racing/"},{"@type":"SiteNavigationElement","position":5,"name":"Shooting Games","url":"https://play.poki2.online/tag/shooting/"},{"@type":"SiteNavigationElement","position":6,"name":"2 Player Games","url":"https://play.poki2.online/2-player-games/"},{"@type":"SiteNavigationElement","position":7,"name":"Competitive Games","url":"https://play.poki2.online/tag/competitive/"},{"@type":"SiteNavigationElement","position":8,"name":"Strategy Games","url":"https://play.poki2.online/tag/strategy/"},{"@type":"SiteNavigationElement","position":9,"name":"Idle Games","url":"https://play.poki2.online/tag/idle/"},{"@type":"SiteNavigationElement","position":10,"name":"Arcade Games","url":"https://play.poki2.online/tag/arcade/"},{"@type":"SiteNavigationElement","position":11,"name":"Sports Games","url":"https://play.poki2.online/tag/sports/"},{"@type":"SiteNavigationElement","position":12,"name":"Platformer Games","url":"https://play.poki2.online/tag/platformer/"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Poki2 Play?","acceptedAnswer":{"@type":"Answer","text":"Poki2 Play is the curated free browser-games collection at play.poki2.online — instant play in your browser, no download and no account."}},{"@type":"Question","name":"Do I need to download or install anything to play?","acceptedAnswer":{"@type":"Answer","text":"No. Every game runs directly in the browser tab and works on desktop, Chromebook, and mobile — just open a game and play."}},{"@type":"Question","name":"Are the games free?","acceptedAnswer":{"@type":"Answer","text":"Yes. All games are free to play, with no sign-up and no account required."}},{"@type":"Question","name":"Can I play on my phone or tablet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most of the collection supports touch controls, and the layout adapts to small screens. Games that need a keyboard or mouse say so on their page."}},{"@type":"Question","name":"How do I find a specific game?","acceptedAnswer":{"@type":"Answer","text":"Use the search box at the top of the page, or browse by category. Every game also has its own page under /game/ that opens directly."}}]}</script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"></script>
@@ -311,6 +312,35 @@
 
             <!-- Category sections rendered by JS -->
             <div id="game-sections"><!--HOME-STATIC:START--><!--HOME-STATIC:END--></div>
+
+            <!-- FAQ (static, crawler-visible; mirrors the FAQPage JSON-LD in <head>) -->
+            <section class="tag-faq home-faq" id="faq" aria-labelledby="faq-title">
+                <h2 id="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <p class="faq-q">What is Poki2 Play?</p>
+                    <p>Poki2 Play is the curated free browser-games collection at play.poki2.online — instant
+                        play in your browser, no download and no account.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">Do I need to download or install anything to play?</p>
+                    <p>No. Every game runs directly in the browser tab and works on desktop, Chromebook, and
+                        mobile — just open a game and play.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">Are the games free?</p>
+                    <p>Yes. All games are free to play, with no sign-up and no account required.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">Can I play on my phone or tablet?</p>
+                    <p>Yes. Most of the collection supports touch controls, and the layout adapts to small
+                        screens. Games that need a keyboard or mouse say so on their page.</p>
+                </div>
+                <div class="faq-item">
+                    <p class="faq-q">How do I find a specific game?</p>
+                    <p>Use the search box at the top of the page, or browse by category. Every game also has
+                        its own page under <code>/game/</code> that opens directly.</p>
+                </div>
+            </section>
 
             <!-- Search results (hidden by default; title injected by JS on
                  first search — avoids an empty H2 in the static markup) -->

@@ -3032,6 +3032,18 @@
         console.warn('[route] no matching game for slug (game page):', slug);
         showHome();
       }
+    } else if (searchParams.get('q')) {
+      // ?q={search_term_string} — declared via the homepage SearchAction.
+      // The target URL must actually land on search results, not a bare home.
+      const q = (searchParams.get('q') || '').trim();
+      if (q) {
+        console.log('[route] detected search query param:', q);
+        $searchInput.value = q;
+        _lastSearchQuery = q;
+        showSearch(q);
+      } else {
+        showHome();
+      }
     } else {
       // If path-style matched earlier, it will open the game; otherwise show home
       if (pathMatch && pathMatch[1]) {
