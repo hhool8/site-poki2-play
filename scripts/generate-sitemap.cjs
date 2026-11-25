@@ -28,6 +28,7 @@ const fs   = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { tagUrlPath } = require('./tag-slugs.cjs');
+const renderContract = require('./render-contract.cjs');
 
 // Sitemap scope (2026-11-04). Google crawled 70 of these 98 URLs and indexed
 // none of them; the list was not buying attention, it was buying a verdict.
@@ -100,7 +101,7 @@ try { store = JSON.parse(fs.readFileSync(SIDECAR, 'utf8')); } catch { store = {}
 // mistaken for a content change: that would stamp today's date on pages whose
 // last real edit was weeks ago, which is the "advertise freshness we do not have"
 // failure this file exists to prevent.
-const FORMULA_VERSION = 2;
+const FORMULA_VERSION = 3;
 
 let bumped = 0, kept = 0, migrated = 0;
 const stale = [];
@@ -210,14 +211,16 @@ for(const game of shown){
 	const char = slug[0].toLowerCase();
 	const loc = `${BASE}/game/${char}/${slug}/`;
 	const priority = game.featured ? '0.9' : '0.7';
-	// Two field lists on purpose:
+	// Three lists on purpose:
 	//   current — what the page renderer actually reads, including `tips` and
-	//             `depth`. Those were missing from v1, so the depth work of
-	//             2026-11-06 changed what these pages serve while the fingerprint
-	//             reported "unchanged" — the exact failure this file prevents.
+	//             `depth`, PLUS the render rule's own decision (renderContract).
+	//             `depth` alone is not enough: the rule's meaning changed on
+	//             2026-11-25 while no games.json field did, so 92 pages began
+	//             serving an article and the fingerprint said "unchanged". The
+	//             rule now lives in render-contract.cjs and is hashed here.
 	//   legacy  — v1's list verbatim. Without it, adding a field would look like a
 	//             content edit on all 41 pages and re-date three weeks of work.
-	const fields        = g => [g.title, g.description, g.howToPlay, g.about, g.tips, g.depth, g.noindex, g.tags, g.input, g.featured, g.imgSrc, g.avalid, g.blog];
+	const fields        = g => [g.title, g.description, g.howToPlay, g.about, g.tips, g.depth, g.noindex, g.tags, g.input, g.featured, g.imgSrc, g.avalid, g.blog, renderContract.isDepth(g)];
 	const legacyFields  = g => [g.title, g.description, g.howToPlay, g.about, g.noindex, g.tags, g.input, g.featured, g.imgSrc, g.avalid, g.blog];
 	lines.push(url(loc,'monthly',priority, lastmodFor(`game ${slug}`, sha(JSON.stringify(fields(game))), sha(JSON.stringify(legacyFields(game)))), game.imgSrc||null, game.title||null));
 	count++;

@@ -339,7 +339,11 @@
     const art = document.getElementById('game-article');
     if (!art) return;
     const slug = (art.getAttribute('data-slug') || '').replace(/[^a-z0-9-]/gi, '');
-    const re = slug ? new RegExp('/game/[a-z]/' + slug + '/?$') : null;
+    /* The directory segment is the slug's first character lowercased, which is
+       not always a letter: /game/2/2048/, /game/8/8-ball-pool/. A hardcoded
+       [a-z] made the article hide itself on those pages, so they lost their h1
+       and body copy while every other page kept it. Match any single character. */
+    const re = slug ? new RegExp('/game/' + slug[0].toLowerCase() + '/' + slug + '/?$') : null;
     function sync() {
       let own = false;
       try { own = !!re && re.test(location.pathname); } catch (e) { own = false; }

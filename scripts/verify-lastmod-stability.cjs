@@ -79,6 +79,32 @@ check('game fingerprint includes tips and depth',
 	/g\.tips/.test(genSrc) && /g\.depth/.test(genSrc),
 	'these fields change what the page renders');
 
+// The render rule must be hashed through its own decision, not inferred from
+// games.json. Widening the gate on 2026-11-25 changed 92 pages while every
+// games.json field stayed byte-identical, and the fingerprint reported
+// "0 updated" — a lastmod that lies. These two checks make that shape fail.
+check('sitemap imports the render contract instead of inlining the rule',
+	/renderContract/.test(genSrc),
+	'generate-sitemap.cjs must read the depth rule from render-contract.cjs');
+const contract = require(path.join(__dirname, 'render-contract.cjs'));
+check('game fingerprint hashes the render rule decision',
+	/renderContract\.isDepth\(g\)/.test(genSrc),
+	'fields(game) must include renderContract.isDepth(g)');
+
+// Mutation: if the rule reverts to a different meaning, the hash must move.
+// Testing the property (not the current value) keeps this true through future
+// rule changes.
+{
+	const games = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'games.json'), 'utf8'));
+	const now = contract.fingerprint(games);
+	const asOptIn = require('crypto').createHash('sha1')
+		.update(`v${contract.DEPTH_RULE_VERSION}:` + games.map(g => (g.depth === true && !!((g.about) || '').trim()) ? '1' : '0').join(''))
+		.digest('hex');
+	check('a rule with different outcomes produces a different fingerprint',
+		now !== asOptIn || games.every(g => (g.depth === true) === (g.depth !== false) || !(g.about || '').trim()),
+		'if this fails the fingerprint cannot see a rule change');
+}
+
 // 4. rebuild does not churn dates ------------------------------------------
 function snapshot(){
 	const s = JSON.parse(fs.readFileSync(SIDECAR, 'utf8'));

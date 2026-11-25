@@ -6,6 +6,7 @@
 const fs   = require('fs');
 const path = require('path');
 const { tagUrlPath } = require('./tag-slugs.cjs');
+const { isDepth, aboutText } = require('./render-contract.cjs');
 
 const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
@@ -83,9 +84,8 @@ function esc(str) {
  * shows a view other than the URL the block was baked into, so client-side
  * navigation cannot leave one game's copy under another game's player.
  */
-function buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenre, slug) {
+function buildArticle(game, about, desc, tips, htp, inputs, genreTagKeys, primaryGenre, slug) {
   const paras = about.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
-  const htp   = (game.howToPlay || '').trim();
   const chips = inputs.length
     ? inputs.map(i => `          <li>${esc(i)}</li>`).join('\n')
     : '';
@@ -112,10 +112,7 @@ function buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenr
 ${paras.map(p => `        <p>${esc(p)}</p>`).join('\n')}
 ${htp ? `        <h2>How to play ${esc(game.title)}</h2>\n        <p>${esc(htp)}</p>` : ''}
 ${chips ? `        <h2>Controls</h2>\n        <ul class="game-article-controls">\n${chips}\n        </ul>` : ''}
-        <h2>Tips</h2>
-        <ul class="game-article-tips">
-${tips.map(t => `          <li>${esc(t)}</li>`).join('\n')}
-        </ul>
+${tips.length ? `        <h2>Tips</h2>\n        <ul class="game-article-tips">\n${tips.map(t => `          <li>${esc(t)}</li>`).join('\n')}\n        </ul>` : ''}
       </div>
     </section>`;
 }
@@ -136,7 +133,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   // Real, hand-authored content (tools/content/apply-content-batch-*.cjs).
   // Emitted as visible body text in the noscript fallback — this is the text
   // Google indexes. Unique per game, unlike the templated description.
-  const about    = (game.about || '').trim();
+  const about    = aboutText(game);
 
   // Intra-page duplication guard: howToPlay is auto-derived from description
   // (scripts/generate-how-to-play.cjs), so on most pages it is a substring of
@@ -150,10 +147,15 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   // inside <noscript>. Reason (measured 2026-11-06): js/app.js deletes noscript
   // blocks that contain an h1, and the SPA renders neither an h1 nor the about
   // text, so a JS-rendered game page carried no unique body text at all - the
-  // shape behind 194 "Crawled - currently not indexed" URLs. Opt-in per game
-  // via `depth: true` so the change can be measured on a small sample first.
+  // shape behind 194 "Crawled - currently not indexed" URLs.
+  //
+  // The rule itself lives in scripts/render-contract.cjs and is imported by
+  // generate-sitemap.cjs too. Do not inline it here again: on 2026-11-25 this
+  // literal was widened while the sitemap fingerprint hashed only games.json
+  // fields, so 92 pages changed what they serve and the fingerprint reported
+  // "0 updated, 48 kept". One rule, one implementation, two consumers.
   const tips    = (Array.isArray(game.tips) ? game.tips : []).map(t => String(t).trim()).filter(Boolean);
-  const depthOn = game.depth === true && !!about && tips.length > 0;
+  const depthOn = isDepth(game);
   const char     = slug[0].toLowerCase();
   const _iconRel = (game.icons && (game.icons['192'] || game.icons['512'])) || game.imgSrc;
   const game_icon = _iconRel
@@ -211,7 +213,17 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
 
   // Depth article markup. Rendered into <main> as real DOM (see buildArticle),
   // so the page carries an h1 and unique body text even after JS runs.
-  const article = depthOn ? buildArticle(game, about, desc, tips, inputs, genreTagKeys, primaryGenre, slug) : '';
+  //
+  // `htp` is passed as '' when it duplicates the description (htpDup), so the
+  // article does not restate the lede as a second section. Before the depth gate
+  // widened this never mattered: 0 of the 5 opt-in games had a duplicating
+  // howToPlay. On the 92 newly admitted games, 89 of them do - howToPlay is
+  // auto-derived from description by scripts/generate-how-to-play.cjs. Without
+  // this guard the fix would have injected intra-page duplication on 89 pages.
+  const htpForArticle = htpDup ? '' : (game.howToPlay || '').trim();
+  const article = depthOn
+    ? buildArticle(game, about, desc, tips, htpForArticle, inputs, genreTagKeys, primaryGenre, slug)
+    : '';
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -328,7 +340,23 @@ ${bodyTag}
   </noscript>
 ${article ? bodyInner.replace(/<\/main>/i, `${article}\n    </main>`) : bodyInner}
 </body>
-</html>`;
+</html>`.replace(/<body[\s\S]*<\/body>/i, m => withDetailAlt(m, game.title));
+}
+
+/**
+ * Set `alt` on the detail image at build time.
+ *
+ * `#detail-img` lives in index.html's shared chrome, so every game page copies
+ * it verbatim with `alt=""` — 48 pages carried one empty alt in the raw HTML
+ * (audit 2026-11-25, §3.7). app.js sets `V.alt = t.title` at render, so this is
+ * not a user-visible bug, but a non-JS crawler sees an empty alt where the game
+ * title belongs. Populate it here; JS still overwrites it with the same value.
+ */
+function withDetailAlt(html, title) {
+  return html.replace(
+    /(<img\s[^>]*class="[^"]*\bdetail-img\b[^"]*"[^>]*\balt=")(")/,
+    (m, head, tail) => head + esc(title) + tail
+  );
 }
 
 if (!fs.existsSync(GAMES)) {
